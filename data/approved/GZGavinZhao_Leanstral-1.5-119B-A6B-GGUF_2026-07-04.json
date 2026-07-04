@@ -23,7 +23,7 @@
   "downloads": 0,
   "likes": 1,
   "trending_score": 0,
-  "last_modified": "2026-07-04T22:56:10.000Z",
+  "last_modified": "2026-07-04T23:13:28.000Z",
   "created_at": "",
   "description": "",
   "hf_url": "https://huggingface.co/GZGavinZhao/Leanstral-1.5-119B-A6B-GGUF",
@@ -48,7 +48,7 @@
     {
       "filename": "Leanstral-1.5-119B-A6B-Q6_K.gguf",
       "quantization": "Q6_K",
-      "size_bytes": 97669011232,
+      "size_bytes": 97669011200,
       "size_human": "90.96 GB",
       "download_url": "https://huggingface.co/GZGavinZhao/Leanstral-1.5-119B-A6B-GGUF/resolve/main/Leanstral-1.5-119B-A6B-Q6_K.gguf",
       "browser_url": "https://huggingface.co/GZGavinZhao/Leanstral-1.5-119B-A6B-GGUF/blob/main/Leanstral-1.5-119B-A6B-Q6_K.gguf"
@@ -62,12 +62,12 @@
       "browser_url": "https://huggingface.co/GZGavinZhao/Leanstral-1.5-119B-A6B-GGUF/blob/main/mmproj-Leanstral-1.5-119b-BF16.gguf"
     }
   ],
-  "scraped_at": "2026-07-04T23:05:02.480758+00:00",
+  "scraped_at": "2026-07-04T23:16:10.837334+00:00",
   "scrape_date": "2026-07-04",
   "chinese_summary": "**GZGavinZhao/Leanstral-1.5-119B-A6B-GGUF** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：Mistral, 数学推理。 提供4种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：221.65 GB ~ 90.96 GB。",
   "chinese_description": "**GZGavinZhao/Leanstral-1.5-119B-A6B-GGUF** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：Mistral, 数学推理。 提供4种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：221.65 GB ~ 90.96 GB。",
   "risk_level": "low",
   "review_notes": "AI自动审核通过",
-  "approved_at": "2026-07-04T23:05:05.343133+00:00",
+  "approved_at": "2026-07-04T23:16:51.782049+00:00",
   "approved_date": "2026-07-04"
 }

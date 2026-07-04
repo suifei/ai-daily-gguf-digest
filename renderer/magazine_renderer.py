@@ -211,19 +211,29 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
 
 
 def get_digest_history() -> list[dict]:
-    """Get digest history from existing HTML files in dist."""
-    dist_dir = Path(OUTPUT_DIR)
-    if not dist_dir.exists():
-        return []
-    
+    """Get digest history from existing HTML files in dist and root."""
     history = []
-    for html_file in sorted(dist_dir.glob("digest-*.html")):
-        # Extract date from filename
+    
+    # Scan dist directory
+    dist_dir = Path(OUTPUT_DIR)
+    if dist_dir.exists():
+        for html_file in sorted(dist_dir.glob("digest-*.html")):
+            date_str = html_file.stem.replace("digest-", "")
+            history.append({
+                "date": date_str,
+                "path": str(html_file),
+            })
+    
+    # Scan root directory (for GitHub Pages legacy build)
+    root_dir = Path(OUTPUT_DIR).parent
+    for html_file in sorted(root_dir.glob("digest-*.html")):
         date_str = html_file.stem.replace("digest-", "")
-        history.append({
-            "date": date_str,
-            "path": str(html_file),
-        })
+        # Avoid duplicates
+        if not any(h["date"] == date_str for h in history):
+            history.append({
+                "date": date_str,
+                "path": str(html_file),
+            })
     
     return sorted(history, key=lambda x: x["date"])
 

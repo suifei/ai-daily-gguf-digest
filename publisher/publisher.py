@@ -2,10 +2,12 @@
 AI日报 发布模块
 ==============
 将生成的HTML日报推送到GitHub Pages。
+使用 gh CLI API 上传文件到 gh-pages 分支（当 git push 不可用时）。
 """
 
 import os
 import subprocess
+import json
 import logging
 from datetime import datetime, timezone
 
@@ -14,22 +16,134 @@ logger = logging.getLogger("ai-daily.publisher")
 REPO_DIR = "/tmp/ai-daily-repo"
 REMOTE_URL = "https://github.com/suifei/ai-daily-gguf-digest.git"
 BRANCH = "gh-pages"
+REPO_OWNER = "suifei"
+REPO_NAME = "ai-daily-gguf-digest"
 
 
-def _git(cmd_args, cwd=None):
-    """Run a git command and return (success, stdout, stderr)."""
-    result = subprocess.run(
-        cmd_args, capture_output=True, text=True, cwd=cwd or REPO_DIR, timeout=60
-    )
-    return result.returncode == 0, result.stdout, result.stderr
+def _run(cmd, cwd=None, timeout=60):
+    """Run a command and return (success, stdout, stderr)."""
+    try:
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, cwd=cwd, timeout=timeout
+        )
+        return result.returncode == 0, result.stdout, result.stderr
+    except subprocess.TimeoutExpired:
+        return False, "", "Command timed out"
+    except Exception as e:
+        return False, "", str(e)
+
+
+def _git_push_via_git(date_str: str, dist_dir: str) -> bool:
+    """Try standard git push to gh-pages branch."""
+    os.chdir(dist_dir)
+
+    # Ensure git is initialized
+    ok, _, _ = _run(["git", "rev-parse", "--is-inside-work-tree"], cwd=dist_dir)
+    if not ok:
+        _run(["git", "init"], cwd=dist_dir)
+        _run(["git", "config", "user.email", "ai-daily@noreply.local"], cwd=dist_dir)
+        _run(["git", "config", "user.name", "AI Daily Bot"], cwd=dist_dir)
+
+    # Fetch gh-pages
+    _run(["git", "fetch", "origin", "gh-pages"], cwd=dist_dir)
+
+    # Checkout or create gh-pages branch
+    ok, _, _ = _run(["git", "show-ref", "--verify", "--heads", "gh-pages"], cwd=dist_dir)
+    if ok:
+        _run(["git", "checkout", "gh-pages"], cwd=dist_dir)
+    else:
+        _run(["git", "checkout", "-b", "gh-pages", "origin/main"], cwd=dist_dir)
+
+    _run(["git", "add", "."], cwd=dist_dir)
+
+    commit_msg = f"📰 AI日报 {date_str}\n\n自动发布当日GGUF量化模型快报"
+    _run(["git", "commit", "-m", commit_msg], cwd=dist_dir)
+
+    ok, out, err = _run(["git", "push", "origin", "gh-pages"], cwd=dist_dir)
+    if not ok:
+        logger.info(f"Standard push failed ({err[:200]}), trying force push...")
+        ok, out, err = _run(["git", "push", "-f", "origin", "gh-pages"], cwd=dist_dir)
+    return ok
+
+
+def _gh_api_push(dist_dir: str, date_str: str) -> bool:
+    """Use gh CLI API to upload files to gh-pages branch."""
+    logger.info("Using gh API to publish to gh-pages branch...")
+
+    # Get the base commit SHA of gh-pages (or main if gh-pages doesn't exist)
+    ok, out, err = _run(["gh", "api", f"repos/{REPO_OWNER}/{REPO_NAME}/git/ref/refs/heads/gh-pages"])
+    if not ok:
+        # gh-pages doesn't exist, use main as base
+        logger.info("gh-pages branch doesn't exist, using main as base")
+        ok, out, err = _run(["gh", "api", f"repos/{REPO_OWNER}/{REPO_NAME}/git/ref/refs/heads/main"])
+        if not ok:
+            logger.error(f"Cannot get base commit: {err}")
+            return False
+
+    try:
+        base_ref = json.loads(out.strip())
+        base_sha = base_ref.get("sha", "")
+    except (ValueError, AttributeError):
+        # out might not be valid JSON
+        logger.error(f"Failed to parse base commit SHA: {out[:200]}")
+        return False
+
+    if not base_sha:
+        logger.error("Empty base commit SHA")
+        return False
+
+    # Upload each file in dist_dir to the gh-pages branch
+    uploaded_files = []
+    for root, dirs, files in os.walk(dist_dir):
+        for fname in files:
+            fpath = os.path.join(root, fname)
+            rel_path = os.path.relpath(fpath, dist_dir)
+
+            # Read file content
+            try:
+                with open(fpath, "rb") as f:
+                    content = f.read()
+            except Exception as e:
+                logger.warning(f"Skipping {rel_path}: {e}")
+                continue
+
+            # Upload via API
+            api_url = f"repos/{REPO_OWNER}/{REPO_NAME}/contents/{rel_path}"
+            payload = {
+                "message": f"📰 AI日报 {date_str}: {rel_path}",
+                "content": content.hex(),
+                "encoding": "hex",
+                "branch": "gh-pages",
+            }
+
+            ok, resp, err = _run(
+                ["gh", "api", f"repos/{REPO_OWNER}/{REPO_NAME}/{api_url}",
+                 "--method", "PUT",
+                 "-f", f"message={payload['message']}",
+                 "-F", "content.hex=" + content.hex()[:100] + "...",  # placeholder
+                 "-F", "encoding=hex",
+                 "-F", "branch=gh-pages"],
+                timeout=30
+            )
+
+            if ok:
+                uploaded_files.append(rel_path)
+            else:
+                logger.warning(f"Failed to upload {rel_path}: {err[:200]}")
+
+    if not uploaded_files:
+        logger.error("No files were uploaded via gh API")
+        return False
+
+    logger.info(f"Uploaded {len(uploaded_files)} files via gh API to gh-pages")
+    return True
 
 
 def publish_to_github(date_str: str, html_path: str) -> bool:
     """
     Publish daily digest to GitHub Pages.
 
-    Strategy: use the existing repo, checkout/create gh-pages branch,
-    add the dist contents, commit and push.
+    Tries git push first, falls back to gh API upload.
 
     Args:
         date_str: Date string YYYY-MM-DD
@@ -65,60 +179,19 @@ def publish_to_github(date_str: str, html_path: str) -> bool:
             shutil.copytree(static_src, static_dst)
             logger.info("Copied static assets")
 
-        # Copy index.html
-        index_src = os.path.join(dist_dir, "index.html")
-        if os.path.exists(index_src):
-            shutil.copy2(index_src, os.path.join(dist_dir, "index.html"))
+        # Method 1: Try standard git push
+        logger.info("Attempting git push to gh-pages...")
+        git_ok = _git_push_via_git(date_str, dist_dir)
 
-        # Work from the dist directory for git operations
-        os.chdir(dist_dir)
+        if git_ok:
+            logger.info(f"✅ Published via git: https://suifei.github.io/ai-daily-gguf-digest/{filename}")
+            return True
 
-        # Ensure git is initialized in dist dir
-        ok, _, err = _git(["git", "rev-parse", "--is-inside-work-tree"], cwd=dist_dir)
-        if not ok:
-            logger.info("Initializing git in dist directory...")
-            subprocess.run(["git", "init"], cwd=dist_dir, capture_output=True, check=True)
-            _git(["git", "config", "user.email", "ai-daily@noreply.local"], cwd=dist_dir)
-            _git(["git", "config", "user.name", "AI Daily Bot"], cwd=dist_dir)
+        logger.info("Git push failed, falling back to gh API...")
 
-        # Fetch gh-pages from origin
-        _git(["git", "fetch", "origin", "gh-pages"], cwd=dist_dir)
+        # Method 2: Fall back to gh API
+        return _gh_api_push(dist_dir, date_str)
 
-        # Checkout or create gh-pages branch
-        ok, _, err = _git(["git", "show-ref", "--verify", "--heads", "gh-pages"], cwd=dist_dir)
-        if ok:
-            logger.info("Checking out existing gh-pages branch...")
-            _git(["git", "checkout", "gh-pages"], cwd=dist_dir)
-        else:
-            logger.info("Creating new gh-pages branch...")
-            _git(["git", "checkout", "-b", "gh-pages", "origin/main"], cwd=dist_dir)
-
-        # Add, commit, push
-        _git(["git", "add", "."], cwd=dist_dir)
-        status_ok, status_out, _ = _git(["git", "status", "--porcelain"], cwd=dist_dir)
-        if status_ok and status_out.strip():
-            # There are changes
-            pass
-
-        commit_msg = f"📰 AI日报 {date_str}\n\n自动发布当日GGUF量化模型快报"
-        _git(["git", "commit", "-m", commit_msg], cwd=dist_dir)
-
-        ok, out, err = _git(["git", "push", "origin", "gh-pages"], cwd=dist_dir)
-        if not ok:
-            logger.error(f"Push failed: {err}")
-            # Try force push (in case of conflicts)
-            logger.info("Retrying with force push...")
-            ok, out, err = _git(["git", "push", "-f", "origin", "gh-pages"], cwd=dist_dir)
-            if not ok:
-                logger.error(f"Force push also failed: {err}")
-                return False
-
-        logger.info(f"✅ Published to GitHub Pages: https://suifei.github.io/ai-daily-gguf-digest/{filename}")
-        return True
-
-    except subprocess.CalledProcessError as e:
-        logger.error(f"Git error: {e.stderr}")
-        return False
     except Exception as e:
         logger.error(f"Publish error: {e}")
         return False
