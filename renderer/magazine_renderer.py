@@ -100,12 +100,27 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
     repo_id = model["repo_id"]
     safe_id = repo_id.replace("/", "-").replace("_", "-").lower()
     author = model.get("author", "")
-    description = model.get("description", "")
+    
+    # Use Chinese description if available, otherwise fall back to English
+    chinese_desc = model.get("chinese_description", "") or model.get("description", "")
+    chinese_summary = model.get("chinese_summary", "")
+    risk_level = model.get("risk_level", "low")
+    review_notes = model.get("review_notes", "")
+    
     downloads = model.get("downloads", 0)
     likes = model.get("likes", 0)
     trending = model.get("trending_score", 0)
     tags = model.get("tags", [])
     pipeline = model.get("pipeline_tag", "")
+    
+    # Risk badge
+    risk_badge = ""
+    if risk_level == "high":
+        risk_badge = '<span class="risk-badge risk-high">⚠️ 高风险</span>'
+    elif risk_level == "medium":
+        risk_badge = '<span class="risk-badge risk-medium">⚡ 中等风险</span>'
+    else:
+        risk_badge = '<span class="risk-badge risk-low">✅ 低风险</span>'
     
     # Build GGUF variants table
     variants_html = ""
@@ -124,6 +139,23 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
         if tag != "gguf":
             tags_html += f'<span class="tag">{tag}</span>'
     
+    # Build summary section
+    summary_html = ""
+    if chinese_summary:
+        summary_html = f'''
+        <div class="model-summary">
+            <h3>📝 能力介绍</h3>
+            <p>{chinese_summary}</p>
+        </div>'''
+    
+    # Build review notes
+    notes_html = ""
+    if review_notes:
+        notes_html = f'''
+        <div class="review-notes">
+            <p>📋 审核备注: {review_notes}</p>
+        </div>'''
+    
     return f"""
     <article class="model-page" id="model-{safe_id}">
         <div class="model-header">
@@ -133,29 +165,31 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
         </div>
         
         <div class="model-meta">
-            <span class="meta-item">⬇️ {downloads:,} downloads</span>
-            <span class="meta-item">❤️ {likes:,} likes</span>
-            <span class="meta-item">📈 Trending: {trending:.1f}</span>
+            <span class="meta-item">⬇️ {downloads:,} 下载</span>
+            <span class="meta-item">❤️ {likes:,} 点赞</span>
+            <span class="meta-item">📈 热度: {trending:.1f}</span>
             {f'<span class="meta-item">🏷️ {pipeline}</span>' if pipeline else ''}
+            {risk_badge}
         </div>
         
         <div class="model-description">
-            <p>{description[:300]}{'...' if len(description) > 300 else ''}</p>
+            <p>{chinese_desc[:300]}{'...' if len(chinese_desc) > 300 else ''}</p>
         </div>
         
+{summary_html}
         <div class="model-tags">
             {tags_html}
         </div>
         
         <div class="variants-section">
-            <h3>📦 GGUF Variants</h3>
+            <h3>📦 GGUF量化规格</h3>
             <table class="variants-table">
                 <thead>
                     <tr>
-                        <th>Quantization</th>
-                        <th>Size</th>
-                        <th>File</th>
-                        <th>Action</th>
+                        <th>量化版本</th>
+                        <th>大小</th>
+                        <th>文件</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -164,8 +198,9 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
             </table>
         </div>
         
+{notes_html}
         <div class="model-links">
-            <a href="{model['hf_url']}" target="_blank" class="primary-link">View on Hugging Face ↗</a>
+            <a href="{model['hf_url']}" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
         </div>
     </article>"""
 

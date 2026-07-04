@@ -444,6 +444,61 @@ a:hover { color: var(--accent-secondary); }
     gap: 0.25rem;
 }
 
+/* Risk badges */
+.risk-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.risk-low {
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.3);
+    color: #22c55e;
+}
+.risk-medium {
+    background: rgba(234,179,8,0.1);
+    border: 1px solid rgba(234,179,8,0.3);
+    color: #eab308;
+}
+.risk-high {
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: #ef4444;
+}
+
+/* Model summary section */
+.model-summary {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(108,99,255,0.05);
+    border: 1px solid rgba(108,99,255,0.15);
+    border-radius: 8px;
+}
+
+.model-summary h3 {
+    font-size: 0.95rem;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+}
+
+.model-summary p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Review notes */
+.review-notes {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.02);
+    border-left: 3px solid var(--text-muted);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
 .model-description {
     color: var(--text-secondary);
     font-size: 0.95rem;

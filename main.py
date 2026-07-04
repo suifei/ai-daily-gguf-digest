@@ -69,8 +69,16 @@ def cmd_scan(args):
     return models
 
 
-def cmd_approve(args, model_info: dict):
-    """Approve a single model."""
+def cmd_approve(args, model_info: dict, chinese_summary: str = "", chinese_desc: str = "", risk_level: str = "low", notes: str = ""):
+    """Approve a single model.
+    
+    Args:
+        model_info: Raw model info from scraper
+        chinese_summary: AI-generated Chinese capability summary (~500 chars)
+        chinese_desc: Chinese translation of description
+        risk_level: 'low', 'medium', 'high'
+        notes: Review notes
+    """
     date_str = datetime.now(timezone.utc).strftime(DATE_FORMAT)
     
     repo_id = model_info["repo_id"]
@@ -80,6 +88,13 @@ def cmd_approve(args, model_info: dict):
         logger.info(f"⏭️  Already in database: {repo_id}")
         return False
     
+    # Add review metadata
+    model_info["chinese_summary"] = chinese_summary
+    model_info["chinese_description"] = chinese_desc or model_info.get("description", "")
+    model_info["risk_level"] = risk_level
+    model_info["review_notes"] = notes
+    model_info["reviewed_at"] = datetime.now(timezone.utc).isoformat()
+    
     # Approve and save
     output = approve_model(model_info, date_str)
     logger.info(f"✅ Approved: {repo_id}")
@@ -87,7 +102,14 @@ def cmd_approve(args, model_info: dict):
 
 
 def cmd_approve_all(args):
-    """Approve all pending models for today."""
+    """Approve all pending models for today.
+    
+    During approval, AI generates Chinese summaries and translations.
+    In practice, the AI reviewer reviews each model and provides
+    the chinese_summary, chinese_desc, risk_level, and notes.
+    """
+    from review.chinese_summary import generate_chinese_summary
+    
     date_str = datetime.now(timezone.utc).strftime(DATE_FORMAT)
     
     pending = load_pending_models(date_str)
@@ -101,7 +123,11 @@ def cmd_approve_all(args):
     approved = 0
     for model in pending:
         try:
-            if cmd_approve(args, model):
+            # Auto-generate Chinese summary (AI reviewer refines this)
+            chinese_summary = generate_chinese_summary(model)
+            logger.info(f"  📝 Summary for {model['model_name']}: {chinese_summary[:80]}...")
+            
+            if cmd_approve(args, model, chinese_summary=chinese_summary):
                 approved += 1
         except Exception as e:
             logger.error(f"Failed to approve {model['repo_id']}: {e}")

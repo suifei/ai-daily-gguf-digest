@@ -1,0 +1,377 @@
+[
+  {
+    "repo_id": "gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF",
+    "model_name": "gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF",
+    "author": "gustajunq",
+    "tags": [
+      "transformers",
+      "gguf",
+      "text-generation-inference",
+      "unsloth",
+      "llama",
+      "llama-cpp",
+      "gguf-my-repo",
+      "en",
+      "base_model:Skskskd/Blitz-ia-flash-lite",
+      "base_model:quantized:Skskskd/Blitz-ia-flash-lite",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "pipeline_tag": "",
+    "library_name": "transformers",
+    "model_family": "Skskskd/Blitz-ia-flash-lite",
+    "downloads": 0,
+    "likes": 0,
+    "trending_score": 0,
+    "last_modified": "2026-07-04T21:37:30.000Z",
+    "created_at": "",
+    "description": "",
+    "hf_url": "https://huggingface.co/gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF",
+    "card_data": {},
+    "gguf_files": [
+      {
+        "filename": "blitz-ia-flash-lite-q4_k_m.gguf",
+        "quantization": "Q4_K_M",
+        "size_bytes": 667815680,
+        "size_human": "636.88 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/blitz-ia-flash-lite-q4_k_m.gguf"
+      }
+    ],
+    "scraped_at": "2026-07-04T21:41:16.176005+00:00",
+    "scrape_date": "2026-07-04"
+  },
+  {
+    "repo_id": "kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF",
+    "model_name": "kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF",
+    "author": "kirilldual0879",
+    "tags": [
+      "gguf",
+      "llama.cpp",
+      "text-generation",
+      "base_model:Kolyadual/MIXdevAI-yandexGPT5-8B",
+      "base_model:quantized:Kolyadual/MIXdevAI-yandexGPT5-8B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "pipeline_tag": "text-generation",
+    "library_name": "",
+    "model_family": "Kolyadual/MIXdevAI-yandexGPT5-8B",
+    "downloads": 0,
+    "likes": 0,
+    "trending_score": 0,
+    "last_modified": "2026-07-04T21:37:13.000Z",
+    "created_at": "",
+    "description": "",
+    "hf_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF",
+    "card_data": {},
+    "gguf_files": [
+      {
+        "filename": "mixdev-ya-f16.gguf",
+        "quantization": "FP16",
+        "size_bytes": 16077197856,
+        "size_human": "14.97 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-f16.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q2_k.gguf",
+        "quantization": "Q2_K",
+        "size_bytes": 3178421152,
+        "size_human": "2.96 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q2_k.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q3_k_l.gguf",
+        "quantization": "Q3_K_L",
+        "size_bytes": 4321567264,
+        "size_human": "4.02 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q3_k_l.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q3_k_m.gguf",
+        "quantization": "Q3_K_M",
+        "size_bytes": 4018528800,
+        "size_human": "3.74 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q3_k_m.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q3_k_s.gguf",
+        "quantization": "Q3_K_S",
+        "size_bytes": 3664110112,
+        "size_human": "3.41 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q3_k_s.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q4_0.gguf",
+        "quantization": "Q4_0",
+        "size_bytes": 4661242528,
+        "size_human": "4.34 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_0.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q4_1.gguf",
+        "quantization": "Q4_1",
+        "size_bytes": 5130481312,
+        "size_human": "4.78 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_1.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q4_k_m.gguf",
+        "quantization": "Q4_K_M",
+        "size_bytes": 4920765088,
+        "size_human": "4.58 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_k_m.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q4_k_s.gguf",
+        "quantization": "Q4_K_S",
+        "size_bytes": 4692699808,
+        "size_human": "4.37 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_k_s.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q5_0.gguf",
+        "quantization": "Q5_0",
+        "size_bytes": 5599720096,
+        "size_human": "5.22 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_0.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q5_1.gguf",
+        "quantization": "Q5_1",
+        "size_bytes": 6068958880,
+        "size_human": "5.65 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_1.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q5_k_m.gguf",
+        "quantization": "Q5_K_M",
+        "size_bytes": 5733413536,
+        "size_human": "5.34 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_k_m.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q5_k_s.gguf",
+        "quantization": "Q5_K_S",
+        "size_bytes": 5599720096,
+        "size_human": "5.22 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_k_s.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q6_k.gguf",
+        "quantization": "Q6_K",
+        "size_bytes": 6596852512,
+        "size_human": "6.14 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q6_k.gguf"
+      },
+      {
+        "filename": "mixdev-ya-q8_0.gguf",
+        "quantization": "Q8_0",
+        "size_bytes": 8543148576,
+        "size_human": "7.96 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q8_0.gguf"
+      }
+    ],
+    "scraped_at": "2026-07-04T21:41:17.734035+00:00",
+    "scrape_date": "2026-07-04"
+  },
+  {
+    "repo_id": "FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF",
+    "model_name": "FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF",
+    "author": "FadedRedStar",
+    "tags": [
+      "gguf",
+      "text-generation",
+      "multimodal",
+      "vision",
+      "reasoning",
+      "math",
+      "stem",
+      "agentic",
+      "tool-use",
+      "abliterated",
+      "uncensored",
+      "mistral",
+      "q4_k_m",
+      "conversational",
+      "image-text-to-text",
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "pt",
+      "nl",
+      "zh",
+      "ja",
+      "ko",
+      "ar",
+      "base_model:coder3101/Ministral-3-8B-Reasoning-2512-heretic",
+      "base_model:quantized:coder3101/Ministral-3-8B-Reasoning-2512-heretic",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "gguf",
+    "model_family": "coder3101/Ministral-3-8B-Reasoning-2512-heretic",
+    "downloads": 456,
+    "likes": 0,
+    "trending_score": 0,
+    "last_modified": "2026-07-04T21:35:41.000Z",
+    "created_at": "",
+    "description": "",
+    "hf_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF",
+    "card_data": {},
+    "gguf_files": [
+      {
+        "filename": "Ministral-3-8B-Reasoning-2512-heretic-Q4_K_M.gguf",
+        "quantization": "Q4_K_M",
+        "size_bytes": 5198385440,
+        "size_human": "4.84 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q4_K_M.gguf"
+      },
+      {
+        "filename": "Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf",
+        "quantization": "Q8_0",
+        "size_bytes": 9028866336,
+        "size_human": "8.41 GB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf"
+      },
+      {
+        "filename": "mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf",
+        "quantization": "FP16",
+        "size_bytes": 866654688,
+        "size_human": "826.51 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf"
+      },
+      {
+        "filename": "mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf",
+        "quantization": "Q8_0",
+        "size_bytes": 469506528,
+        "size_human": "447.76 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf"
+      }
+    ],
+    "scraped_at": "2026-07-04T21:41:21.405883+00:00",
+    "scrape_date": "2026-07-04"
+  },
+  {
+    "repo_id": "athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF",
+    "model_name": "athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF",
+    "author": "athrael-soju",
+    "tags": [
+      "gguf",
+      "base_model:athrael-soju/t-176-HydraQwen-3.5-0.8B",
+      "base_model:quantized:athrael-soju/t-176-HydraQwen-3.5-0.8B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "pipeline_tag": "",
+    "library_name": "",
+    "model_family": "athrael-soju/t-176-HydraQwen-3.5-0.8B",
+    "downloads": 0,
+    "likes": 0,
+    "trending_score": 0,
+    "last_modified": "2026-07-04T21:35:28.000Z",
+    "created_at": "",
+    "description": "",
+    "hf_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF",
+    "card_data": {},
+    "gguf_files": [
+      {
+        "filename": "hydra-base-q5_k_m.gguf",
+        "quantization": "Q5_K_M",
+        "size_bytes": 577998816,
+        "size_human": "551.22 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/hydra-base-q5_k_m.gguf"
+      },
+      {
+        "filename": "hydra-base-q6_k.gguf",
+        "quantization": "Q6_K",
+        "size_bytes": 629744096,
+        "size_human": "600.57 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/hydra-base-q6_k.gguf"
+      },
+      {
+        "filename": "hydra-lora-f16.gguf",
+        "quantization": "FP16",
+        "size_bytes": 86606944,
+        "size_human": "82.59 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/hydra-lora-f16.gguf"
+      },
+      {
+        "filename": "hydra-mmproj-f16.gguf",
+        "quantization": "FP16",
+        "size_bytes": 204987136,
+        "size_human": "195.49 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/hydra-mmproj-f16.gguf"
+      }
+    ],
+    "scraped_at": "2026-07-04T21:41:23.557616+00:00",
+    "scrape_date": "2026-07-04"
+  },
+  {
+    "repo_id": "aaro765/BanBTPV6",
+    "model_name": "aaro765/BanBTPV6",
+    "author": "aaro765",
+    "tags": [
+      "gguf",
+      "license:bsd-3-clause",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "",
+    "library_name": "",
+    "model_family": "",
+    "downloads": 0,
+    "likes": 0,
+    "trending_score": 0,
+    "last_modified": "2026-07-04T21:35:10.000Z",
+    "created_at": "",
+    "description": "",
+    "hf_url": "https://huggingface.co/aaro765/BanBTPV6",
+    "card_data": {},
+    "gguf_files": [
+      {
+        "filename": "Banbtpv6-54M-F16.gguf",
+        "quantization": "FP16",
+        "size_bytes": 110627456,
+        "size_human": "105.5 MB",
+        "download_url": "",
+        "browser_url": "https://huggingface.co//blob/main/Banbtpv6-54M-F16.gguf"
+      }
+    ],
+    "scraped_at": "2026-07-04T21:41:25.616585+00:00",
+    "scrape_date": "2026-07-04"
+  }
+]

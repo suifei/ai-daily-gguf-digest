@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日报 GGUF模型快报 2026-07-04</title>
+    <link rel="stylesheet" href="../static/magazine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Magazine Cover -->
+    <header class="magazine-cover">
+        <div class="cover-content">
+            <div class="cover-brand">
+                <span class="brand-icon">🤖</span>
+                <h1 class="brand-title">AI日报</h1>
+                <span class="brand-subtitle">GGUF 量化模型快报</span>
+            </div>
+            <div class="cover-date">
+                <span class="date-year">2026</span>
+                <span class="date-separator">/</span>
+                <span class="date-month-day">07-04</span>
+            </div>
+            <div class="cover-stats">
+                <span class="stat-item">📊 4 个新模型</span>
+                <span class="stat-divider">·</span>
+                <span class="stat-item">🔄 自动采集</span>
+                <span class="stat-divider">·</span>
+                <span class="stat-item">📡 HuggingFace</span>
+            </div>
+            <div class="cover-footer">
+                <p>Powered by AI · 每小时自动扫描 · 每日发布</p>
+                <p class="generated-at">生成时间: 2026-07-04 21:47 UTC</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="magazine-nav">
+        <div class="nav-inner">
+            <button class="nav-btn prev-btn" onclick="scrollPage(-1)" title="上一页">◀</button>
+            <button class="nav-btn toc-toggle" onclick="toggleTOC()" title="目录">☰ 目录</button>
+            <span class="nav-date">2026-07-04</span>
+            <button class="nav-btn next-btn" onclick="scrollPage(1)" title="下一页">▶</button>
+        </div>
+    </nav>
+
+    <!-- Table of Contents Sidebar -->
+    <aside class="toc-sidebar" id="tocSidebar">
+        <div class="toc-header">
+            <h3>📋 本期目录</h3>
+            <button class="toc-close" onclick="toggleTOC()">✕</button>
+        </div>
+        <div class="toc-list">
+<a href="#model-gustajunq-blitz-ia-flash-lite-q4-k-m-gguf" class="toc-link">gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF</a>
+<a href="#model-kirilldual0879-mixdevai-yandexgpt5-8b-gguf" class="toc-link">kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF</a>
+<a href="#model-fadedredstar-ministral-3-8b-reasoning-2512-heretic-gguf" class="toc-link">FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF</a>
+<a href="#model-athrael-soju-t-176-hydraqwen-3.5-0.8b-gguf" class="toc-link">athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF</a>
+
+        </div>
+        <div class="toc-nav">
+<a href="../digest-2025-07-05.html" class="toc-nav-link">← 上一期 (2025-07-05)</a>
+<a href="../digest-2026-07-05.html" class="toc-nav-link">下一期 (2026-07-05) →</a>
+        </div>
+    </aside>
+
+    <!-- Overlay for mobile TOC -->
+    <div class="toc-overlay" id="tocOverlay" onclick="toggleTOC()"></div>
+
+    <!-- Main Content -->
+    <main class="magazine-content">
+        <!-- Issue Navigation -->
+        <div class="issue-nav">
+<a href="../digest-2025-07-05.html" class="issue-link prev-issue">← 上一期: 2025-07-05</a>
+            <span class="issue-counter">第 2 期</span>
+<a href="../digest-2026-07-05.html" class="issue-link next-issue">下一期: 2026-07-05 →</a>
+        </div>
+
+        <!-- Model Cards -->
+
+    <article class="model-page" id="model-gustajunq-blitz-ia-flash-lite-q4-k-m-gguf">
+        <div class="model-header">
+            <span class="model-number">1</span>
+            <h2 class="model-title">gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF</h2>
+            <p class="model-author">by gustajunq</p>
+        </div>
+        
+        <div class="model-meta">
+            <span class="meta-item">⬇️ 0 下载</span>
+            <span class="meta-item">❤️ 0 点赞</span>
+            <span class="meta-item">📈 热度: 0.0</span>
+            
+            <span class="risk-badge risk-low">✅ 低风险</span>
+        </div>
+        
+        <div class="model-description">
+            <p>Blitz-ia-flash-lite 是基于 Meta Llama 架构的微缩量化模型（约300M参数），专为边缘设备和低功耗场景设计。采用 Unsloth 高效微调技术训练，支持文本生成任务。提供 Q4_K_M 一种量化规格（636MB），在精度与体积间取得良好平衡，适合部署于手机、树莓派等资源受限设备。BSD许可，可商用。</p>
+        </div>
+        
+
+        <div class="model-summary">
+            <h3>📝 能力介绍</h3>
+            <p>Blitz-ia-flash-lite 是基于 Meta Llama 架构的微缩量化模型（约300M参数），专为边缘设备和低功耗场景设计。采用 Unsloth 高效微调技术训练，支持文本生成任务。提供 Q4_K_M 一种量化规格（636MB），在精度与体积间取得良好平衡，适合部署于手机、树莓派等资源受限设备。BSD许可，可商用。</p>
+        </div>
+        <div class="model-tags">
+            <span class="tag">transformers</span><span class="tag">text-generation-inference</span><span class="tag">unsloth</span><span class="tag">llama</span><span class="tag">llama-cpp</span><span class="tag">gguf-my-repo</span><span class="tag">en</span>
+        </div>
+        
+        <div class="variants-section">
+            <h3>📦 GGUF量化规格</h3>
+            <table class="variants-table">
+                <thead>
+                    <tr>
+                        <th>量化版本</th>
+                        <th>大小</th>
+                        <th>文件</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="variant-row">
+            <td class="quant-badge">Q4_K_M</td>
+            <td>636.88 MB</td>
+            <td><a href="https://huggingface.co//blob/main/blitz-ia-flash-lite-q4_k_m.gguf" target="_blank" class="file-link">📄 blitz-ia-flash-lite-q4_k_m.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <div class="review-notes">
+            <p>📋 审核备注: 轻量级边缘模型，适合IoT部署</p>
+        </div>
+        <div class="model-links">
+            <a href="https://huggingface.co/gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-page" id="model-kirilldual0879-mixdevai-yandexgpt5-8b-gguf">
+        <div class="model-header">
+            <span class="model-number">2</span>
+            <h2 class="model-title">kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF</h2>
+            <p class="model-author">by kirilldual0879</p>
+        </div>
+        
+        <div class="model-meta">
+            <span class="meta-item">⬇️ 0 下载</span>
+            <span class="meta-item">❤️ 0 点赞</span>
+            <span class="meta-item">📈 热度: 0.0</span>
+            <span class="meta-item">🏷️ text-generation</span>
+            <span class="risk-badge risk-low">✅ 低风险</span>
+        </div>
+        
+        <div class="model-description">
+            <p>MIXdevAI-yandexGPT5-8B 是俄罗斯Yandex公司开发的8B参数大语言模型的GGUF量化版本，由知名量化专家kirilldual0879提供。本次收录亮点：15种量化规格全覆盖——从极致压缩的Q2_K（2.96GB）到无损FP16（14.97GB），满足从移动端到桌面级的全场景需求。擅长文本生成、多语言理解和推理任务。Apache许可，可商用。推荐Q4_K_M或Q5_K_M版本。</p>
+        </div>
+        
+
+        <div class="model-summary">
+            <h3>📝 能力介绍</h3>
+            <p>MIXdevAI-yandexGPT5-8B 是俄罗斯Yandex公司开发的8B参数大语言模型的GGUF量化版本，由知名量化专家kirilldual0879提供。本次收录亮点：15种量化规格全覆盖——从极致压缩的Q2_K（2.96GB）到无损FP16（14.97GB），满足从移动端到桌面级的全场景需求。擅长文本生成、多语言理解和推理任务。Apache许可，可商用。推荐Q4_K_M或Q5_K_M版本。</p>
+        </div>
+        <div class="model-tags">
+            <span class="tag">llama.cpp</span><span class="tag">text-generation</span><span class="tag">base_model:Kolyadual/MIXdevAI-yandexGPT5-8B</span><span class="tag">base_model:quantized:Kolyadual/MIXdevAI-yandexGPT5-8B</span><span class="tag">license:apache-2.0</span><span class="tag">endpoints_compatible</span><span class="tag">region:us</span>
+        </div>
+        
+        <div class="variants-section">
+            <h3>📦 GGUF量化规格</h3>
+            <table class="variants-table">
+                <thead>
+                    <tr>
+                        <th>量化版本</th>
+                        <th>大小</th>
+                        <th>文件</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="variant-row">
+            <td class="quant-badge">FP16</td>
+            <td>14.97 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-f16.gguf" target="_blank" class="file-link">📄 mixdev-ya-f16.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q2_K</td>
+            <td>2.96 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q2_k.gguf" target="_blank" class="file-link">📄 mixdev-ya-q2_k.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q3_K_L</td>
+            <td>4.02 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q3_k_l.gguf" target="_blank" class="file-link">📄 mixdev-ya-q3_k_l.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q3_K_M</td>
+            <td>3.74 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q3_k_m.gguf" target="_blank" class="file-link">📄 mixdev-ya-q3_k_m.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q3_K_S</td>
+            <td>3.41 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q3_k_s.gguf" target="_blank" class="file-link">📄 mixdev-ya-q3_k_s.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q4_0</td>
+            <td>4.34 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q4_0.gguf" target="_blank" class="file-link">📄 mixdev-ya-q4_0.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q4_1</td>
+            <td>4.78 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q4_1.gguf" target="_blank" class="file-link">📄 mixdev-ya-q4_1.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q4_K_M</td>
+            <td>4.58 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q4_k_m.gguf" target="_blank" class="file-link">📄 mixdev-ya-q4_k_m.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q4_K_S</td>
+            <td>4.37 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q4_k_s.gguf" target="_blank" class="file-link">📄 mixdev-ya-q4_k_s.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q5_0</td>
+            <td>5.22 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q5_0.gguf" target="_blank" class="file-link">📄 mixdev-ya-q5_0.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q5_1</td>
+            <td>5.65 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q5_1.gguf" target="_blank" class="file-link">📄 mixdev-ya-q5_1.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q5_K_M</td>
+            <td>5.34 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q5_k_m.gguf" target="_blank" class="file-link">📄 mixdev-ya-q5_k_m.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q5_K_S</td>
+            <td>5.22 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q5_k_s.gguf" target="_blank" class="file-link">📄 mixdev-ya-q5_k_s.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q6_K</td>
+            <td>6.14 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q6_k.gguf" target="_blank" class="file-link">📄 mixdev-ya-q6_k.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q8_0</td>
+            <td>7.96 GB</td>
+            <td><a href="https://huggingface.co//blob/main/mixdev-ya-q8_0.gguf" target="_blank" class="file-link">📄 mixdev-ya-q8_0.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <div class="review-notes">
+            <p>📋 审核备注: ⭐ 重点推荐：15种量化规格最全</p>
+        </div>
+        <div class="model-links">
+            <a href="https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-page" id="model-fadedredstar-ministral-3-8b-reasoning-2512-heretic-gguf">
+        <div class="model-header">
+            <span class="model-number">3</span>
+            <h2 class="model-title">FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF</h2>
+            <p class="model-author">by FadedRedStar</p>
+        </div>
+        
+        <div class="model-meta">
+            <span class="meta-item">⬇️ 456 下载</span>
+            <span class="meta-item">❤️ 0 点赞</span>
+            <span class="meta-item">📈 热度: 0.0</span>
+            <span class="meta-item">🏷️ image-text-to-text</span>
+            <span class="risk-badge risk-medium">⚡ 中等风险</span>
+        </div>
+        
+        <div class="model-description">
+            <p>Ministral-3-8B-Reasoning 是Mistral AI推出的8B参数推理专用模型，由FadedRedStar量化为GGUF格式。注意：此模型带有heretic标记，表示已去除部分安全对齐限制（abliterated），适合研究、角色扮演和无限制对话场景。提供4种量化规格（Q4/Q5/Q8/FP16），另有BF16多模态投影文件（826MB）。支持文本生成、逻辑推理和视觉理解任务。已获456次下载。建议有经验的用户使用。</p>
+        </div>
+        
+
+        <div class="model-summary">
+            <h3>📝 能力介绍</h3>
+            <p>Ministral-3-8B-Reasoning 是Mistral AI推出的8B参数推理专用模型，由FadedRedStar量化为GGUF格式。注意：此模型带有heretic标记，表示已去除部分安全对齐限制（abliterated），适合研究、角色扮演和无限制对话场景。提供4种量化规格（Q4/Q5/Q8/FP16），另有BF16多模态投影文件（826MB）。支持文本生成、逻辑推理和视觉理解任务。已获456次下载。建议有经验的用户使用。</p>
+        </div>
+        <div class="model-tags">
+            <span class="tag">text-generation</span><span class="tag">multimodal</span><span class="tag">vision</span><span class="tag">reasoning</span><span class="tag">math</span><span class="tag">stem</span><span class="tag">agentic</span>
+        </div>
+        
+        <div class="variants-section">
+            <h3>📦 GGUF量化规格</h3>
+            <table class="variants-table">
+                <thead>
+                    <tr>
+                        <th>量化版本</th>
+                        <th>大小</th>
+                        <th>文件</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="variant-row">
+            <td class="quant-badge">Q4_K_M</td>
+            <td>4.84 GB</td>
+            <td><a href="https://huggingface.co//blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q4_K_M.gguf" target="_blank" class="file-link">📄 Ministral-3-8B-Reasoning-2512-heretic-Q4_K_M.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q8_0</td>
+            <td>8.41 GB</td>
+            <td><a href="https://huggingface.co//blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf" target="_blank" class="file-link">📄 Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">FP16</td>
+            <td>826.51 MB</td>
+            <td><a href="https://huggingface.co//blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf" target="_blank" class="file-link">📄 mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q8_0</td>
+            <td>447.76 MB</td>
+            <td><a href="https://huggingface.co//blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf" target="_blank" class="file-link">📄 mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <div class="review-notes">
+            <p>📋 审核备注: ⚠️ 去对齐版本，仅推荐高级用户使用</p>
+        </div>
+        <div class="model-links">
+            <a href="https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-page" id="model-athrael-soju-t-176-hydraqwen-3.5-0.8b-gguf">
+        <div class="model-header">
+            <span class="model-number">4</span>
+            <h2 class="model-title">athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF</h2>
+            <p class="model-author">by athrael-soju</p>
+        </div>
+        
+        <div class="model-meta">
+            <span class="meta-item">⬇️ 0 下载</span>
+            <span class="meta-item">❤️ 0 点赞</span>
+            <span class="meta-item">📈 热度: 0.0</span>
+            
+            <span class="risk-badge risk-low">✅ 低风险</span>
+        </div>
+        
+        <div class="model-description">
+            <p>HydraQwen-3.5-0.8B 是基于阿里巴巴通义千问（Qwen）架构的超轻量级语言模型（约800M参数），专为资源受限场景优化。亮点：仅195MB（Q5_K_M）即可运行，支持中文和英文双语任务。提供4种量化规格，涵盖FP16 LoRA适配器（82MB）到Q6_K高精度版本。擅长代码生成、数学计算、知识问答和长文本理解。Apache 2.0开源许可，可自由商用。非常适合手机端和IoT设备部署。</p>
+        </div>
+        
+
+        <div class="model-summary">
+            <h3>📝 能力介绍</h3>
+            <p>HydraQwen-3.5-0.8B 是基于阿里巴巴通义千问（Qwen）架构的超轻量级语言模型（约800M参数），专为资源受限场景优化。亮点：仅195MB（Q5_K_M）即可运行，支持中文和英文双语任务。提供4种量化规格，涵盖FP16 LoRA适配器（82MB）到Q6_K高精度版本。擅长代码生成、数学计算、知识问答和长文本理解。Apache 2.0开源许可，可自由商用。非常适合手机端和IoT设备部署。</p>
+        </div>
+        <div class="model-tags">
+            <span class="tag">base_model:athrael-soju/t-176-HydraQwen-3.5-0.8B</span><span class="tag">base_model:quantized:athrael-soju/t-176-HydraQwen-3.5-0.8B</span><span class="tag">license:apache-2.0</span><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span>
+        </div>
+        
+        <div class="variants-section">
+            <h3>📦 GGUF量化规格</h3>
+            <table class="variants-table">
+                <thead>
+                    <tr>
+                        <th>量化版本</th>
+                        <th>大小</th>
+                        <th>文件</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="variant-row">
+            <td class="quant-badge">Q5_K_M</td>
+            <td>551.22 MB</td>
+            <td><a href="https://huggingface.co//blob/main/hydra-base-q5_k_m.gguf" target="_blank" class="file-link">📄 hydra-base-q5_k_m.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">Q6_K</td>
+            <td>600.57 MB</td>
+            <td><a href="https://huggingface.co//blob/main/hydra-base-q6_k.gguf" target="_blank" class="file-link">📄 hydra-base-q6_k.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">FP16</td>
+            <td>82.59 MB</td>
+            <td><a href="https://huggingface.co//blob/main/hydra-lora-f16.gguf" target="_blank" class="file-link">📄 hydra-lora-f16.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+        <tr class="variant-row">
+            <td class="quant-badge">FP16</td>
+            <td>195.49 MB</td>
+            <td><a href="https://huggingface.co//blob/main/hydra-mmproj-f16.gguf" target="_blank" class="file-link">📄 hydra-mmproj-f16.gguf</a></td>
+            <td><a href="" target="_blank" class="dl-link">⬇️ Download</a></td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <div class="review-notes">
+            <p>📋 审核备注: ⭐ 推荐：超轻量中文模型</p>
+        </div>
+        <div class="model-links">
+            <a href="https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+
+        <!-- Empty State -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="magazine-footer">
+        <div class="footer-inner">
+            <p>📰 AI日报 GGUF量化模型快报 · 2026-07-04</p>
+            <p>数据来源: <a href="https://huggingface.co/models?search=gguf" target="_blank">HuggingFace</a> · 自动化采集与审核</p>
+            <p>项目地址: <a href="https://github.com/suifei/ai-daily-gguf-digest" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="../static/magazine.js"></script>
+</body>
+</html>

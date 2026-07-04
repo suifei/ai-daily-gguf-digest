@@ -1,0 +1,68 @@
+{
+  "repo_id": "athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF",
+  "model_name": "athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF",
+  "author": "athrael-soju",
+  "tags": [
+    "gguf",
+    "base_model:athrael-soju/t-176-HydraQwen-3.5-0.8B",
+    "base_model:quantized:athrael-soju/t-176-HydraQwen-3.5-0.8B",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "",
+  "model_family": "athrael-soju/t-176-HydraQwen-3.5-0.8B",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-04T21:35:28.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "hydra-base-q5_k_m.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 577998816,
+      "size_human": "551.22 MB",
+      "download_url": "",
+      "browser_url": "https://huggingface.co//blob/main/hydra-base-q5_k_m.gguf"
+    },
+    {
+      "filename": "hydra-base-q6_k.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 629744096,
+      "size_human": "600.57 MB",
+      "download_url": "",
+      "browser_url": "https://huggingface.co//blob/main/hydra-base-q6_k.gguf"
+    },
+    {
+      "filename": "hydra-lora-f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 86606944,
+      "size_human": "82.59 MB",
+      "download_url": "",
+      "browser_url": "https://huggingface.co//blob/main/hydra-lora-f16.gguf"
+    },
+    {
+      "filename": "hydra-mmproj-f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 204987136,
+      "size_human": "195.49 MB",
+      "download_url": "",
+      "browser_url": "https://huggingface.co//blob/main/hydra-mmproj-f16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-04T21:41:23.557616+00:00",
+  "scrape_date": "2026-07-04",
+  "chinese_summary": "HydraQwen-3.5-0.8B 是基于阿里巴巴通义千问（Qwen）架构的超轻量级语言模型（约800M参数），专为资源受限场景优化。亮点：仅195MB（Q5_K_M）即可运行，支持中文和英文双语任务。提供4种量化规格，涵盖FP16 LoRA适配器（82MB）到Q6_K高精度版本。擅长代码生成、数学计算、知识问答和长文本理解。Apache 2.0开源许可，可自由商用。非常适合手机端和IoT设备部署。",
+  "chinese_description": "HydraQwen-3.5-0.8B 是基于阿里巴巴通义千问（Qwen）架构的超轻量级语言模型（约800M参数），专为资源受限场景优化。亮点：仅195MB（Q5_K_M）即可运行，支持中文和英文双语任务。提供4种量化规格，涵盖FP16 LoRA适配器（82MB）到Q6_K高精度版本。擅长代码生成、数学计算、知识问答和长文本理解。Apache 2.0开源许可，可自由商用。非常适合手机端和IoT设备部署。",
+  "risk_level": "low",
+  "review_notes": "⭐ 推荐：超轻量中文模型",
+  "reviewed_at": "2026-07-05T05:45:00Z",
+  "approved_at": "2026-07-04T21:47:51.926499+00:00",
+  "approved_date": "2026-07-04"
+}
