@@ -169,6 +169,16 @@
         cards.forEach(function(card) {
             cardObserver.observe(card);
         });
+        
+        // Fallback: if cards are still hidden after 2 seconds, reveal them
+        setTimeout(function() {
+            cards.forEach(function(card) {
+                if (card.style.opacity === '0') {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        }, 2000);
     }
 
     // --- Console welcome message ---
