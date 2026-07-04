@@ -30,120 +30,120 @@
       "quantization": "FP16",
       "size_bytes": 16077197856,
       "size_human": "14.97 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-f16.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-f16.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-f16.gguf"
     },
     {
       "filename": "mixdev-ya-q2_k.gguf",
       "quantization": "Q2_K",
       "size_bytes": 3178421152,
       "size_human": "2.96 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q2_k.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q2_k.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q2_k.gguf"
     },
     {
       "filename": "mixdev-ya-q3_k_l.gguf",
       "quantization": "Q3_K_L",
       "size_bytes": 4321567264,
       "size_human": "4.02 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q3_k_l.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q3_k_l.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q3_k_l.gguf"
     },
     {
       "filename": "mixdev-ya-q3_k_m.gguf",
       "quantization": "Q3_K_M",
       "size_bytes": 4018528800,
       "size_human": "3.74 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q3_k_m.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q3_k_m.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q3_k_m.gguf"
     },
     {
       "filename": "mixdev-ya-q3_k_s.gguf",
       "quantization": "Q3_K_S",
       "size_bytes": 3664110112,
       "size_human": "3.41 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q3_k_s.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q3_k_s.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q3_k_s.gguf"
     },
     {
       "filename": "mixdev-ya-q4_0.gguf",
       "quantization": "Q4_0",
       "size_bytes": 4661242528,
       "size_human": "4.34 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_0.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q4_0.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q4_0.gguf"
     },
     {
       "filename": "mixdev-ya-q4_1.gguf",
       "quantization": "Q4_1",
       "size_bytes": 5130481312,
       "size_human": "4.78 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_1.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q4_1.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q4_1.gguf"
     },
     {
       "filename": "mixdev-ya-q4_k_m.gguf",
       "quantization": "Q4_K_M",
       "size_bytes": 4920765088,
       "size_human": "4.58 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_k_m.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q4_k_m.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q4_k_m.gguf"
     },
     {
       "filename": "mixdev-ya-q4_k_s.gguf",
       "quantization": "Q4_K_S",
       "size_bytes": 4692699808,
       "size_human": "4.37 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q4_k_s.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q4_k_s.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q4_k_s.gguf"
     },
     {
       "filename": "mixdev-ya-q5_0.gguf",
       "quantization": "Q5_0",
       "size_bytes": 5599720096,
       "size_human": "5.22 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_0.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q5_0.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q5_0.gguf"
     },
     {
       "filename": "mixdev-ya-q5_1.gguf",
       "quantization": "Q5_1",
       "size_bytes": 6068958880,
       "size_human": "5.65 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_1.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q5_1.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q5_1.gguf"
     },
     {
       "filename": "mixdev-ya-q5_k_m.gguf",
       "quantization": "Q5_K_M",
       "size_bytes": 5733413536,
       "size_human": "5.34 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_k_m.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q5_k_m.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q5_k_m.gguf"
     },
     {
       "filename": "mixdev-ya-q5_k_s.gguf",
       "quantization": "Q5_K_S",
       "size_bytes": 5599720096,
       "size_human": "5.22 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q5_k_s.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q5_k_s.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q5_k_s.gguf"
     },
     {
       "filename": "mixdev-ya-q6_k.gguf",
       "quantization": "Q6_K",
       "size_bytes": 6596852512,
       "size_human": "6.14 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q6_k.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q6_k.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q6_k.gguf"
     },
     {
       "filename": "mixdev-ya-q8_0.gguf",
       "quantization": "Q8_0",
       "size_bytes": 8543148576,
       "size_human": "7.96 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mixdev-ya-q8_0.gguf"
+      "download_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/resolve/main/mixdev-ya-q8_0.gguf",
+      "browser_url": "https://huggingface.co/kirilldual0879/MIXdevAI-yandexGPT5-8B-GGUF/blob/main/mixdev-ya-q8_0.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:41:17.734035+00:00",

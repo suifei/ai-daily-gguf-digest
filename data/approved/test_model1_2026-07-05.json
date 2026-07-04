@@ -2,7 +2,10 @@
   "repo_id": "test/model1",
   "gguf_files": [
     {
-      "quantization": "Q4_K_M"
+      "filename": "test.gguf",
+      "quantization": "Q4_K_M",
+      "download_url": "https://huggingface.co/test/model1/resolve/main/test.gguf",
+      "browser_url": "https://huggingface.co/test/model1/blob/main/test.gguf"
     }
   ],
   "approved_at": "2026-07-04T22:25:45.110107+00:00",

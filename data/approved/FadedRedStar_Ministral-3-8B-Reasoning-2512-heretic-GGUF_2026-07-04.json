@@ -52,32 +52,32 @@
       "quantization": "Q4_K_M",
       "size_bytes": 5198385440,
       "size_human": "4.84 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q4_K_M.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/resolve/main/Ministral-3-8B-Reasoning-2512-heretic-Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q4_K_M.gguf"
     },
     {
       "filename": "Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf",
       "quantization": "Q8_0",
       "size_bytes": 9028866336,
       "size_human": "8.41 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/resolve/main/Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/blob/main/Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf"
     },
     {
       "filename": "mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf",
       "quantization": "FP16",
       "size_bytes": 866654688,
       "size_human": "826.51 MB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/resolve/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-BF16.gguf"
     },
     {
       "filename": "mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf",
       "quantization": "Q8_0",
       "size_bytes": 469506528,
       "size_human": "447.76 MB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/resolve/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Ministral-3-8B-Reasoning-2512-heretic-GGUF/blob/main/mmproj-Ministral-3-8B-Reasoning-2512-heretic-Q8_0.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:41:21.405883+00:00",

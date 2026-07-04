@@ -37,8 +37,8 @@
       "quantization": "Unknown",
       "size_bytes": 2479595328,
       "size_human": "2.31 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/llama3.2-1b-medical-reasonmed-fp16.gguf"
+      "download_url": "https://huggingface.co/Rumiii/LlamaTron-RS1-Rolex/resolve/main/llama3.2-1b-medical-reasonmed-fp16.gguf",
+      "browser_url": "https://huggingface.co/Rumiii/LlamaTron-RS1-Rolex/blob/main/llama3.2-1b-medical-reasonmed-fp16.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:19:55.358431+00:00",

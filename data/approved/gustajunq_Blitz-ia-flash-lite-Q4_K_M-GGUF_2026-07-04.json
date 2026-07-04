@@ -35,8 +35,8 @@
       "quantization": "Q4_K_M",
       "size_bytes": 667815680,
       "size_human": "636.88 MB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/blitz-ia-flash-lite-q4_k_m.gguf"
+      "download_url": "https://huggingface.co/gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF/resolve/main/blitz-ia-flash-lite-q4_k_m.gguf",
+      "browser_url": "https://huggingface.co/gustajunq/Blitz-ia-flash-lite-Q4_K_M-GGUF/blob/main/blitz-ia-flash-lite-q4_k_m.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:41:16.176005+00:00",

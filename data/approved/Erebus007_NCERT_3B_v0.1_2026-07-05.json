@@ -31,8 +31,8 @@
       "quantization": "Unknown",
       "size_bytes": 2019377184,
       "size_human": "1.88 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/NCERT_3B_v0.1.gguf"
+      "download_url": "https://huggingface.co/Erebus007/NCERT_3B_v0.1/resolve/main/NCERT_3B_v0.1.gguf",
+      "browser_url": "https://huggingface.co/Erebus007/NCERT_3B_v0.1/blob/main/NCERT_3B_v0.1.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:20:19.558172+00:00",

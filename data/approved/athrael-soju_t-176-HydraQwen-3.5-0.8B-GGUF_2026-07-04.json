@@ -28,32 +28,32 @@
       "quantization": "Q5_K_M",
       "size_bytes": 577998816,
       "size_human": "551.22 MB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/hydra-base-q5_k_m.gguf"
+      "download_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/resolve/main/hydra-base-q5_k_m.gguf",
+      "browser_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/blob/main/hydra-base-q5_k_m.gguf"
     },
     {
       "filename": "hydra-base-q6_k.gguf",
       "quantization": "Q6_K",
       "size_bytes": 629744096,
       "size_human": "600.57 MB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/hydra-base-q6_k.gguf"
+      "download_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/resolve/main/hydra-base-q6_k.gguf",
+      "browser_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/blob/main/hydra-base-q6_k.gguf"
     },
     {
       "filename": "hydra-lora-f16.gguf",
       "quantization": "FP16",
       "size_bytes": 86606944,
       "size_human": "82.59 MB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/hydra-lora-f16.gguf"
+      "download_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/resolve/main/hydra-lora-f16.gguf",
+      "browser_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/blob/main/hydra-lora-f16.gguf"
     },
     {
       "filename": "hydra-mmproj-f16.gguf",
       "quantization": "FP16",
       "size_bytes": 204987136,
       "size_human": "195.49 MB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/hydra-mmproj-f16.gguf"
+      "download_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/resolve/main/hydra-mmproj-f16.gguf",
+      "browser_url": "https://huggingface.co/athrael-soju/t-176-HydraQwen-3.5-0.8B-GGUF/blob/main/hydra-mmproj-f16.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:41:23.557616+00:00",

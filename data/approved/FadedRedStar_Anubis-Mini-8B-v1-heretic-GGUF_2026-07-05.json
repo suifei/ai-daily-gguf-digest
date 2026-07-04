@@ -37,16 +37,16 @@
       "quantization": "Q4_K_M",
       "size_bytes": 4920744992,
       "size_human": "4.58 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-Q4_K_M.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q4_K_M.gguf"
     },
     {
       "filename": "Anubis-Mini-8B-v1-heretic-Q5_K_M.gguf",
       "quantization": "Q5_K_M",
       "size_bytes": 5732998688,
       "size_human": "5.34 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-Q5_K_M.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q5_K_M.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q5_K_M.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:19:47.693597+00:00",

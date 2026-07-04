@@ -39,24 +39,24 @@
       "quantization": "Unknown",
       "size_bytes": 4677999872,
       "size_human": "4.36 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf"
     },
     {
       "filename": "Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf",
       "quantization": "Q4_K_M",
       "size_bytes": 4920745216,
       "size_human": "4.58 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf"
     },
     {
       "filename": "Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf",
       "quantization": "Q5_K_M",
       "size_bytes": 5732998944,
       "size_human": "5.34 GB",
-      "download_url": "",
-      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf"
+      "download_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf",
+      "browser_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf"
     }
   ],
   "scraped_at": "2026-07-04T21:19:40.905183+00:00",
