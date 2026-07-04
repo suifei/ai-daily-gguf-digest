@@ -9,5 +9,6 @@
     }
   ],
   "approved_at": "2026-07-04T22:25:45.110107+00:00",
-  "approved_date": "2026-07-05"
+  "approved_date": "2026-07-05",
+  "model_name": "test/model1"
 }

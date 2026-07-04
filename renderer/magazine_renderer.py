@@ -57,12 +57,12 @@ def generate_magazine_html(models: list[dict], date_str: str, output_path: str) 
     generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     
     # Build TOC nav links
-    toc_prev = f'<a href="../digest-{prev_date}.html" class="toc-nav-link">← 上一期 ({prev_date})</a>' if prev_date else '<span class="toc-nav-blank">← 更早</span>'
-    toc_next = f'<a href="../digest-{next_date}.html" class="toc-nav-link">下一期 ({next_date}) →</a>' if next_date else '<span class="toc-nav-blank">更晚 →</span>'
+    toc_prev = f'<a href="/ai-daily-gguf-digest/digest-{prev_date}.html" class="toc-nav-link">← 上一期 ({prev_date})</a>' if prev_date else '<span class="toc-nav-blank">← 更早</span>'
+    toc_next = f'<a href="/ai-daily-gguf-digest/digest-{next_date}.html" class="toc-nav-link">下一期 ({next_date}) →</a>' if next_date else '<span class="toc-nav-blank">更晚 →</span>'
     
     # Build issue nav links
-    issue_prev = f'<a href="../digest-{prev_date}.html" class="issue-link prev-issue">← 上一期: {prev_date}</a>' if prev_date else '<span class="issue-link prev-issue disabled">← 上一期</span>'
-    issue_next = f'<a href="../digest-{next_date}.html" class="issue-link next-issue">下一期: {next_date} →</a>' if next_date else '<span class="issue-link next-issue disabled">下一期 →</span>'
+    issue_prev = f'<a href="/ai-daily-gguf-digest/digest-{prev_date}.html" class="issue-link prev-issue">← 上一期: {prev_date}</a>' if prev_date else '<span class="issue-link prev-issue disabled">← 上一期</span>'
+    issue_next = f'<a href="/ai-daily-gguf-digest/digest-{next_date}.html" class="issue-link next-issue">下一期: {next_date} →</a>' if next_date else '<span class="issue-link next-issue disabled">下一期 →</span>'
     
     # Empty state placeholder
     empty_state = '<div class="empty-state"><h2>📭 今日暂无新模型</h2><p>今天没有发现新的 GGUF 量化模型。</p></div>' if not models else ''
@@ -125,12 +125,17 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
     # Build GGUF variants table
     variants_html = ""
     for gguf in model.get("gguf_files", []):
+        quant = gguf.get("quantization", "Unknown")
+        size = gguf.get("size_human", "N/A")
+        filename = gguf.get("filename", "unknown.gguf")
+        browser_url = gguf.get("browser_url", "")
+        download_url = gguf.get("download_url", "")
         variants_html += f"""
         <tr class="variant-row">
-            <td class="quant-badge">{gguf['quantization']}</td>
-            <td>{gguf['size_human']}</td>
-            <td><a href="{gguf['browser_url']}" target="_blank" class="file-link">📄 {gguf['filename']}</a></td>
-            <td><a href="{gguf['download_url']}" target="_blank" class="dl-link">⬇️ Download</a></td>
+            <td class="quant-badge">{quant}</td>
+            <td>{size}</td>
+            <td><a href="{browser_url}" target="_blank" class="file-link">📄 {filename}</a></td>
+            <td><a href="{download_url}" target="_blank" class="dl-link">⬇️ Download</a></td>
         </tr>"""
     
     # Tags display
@@ -160,7 +165,7 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
     <article class="model-page" id="model-{safe_id}">
         <div class="model-header">
             <span class="model-number">{index + 1}</span>
-            <h2 class="model-title">{model['model_name']}</h2>
+            <h2 class="model-title">{model.get('model_name', repo_id)}</h2>
             <p class="model-author">by {author}</p>
         </div>
         
@@ -200,7 +205,7 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
         
 {notes_html}
         <div class="model-links">
-            <a href="{model['hf_url']}" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+            <a href="{model.get('hf_url', '')}" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
         </div>
     </article>"""
 
@@ -233,7 +238,7 @@ MAGAZINE_TEMPLATE = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>%s</title>
-    <link rel="stylesheet" href="../static/magazine.css">
+    <link rel="stylesheet" href="/ai-daily-gguf-digest/static/magazine.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -318,7 +323,7 @@ MAGAZINE_TEMPLATE = """<!DOCTYPE html>
         </div>
     </footer>
 
-    <script src="../static/magazine.js"></script>
+    <script src="/ai-daily-gguf-digest/static/magazine.js"></script>
 </body>
 </html>"""
 
@@ -331,8 +336,9 @@ def generate_index_page(history: list[dict], output_path: str) -> str:
     for entry in sorted(history, key=lambda x: x["date"], reverse=True):
         date = entry["date"]
         html_path = f"digest-{date}.html"
+        repo_prefix = "/ai-daily-gguf-digest/"
         entries_html += f"""
-        <a href="{html_path}" class="digest-entry">
+        <a href="{repo_prefix}{html_path}" class="digest-entry">
             <span class="entry-date">{date}</span>
             <span class="entry-arrow">→</span>
         </a>"""
@@ -352,7 +358,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI日报 GGUF量化模型快报 - 目录</title>
-    <link rel="stylesheet" href="static/magazine.css">
+    <link rel="stylesheet" href="/ai-daily-gguf-digest/static/magazine.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="index-page">
