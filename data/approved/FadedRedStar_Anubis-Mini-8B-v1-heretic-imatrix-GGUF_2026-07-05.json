@@ -1,0 +1,66 @@
+{
+  "repo_id": "FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF",
+  "model_name": "FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF",
+  "author": "FadedRedStar",
+  "tags": [
+    "gguf",
+    "text-generation",
+    "roleplay",
+    "creative-writing",
+    "chat",
+    "abliterated",
+    "uncensored",
+    "llama-3.3",
+    "q4_k_m",
+    "iq4_nl",
+    "imatrix",
+    "conversational",
+    "en",
+    "base_model:coder3101/Anubis-Mini-8B-v1-heretic",
+    "base_model:quantized:coder3101/Anubis-Mini-8B-v1-heretic",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us"
+  ],
+  "pipeline_tag": "text-generation",
+  "library_name": "gguf",
+  "model_family": "coder3101/Anubis-Mini-8B-v1-heretic",
+  "downloads": 703,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-04T21:18:07.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 4677999872,
+      "size_human": "4.36 GB",
+      "download_url": "",
+      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf"
+    },
+    {
+      "filename": "Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 4920745216,
+      "size_human": "4.58 GB",
+      "download_url": "",
+      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf"
+    },
+    {
+      "filename": "Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 5732998944,
+      "size_human": "5.34 GB",
+      "download_url": "",
+      "browser_url": "https://huggingface.co//blob/main/Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-04T21:19:40.905183+00:00",
+  "scrape_date": "2026-07-05",
+  "approved_at": "2026-07-04T21:20:22.579033+00:00",
+  "approved_date": "2026-07-05"
+}

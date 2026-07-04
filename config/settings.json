@@ -1,0 +1,45 @@
+{
+    "project": "AI日报 GGUF量化模型快报",
+    "version": "1.0.0",
+    "scrape": {
+        "hf_api_base": "https://huggingface.co/api",
+        "proxy": {
+            "http": "http://localhost:8080",
+            "https": "http://localhost:8080"
+        },
+        "default_limit": 100,
+        "sort_by": "lastModified",
+        "tags_filter": ["gguf"],
+        "request_timeout": 30,
+        "retry_attempts": 2,
+        "retry_delay": 5
+    },
+    "schedule": {
+        "scan_cron": "0 */1 * * *",
+        "publish_cron": "0 12 * * *",
+        "publish_timezone": "Asia/Shanghai",
+        "publish_hour_utc": 12
+    },
+    "paths": {
+        "repo_root": "/tmp/ai-daily-repo",
+        "database": "/tmp/ai-daily-repo/data/database/models.db",
+        "csv_export": "/tmp/ai-daily-repo/data/database/models.csv",
+        "pending_dir": "/tmp/ai-daily-repo/data/pending",
+        "approved_dir": "/tmp/ai-daily-repo/data/approved",
+        "dist_dir": "/tmp/ai-daily-repo/dist",
+        "static_dir": "/tmp/ai-daily-repo/static",
+        "log_dir": "/tmp/ai-daily-repo/logs"
+    },
+    "github": {
+        "owner": "suifei",
+        "repo": "ai-daily-gguf-digest",
+        "branch": "gh-pages",
+        "pages_url": "https://suifei.github.io/ai-daily-gguf-digest"
+    },
+    "display": {
+        "language": "zh-CN",
+        "font_serif": "Noto Serif SC",
+        "font_sans": "Inter",
+        "theme": "dark"
+    }
+}
