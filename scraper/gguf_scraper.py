@@ -132,12 +132,13 @@ def get_model_siblings(repo_id: str) -> list[dict]:
         return []
 
 
-def parse_gguf_files(siblings: list[dict]) -> list[dict]:
+def parse_gguf_files(siblings: list[dict], repo_id: str = "") -> list[dict]:
     """
     Parse GGUF variant files from model siblings.
     
     Args:
         siblings: List of file metadata from HuggingFace
+        repo_id: Repository ID for constructing URLs
     
     Returns:
         List of GGUF file info dicts with size, quantization level, download URL
@@ -154,13 +155,21 @@ def parse_gguf_files(siblings: list[dict]) -> list[dict]:
         # Determine quantization level from filename
         quant = extract_quantization(filename)
         
+        # Use repo_id from parameter or extract from sibling
+        actual_repo = repo_id or sibling.get("repo", {}).get("id", "")
+        
+        # Construct download URL if rurl is empty
+        download_url = rfile_url
+        if not download_url:
+            download_url = f"https://huggingface.co/{actual_repo}/resolve/main/{filename}"
+        
         gguf_files.append({
             "filename": filename,
             "quantization": quant,
             "size_bytes": size_bytes,
             "size_human": format_size(size_bytes),
-            "download_url": rfile_url,
-            "browser_url": f"https://huggingface.co/{sibling.get('repo', {}).get('id', '')}/blob/main/{filename}",
+            "download_url": download_url,
+            "browser_url": f"https://huggingface.co/{actual_repo}/blob/main/{filename}",
         })
     
     return gguf_files
@@ -324,7 +333,7 @@ def scrape_today_models(date_str: str | None = None) -> list[dict]:
         
         # Step 2: Get GGUF files for this model
         siblings = get_model_siblings(repo_id)
-        gguf_files = parse_gguf_files(siblings)
+        gguf_files = parse_gguf_files(siblings, repo_id)
         
         if not gguf_files:
             continue  # No GGUF files found
