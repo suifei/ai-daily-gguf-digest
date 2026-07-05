@@ -39,7 +39,7 @@
                 }
             });
         }, {
-            rootMargin: '-10% 0px -70% 0px',
+            rootMargin: '-30% 0px -50% 0px',
             threshold: 0
         });
 
