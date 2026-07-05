@@ -17,6 +17,14 @@ from urllib.parse import quote_plus
 
 import requests
 
+# Lazy import JA3 client (requires curl_cffi, may not be installed)
+try:
+    from scrapers.ja3_client import ja3_get
+    HAS_JA3 = True
+except ImportError:
+    HAS_JA3 = False
+    ja3_get = None
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -154,15 +162,16 @@ def llm_enrich_model(model_id, tags, pipeline_tag, card_data):
 
 
 # =====================================================================
-# Web search: reviews & news via DuckDuckGo
+# Web search: reviews & news via JA3-simulating client
 # =====================================================================
 def search_ddg(query, max_results=5):
-    """Search DuckDuckGo HTML version."""
+    """Search DuckDuckGo HTML version with JA3 fingerprint."""
     results = []
     try:
         url = f"https://html.duckduckgo.com/html/?q={quote_plus(query)}"
-        resp = requests.get(url, headers=SEARCH_HEADERS, timeout=15, **REQUESTS_KWARGS)
-        resp.raise_for_status()
+        resp = ja3_get(url, profile="chrome")
+        if resp is None or resp.status_code != 200:
+            return []
         
         html = resp.text
         
@@ -194,33 +203,33 @@ def search_ddg(query, max_results=5):
         if results:
             logger.info(f"DDG search '{query}': found {len(results)} results")
             
-    except requests.RequestException as e:
-        logger.warning(f"DDG search failed for '{query}': {e}")
     except Exception as e:
-        logger.warning(f"DDG search error for '{query}': {e}")
+        logger.warning(f"DDG search failed for '{query}': {e}")
     
     return results[:max_results]
 
 
-def search_bing(query, max_results=3):
-    """Search Bing for model reviews/news."""
+def search_bing(query, max_results=5):
+    """Search Bing with JA3 browser fingerprint to bypass anti-bot."""
     results = []
     try:
         url = f"https://www.bing.com/search?q={quote_plus(query)}&count={max_results}"
-        headers = {
-            "User-Agent": SEARCH_HEADERS["User-Agent"],
-            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-        }
-        resp = requests.get(url, headers=headers, timeout=15, **REQUESTS_KWARGS)
-        resp.raise_for_status()
+        resp = ja3_get(url, profile="chrome")
+        if resp is None or resp.status_code != 200:
+            return []
         
         html = resp.text
         
         # Bing uses <h2><a href="...">title</a></h2> for organic results
-        links = re.findall(r'<h2[^>]*>\s*<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>\s*</h2>', html, re.DOTALL)
+        links = re.findall(
+            r'<h2[^>]*>\s*<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>\s*</h2>',
+            html, re.DOTALL
+        )
         
         # Snippets in algoSnippet or general <p>
-        snippets = re.findall(r'<p[^>]*class="algoSnippet"[^>]*>(.*?)</p>', html, re.DOTALL)
+        snippets = re.findall(
+            r'<p[^>]*class="algoSnippet"[^>]*>(.*?)</p>', html, re.DOTALL
+        )
         if not snippets:
             snippets = re.findall(r'<p[^>]*>(.*?)</p>', html, re.DOTALL)
         
@@ -231,27 +240,37 @@ def search_bing(query, max_results=3):
                 results.append({
                     "title": title,
                     "snippet": snippet[:300],
-                    "url": href,  # Bing redirect URL (works fine for clicking)
+                    "url": href,  # Bing redirect URL (clicks work fine)
                 })
         
         if results:
             logger.info(f"Bing search '{query}': found {len(results)} results")
             
-    except requests.RequestException as e:
-        logger.warning(f"Bing search failed for '{query}': {e}")
     except Exception as e:
-        logger.warning(f"Bing search error for '{query}': {e}")
+        logger.warning(f"Bing search failed for '{query}': {e}")
     
     return results[:max_results]
 
 
 def search_model_reviews_and_news(model_name, model_id):
-    """Search for reviews and news about a model using LLM.
+    """Search for reviews and news about a model.
     
-    Since web search engines (DDG/Bing) may be blocked, we use LLM
-    to generate relevant review/news links based on the model info.
+    Priority: 1) JA3 web search (Bing/DDG) → 2) LLM-generated links
     """
-    # Build context for LLM
+    # Try JA3 web search first (Bing)
+    results = search_bing(f"{model_name} review benchmark", max_results=5)
+    
+    if results:
+        logger.info(f"Web search for '{model_name}': found {len(results)} results")
+        return results
+    
+    # Fallback to LLM-generated links
+    logger.info(f"Web search returned 0 for '{model_name}', trying LLM...")
+    return _llm_search_links(model_name, model_id)
+
+
+def _llm_search_links(model_name, model_id):
+    """Generate review/news links via LLM as fallback."""
     context_parts = [f"模型名称: {model_name}", f"模型ID: {model_id}"]
     context = '\n'.join(context_parts)
     

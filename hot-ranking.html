@@ -270,7 +270,7 @@
         <a href="https://github.com/suifei/ai-daily-gguf-digest" class="toolbar-btn github-btn" target="_blank" title="GitHub 仓库" aria-label="GitHub 仓库">
             <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
         </a>
-        <a href="/" class="toolbar-btn" title="返回首页" aria-label="返回首页">
+        <a href="./" class="toolbar-btn" title="返回首页" aria-label="返回首页">
             <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
         </a>
         <button class="toolbar-btn" onclick="window.scrollTo({{top:0,behavior:'smooth'}})" title="回到顶部" aria-label="回到顶部">
@@ -291,7 +291,7 @@
         <div class="hot-ranking-meta">
             <span>30 个热门模型</span>
             <span>综合下载量与点赞数</span>
-            <span>最后更新: 2026-07-05 12:04 UTC</span>
+            <span>最后更新: 2026-07-05 12:41 UTC</span>
         </div>
     </header>
 
@@ -301,43 +301,25 @@
     <article class="hot-model-card" id="model-1">
         <div class="hot-model-header">
         <div class="hot-rank-badge">1</div>
-        <h2 class="hot-model-name">Gemma-4-12B-Coder-Fable5-Composer2.5</h2>
+        <h2 class="hot-model-name">Gemma-4-12B-Coder Fable5 Composer2.5</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 651,758 下载</span>
-        <span>❤️ 2,599 赞</span>
+        <span>❤️ 2,600 赞</span>
         <span>👤 Yuxinlu1</span>
         
     </div>
-        <p class="hot-model-description">基于Google Gemma-4-12B-IT微调的代码生成专用模型，采用Apache-2.0开源协议。针对编码任务深度优化，支持复杂推理与代码生成，提供GGUF量化格式便于本地部署。</p>
+        <p class="hot-model-description">基于Google Gemma-4-12B-IT微调的编码专用模型，采用Apache-2.0开源协议。经Fable5与Composer2.5技术优化，强化代码生成、推理与思维链能力，支持GGUF格式可在本地通过llama.cpp高效部署运行。</p>
         <div class="hot-highlights">
             <h4>核心亮点</h4>
-            <ul><li>基于Gemma-4-12B-IT架构</li><li>专注代码生成与推理优化</li><li>Apache-2.0开源许可</li><li>GGUF格式支持本地运行</li><li>兼容llama.cpp等推理框架</li></ul>
+            <ul><li>基于Google Gemma-4-12B-IT基座模型微调</li><li>强化代码生成与推理能力</li><li>支持思维链(Chain-of-Thought)推理</li><li>GGUF量化格式，兼容llama.cpp本地部署</li><li>Apache-2.0宽松开源协议</li></ul>
         </div>
         <div class="hot-use-cases">
             <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">代码生成与补全</span><span class="hot-use-case">编程问题解答</span><span class="hot-use-case">代码重构建议</span><span class="hot-use-case">技术文档辅助</span></div>
+            <div class="hot-use-cases-list"><span class="hot-use-case">编程辅助与代码生成</span><span class="hot-use-case">复杂问题推理与解答</span><span class="hot-use-case">本地化大模型部署</span><span class="hot-use-case">代码审查与调试</span><span class="hot-use-case">技术文档生成</span></div>
         </div>
-        <div class="hot-related-news">Google于2025年发布Gemma-4系列模型，提供强大的基础语言理解能力，为社区微调提供了优质起点。</div>
-        <div class="hot-reviews-news">
-            <h4>📰 相关评测与新闻</h4>
-            <div class="hot-review-item">
-                <a href="https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF" target="_blank" rel="noopener">HuggingFace 模型页面 (GGUF 量化版)</a>
-                <p class="hot-review-snippet">该模型的 GGUF 量化版本页面，包含所有量化档位文件下载，支持 llama.cpp、LM Studio、Ollama 等本地推理工具。</p>
-            </div><div class="hot-review-item">
-                <a href="https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1" target="_blank" rel="noopener">HuggingFace 模型页面 (完整精度 safetensors)</a>
-                <p class="hot-review-snippet">Composer 2.5 × Fable 5 微调的完整精度 master 权重，可用于自定义量化、LoRA 继续训练或 transformers 直接加载。</p>
-            </div><div class="hot-review-item">
-                <a href="https://huggingface.co/google/gemma-4-12b-it" target="_blank" rel="noopener">Google Gemma 4 12B-IT 官方模型</a>
-                <p class="hot-review-snippet">该模型基于的原始 Gemma 4 12B-IT 指令微调模型，由 Google DeepMind 发布，支持 256K 上下文窗口和多模态输入。</p>
-            </div><div class="hot-review-item">
-                <a href="https://github.com/tau-ai/tau2-bench" target="_blank" rel="noopener">Tau2-Bench 基准测试</a>
-                <p class="hot-review-snippet">该模型在 tau2-bench 上取得 ~55% 的成绩（对比基线 ~15%），这是一个评估模型诊断→修复→验证能力的 agentic 工具使用基准。</p>
-            </div><div class="hot-review-item">
-                <a href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener">llama.cpp 本地运行指南</a>
-                <p class="hot-review-snippet">GGUF 格式的标准推理引擎，支持该模型的本地运行，可在 ~4.5GB VRAM 的统一内存设备上流畅运行量化版本。</p>
-            </div>
-        </div>
+        <div class="hot-related-news">Google于2025年发布Gemma-4系列开源语言模型，12B参数版本在保持轻量化的同时具备出色的代码和推理能力。GGUF格式由llama.cpp社区推动，已成为本地部署大模型的事实标准。</div>
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
@@ -349,39 +331,21 @@
     </div>
         <div class="hot-model-stats">
         <span>📥 220,379 下载</span>
-        <span>❤️ 3,424 赞</span>
-        <span>👤 智谱AI (Zhipu AI)</span>
+        <span>❤️ 3,425 赞</span>
+        <span>👤 智源研究院 (Zhipu AI)</span>
         
     </div>
-        <p class="hot-model-description">GLM-5.2 是智谱AI推出的最新一代混合专家（MoE）架构语言模型，支持多轮对话与文本生成。采用GLM-MoE-DSA架构，具备中英文及阿拉伯语等多语言能力，兼容Transformers与Safetensors格式，适配主流推理端点。</p>
+        <p class="hot-model-description">智源研究院推出的GLM-5.2多语言大语言模型，采用MoE架构结合DSA技术，支持中英阿三语对话与文本生成，具备强大的推理和对话能力。</p>
         <div class="hot-highlights">
             <h4>核心亮点</h4>
-            <ul><li>MoE（混合专家）架构，提升推理效率与扩展性</li><li>原生支持多轮对话与复杂任务处理</li><li>多语言支持：英语、中文、阿拉伯语</li><li>兼容Transformers与Safetensors格式，开箱即用</li><li>适配主流推理端点（endpoints_compatible）</li></ul>
+            <ul><li>采用混合专家(MoE)架构提升推理效率</li><li>支持中文、英文、阿拉伯语等多语言</li><li>专为对话和文本生成优化</li><li>兼容主流端点接口</li><li>开源MIT协议，可自由商用</li></ul>
         </div>
         <div class="hot-use-cases">
             <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">多轮对话与角色扮演</span><span class="hot-use-case">中英文内容创作与摘要</span><span class="hot-use-case">多语言问答与信息检索</span><span class="hot-use-case">代码生成与逻辑推理</span><span class="hot-use-case">企业级智能客服与助手</span></div>
+            <div class="hot-use-cases-list"><span class="hot-use-case">多语言对话助手</span><span class="hot-use-case">内容创作与文案生成</span><span class="hot-use-case">复杂推理任务</span><span class="hot-use-case">跨语言翻译与交流</span><span class="hot-use-case">企业级AI应用集成</span></div>
         </div>
-        <div class="hot-related-news">智谱AI持续迭代GLM系列模型，GLM-5系列在推理能力、多模态理解和长上下文方面均有显著提升。GLM-5.2引入DSA架构优化，进一步增强了MoE模型的训练稳定性和推理速度。</div>
-        <div class="hot-reviews-news">
-            <h4>📰 相关评测与新闻</h4>
-            <div class="hot-review-item">
-                <a href="https://z.ai/blog/glm-5.2" target="_blank" rel="noopener">GLM-5.2: Built for Long-Horizon Tasks — Official Blog Post</a>
-                <p class="hot-review-snippet">Z.ai官方技术博客，详细介绍GLM-5.2的1M token上下文能力、IndexShare稀疏注意力优化、多思考层级控制以及在各长程编码基准上的评测表现。</p>
-            </div><div class="hot-review-item">
-                <a href="https://arxiv.org/abs/2602.15763" target="_blank" rel="noopener">GLM-5: from Vibe Coding to Agentic Engineering — ArXiv Technical Report</a>
-                <p class="hot-review-snippet">GLM-5系列的完整技术报告，涵盖从Vibe Coding到Agentic Engineering的架构演进、训练方法和基准评测结果，由智谱AI研究团队撰写。</p>
-            </div><div class="hot-review-item">
-                <a href="https://arxiv.org/abs/2603.12201" target="_blank" rel="noopener">IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse — ArXiv Paper</a>
-                <p class="hot-review-snippet">GLM-5.2中IndexShare技术的学术论文，提出跨层索引复用方法加速稀疏注意力计算，在30B模型上减少75%索引计算量，实现1.82x预填充加速。</p>
-            </div><div class="hot-review-item">
-                <a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank" rel="noopener">GLM-5.2 on HuggingFace — Model Card & Weights</a>
-                <p class="hot-review-snippet">HuggingFace模型页面，包含GLM-5.2的完整模型权重下载（MIT开源许可证）、详细benchmark对比数据（AIME 2026: 99.2, FrontierSWE等）、模型卡片和社区讨论。</p>
-            </div><div class="hot-review-item">
-                <a href="https://www.z.ai" target="_blank" rel="noopener">Z.ai API Platform — GLM-5.2在线试用</a>
-                <p class="hot-review-snippet">智谱AI官方API平台，提供GLM-5.2的云端推理服务，支持文本生成、长上下文编程代理任务等，无需本地部署即可体验模型能力。</p>
-            </div>
-        </div>
+        <div class="hot-related-news">GLM系列是智源研究院的旗舰大模型产品线，GLM-5.2在之前版本基础上进一步提升了多语言能力和推理性能，相关技术细节见论文arxiv:2602.15763和arxiv:2603.12201。</div>
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
@@ -389,221 +353,129 @@
     <article class="hot-model-card" id="model-3">
         <div class="hot-model-header">
         <div class="hot-rank-badge">3</div>
-        <h2 class="hot-model-name">Shirdel Coder 9B (Claude Fable 5)</h2>
+        <h2 class="hot-model-name">EvolAI Qwen3 模型</h2>
     </div>
         <div class="hot-model-stats">
-        <span>📥 3,814 下载</span>
-        <span>❤️ 4 赞</span>
-        <span>👤 Tesleum</span>
+        <span>📥 3,020 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 EvolAI</span>
         
     </div>
-        <p class="hot-model-description">基于Qwen3.5架构的9B参数多模态视觉语言模型，融合Anthropic Claude Fable 5指令微调与Evol-Instruct-Code-80k-v1代码数据集。支持图像理解与代码生成，专为编程辅助和视觉推理任务优化，兼容llama.cpp、vLLM、Ollama等推理框架。</p>
+        <p class="hot-model-description">基于Qwen3架构的开源大语言模型，由EvolAI社区贡献并托管于Hugging Face Hub。该模型采用safetensors格式，支持高效推理与快速加载，适用于文本生成、对话理解及多领域自然语言处理任务。</p>
         <div class="hot-highlights">
             <h4>核心亮点</h4>
-            <ul><li>9B参数规模，平衡性能与部署效率</li><li>融合Claude Fable 5指令调优，对话与推理能力强</li><li>Evol-Instruct-Code-80k-v1代码专项训练，编程能力突出</li><li>支持图文多模态输入（image-text-to-text）</li><li>兼容主流推理框架：llama.cpp、vLLM、Ollama、Unsloth</li></ul>
+            <ul><li>基于Qwen3架构，继承其强大的语言理解和生成能力</li><li>使用safetensors格式，提升加载速度与安全性</li><li>社区驱动开发，持续迭代优化模型性能</li><li>支持多种NLP下游任务，通用性强</li><li>开源可商用，便于本地部署和二次开发</li></ul>
         </div>
         <div class="hot-use-cases">
             <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">代码生成与补全（结合代码注释或需求描述）</span><span class="hot-use-case">视觉代码理解（截图转代码、UI设计稿解析）</span><span class="hot-use-case">编程问答与技术文档生成</span><span class="hot-use-case">多模态推理与图像描述</span><span class="hot-use-case">本地化部署的代码助手</span></div>
+            <div class="hot-use-cases-list"><span class="hot-use-case">智能对话与问答系统</span><span class="hot-use-case">文本摘要与内容生成</span><span class="hot-use-case">代码辅助与逻辑推理</span></div>
         </div>
-        <div class="hot-related-news">Evol-Instruct-Code-80k-v1数据集由NickRosh发布，通过进化指令生成技术从少量种子提示中自动生成高质量代码训练数据，被广泛用于提升代码模型的推理与生成能力。Claude Fable系列是Anthropic在小型模型上的指令调优尝试，旨在让非旗舰模型也能获得类Claude级别的对话与推理体验。</div>
+        <div class="hot-related-news">Qwen系列模型由阿里云通义实验室研发，近年来在多个基准测试中表现优异。EvolAI作为社区项目，致力于推动Qwen模型的开放共享与本地化应用。</div>
         <div class="hot-reviews-news">
             <h4>📰 相关评测与新闻</h4>
             <div class="hot-review-item">
-                <a href="https://huggingface.co/Tesleum/shirdel-coder-9b-claude-fable-5" target="_blank" rel="noopener">Model Card - Tesleum/shirdel-coder-9b-claude-fable-5</a>
-                <p class="hot-review-snippet">Hugging Face官方模型页面，包含GGUF Q6_K量化版本下载、vLLM部署指南、训练数据集(Evol-Instruct-Code-80k-v1 + Qwen/DeepPlanning)及模型架构详情。基于Qwen3.5-9B基座模型，采用Claude Fable 5风格指令调优。</p>
+                <a href="https://huggingface.co/donate110/evolai-model-uid102" target="_blank" rel="noopener">evolai-model-uid102 - Hugging Face</a>
+                <p class="hot-review-snippet">Qwen3-based model by EvolAI on Hugging Face. Safetensors format, community likes: 1.</p>
             </div><div class="hot-review-item">
-                <a href="https://huggingface.co/Tesleum" target="_blank" rel="noopener">Tesleum组织主页 - AI模型开发团队</a>
-                <p class="hot-review-snippet">Tesleum团队介绍页，展示其专注于本地推理优化的AI模型生态，包括shirdel-coder系列模型、GGUF量化方案及社区协作方式。团队成员Mustafa Shirdel主导开发。</p>
+                <a href="https://qwenlm.github.io/blog/qwen3/" target="_blank" rel="noopener">Qwen3 Official Page - Alibaba Cloud</a>
+                <p class="hot-review-snippet">Official Qwen3 model family announcement and technical details from Alibaba's Qwen team.</p>
             </div><div class="hot-review-item">
-                <a href="https://huggingface.co/Qwen/Qwen3.5-9B" target="_blank" rel="noopener">Qwen3.5-9B基座模型 - 底层架构说明</a>
-                <p class="hot-review-snippet">本模型的基座模型Qwen3.5-9B官方页面。了解Transformer架构、注意力机制、分词器等核心技术细节，这是理解Shirdel Coder 9B能力边界的基础。</p>
+                <a href="https://huggingface.co/Qwen" target="_blank" rel="noopener">Qwen3 Models - Hugging Face</a>
+                <p class="hot-review-snippet">Hugging Face collection of all official Qwen3 models by the Qwen team.</p>
             </div><div class="hot-review-item">
-                <a href="https://huggingface.co/datasets/nickrosh/Evol-Instruct-Code-80k-v1" target="_blank" rel="noopener">Evol-Instruct-Code-80k-v1 - 训练数据集</a>
-                <p class="hot-review-snippet">该模型使用的核心代码微调数据集。包含78.3k条高质量编程指令样本，采用Evol-Instruct方法进化生成的代码任务，对模型代码生成能力起决定性作用。</p>
+                <a href="https://huggingface.co/donate110" target="_blank" rel="noopener">EvolAI on Hugging Face</a>
+                <p class="hot-review-snippet">Profile page for the EvolAI organization/model uploader on Hugging Face.</p>
             </div><div class="hot-review-item">
-                <a href="https://huggingface.co/docs/transformers/model_doc/qwen3" target="_blank" rel="noopener">Claude Fable 5指令调优方法解析</a>
-                <p class="hot-review-snippet">探索Claude Fable 5风格的指令调优技术在代码模型中的应用。了解Tesleum如何将Anthropic Claude的对话对齐风格迁移到Qwen3.5架构上，实现更自然的代码交互体验。</p>
+                <a href="https://arxiv.org/abs/2505.09388" target="_blank" rel="noopener">Qwen3 Technical Report - arXiv</a>
+                <p class="hot-review-snippet">Technical report and evaluation of the Qwen3 model family, covering architecture improvements and benchmark results.</p>
             </div>
         </div>
         <div class="hot-model-links">
-        <a href="https://huggingface.co/Tesleum/shirdel-coder-9b-claude-fable-5" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/donate110/evolai-model-uid102" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-4">
         <div class="hot-model-header">
         <div class="hot-rank-badge">4</div>
-        <h2 class="hot-model-name">Qwen 3.5 2B Reliquary</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 3,391 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 阿里巴巴通义实验室 (Alibaba Cloud)</span>
-        
-    </div>
-        <p class="hot-model-description">基于 Qwen 3.5 架构微调的轻量级 2B 参数语言模型，由 Reliquary Forge 社区项目优化。在保持小模型推理速度的同时，增强了中文理解与生成能力，适合资源受限环境部署。支持 safetensors 格式，便于快速加载。</p>
-        <div class="hot-highlights">
-            <h4>核心亮点</h4>
-            <ul><li>仅 2B 参数，推理速度快，内存占用低</li><li>针对中文场景优化，提升本地化理解与生成质量</li><li>采用 Qwen 3.5 基础架构，兼容现有生态工具链</li><li>使用 safetensors 格式，加载安全高效</li><li>适合边缘设备、嵌入式系统及低延迟推理场景</li></ul>
-        </div>
-        <div class="hot-use-cases">
-            <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">移动端或边缘设备的实时对话系统</span><span class="hot-use-case">低资源环境下的文本摘要与分类任务</span><span class="hot-use-case">中文问答机器人或客服助手</span><span class="hot-use-case">本地部署的智能写作辅助工具</span><span class="hot-use-case">物联网设备中的自然语言指令解析</span></div>
-        </div>
-        <div class="hot-related-news">Qwen 系列模型持续在开源社区获得关注，其小参数版本因高效能与多语言能力被广泛用于轻量化 AI 应用。Reliquary Forge 是专注于模型微调与优化的社区项目，致力于提升基础模型在特定语言或任务上的表现。</div>
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/ReliquaryForge/qwen3.5-2b-reliquary" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-5">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">5</div>
-        <h2 class="hot-model-name">ReasonCritic-7B-i1-GGUF</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 1,234 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 mradermacher</span>
-        
-    </div>
-        <p class="hot-model-description">ReasonCritic-7B-i1-GGUF</p>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-6">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">6</div>
-        <h2 class="hot-model-name">my-finetuned-translation-model</h2>
+        <h2 class="hot-model-name">My-Finetuned-Translation-Model</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 432 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 chetty23</span>
+        <span>👤 Chetty23</span>
         
     </div>
-        <p class="hot-model-description">my-finetuned-translation-model</p>
-        
-        
-        
+        <p class="hot-model-description">基于Google T5-small架构微调的文本到文本翻译模型，采用Apache 2.0许可证，支持文本生成与推理端点兼容，适用于多语言翻译任务。</p>
+        <div class="hot-highlights">
+            <h4>核心亮点</h4>
+            <ul><li>基于T5-small架构，轻量高效</li><li>Apache 2.0开源许可证</li><li>支持文本生成推理（TGI）</li><li>兼容Safetensors格式</li><li>微调自原始T5-small模型</li></ul>
+        </div>
+        <div class="hot-use-cases">
+            <h4>适用场景</h4>
+            <div class="hot-use-cases-list"><span class="hot-use-case">机器翻译</span><span class="hot-use-case">文本生成</span><span class="hot-use-case">自然语言处理</span><span class="hot-use-case">多语言转换</span><span class="hot-use-case">自动化翻译服务</span></div>
+        </div>
+        <div class="hot-related-news">T5（Text-to-Text Transfer Transformer）是Google提出的通用NLP预训练模型，将各种NLP任务统一为文本生成形式，在多个基准测试中表现优异。</div>
         
         <div class="hot-model-links">
         <a href="https://huggingface.co/chetty23/my-finetuned-translation-model" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
+    <article class="hot-model-card" id="model-5">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">5</div>
+        <h2 class="hot-model-name">LocateAnything 3B Cascade</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 158 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 ashpika13</span>
+        
+    </div>
+        <p class="hot-model-description">基于EAGLE架构的视觉基础模型，支持物体检测、定位和grounding任务。采用cascade策略增强特征提取能力，可处理图像中的多尺度物体检测与空间定位，适用于需要精确物体识别和位置标注的视觉理解场景。</p>
+        <div class="hot-highlights">
+            <h4>核心亮点</h4>
+            <ul><li>基于EAGLE架构</li><li>Cascade特征增强</li><li>支持物体检测与定位</li><li>Grounding能力</li><li>多尺度视觉理解</li></ul>
+        </div>
+        <div class="hot-use-cases">
+            <h4>适用场景</h4>
+            <div class="hot-use-cases-list"><span class="hot-use-case">工业质检中的缺陷定位</span><span class="hot-use-case">自动驾驶环境感知</span><span class="hot-use-case">文档OCR与版面分析</span><span class="hot-use-case">零售商品检测与追踪</span><span class="hot-use-case">医疗影像病灶定位</span></div>
+        </div>
+        <div class="hot-related-news">该模型引用了arXiv论文2605.27365和2504.07491，涉及EAGLE架构在视觉基础模型中的应用研究，代表了当前开放词汇物体检测和视觉grounding领域的前沿进展。</div>
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/ashpika13/LocateAnything-3B-cascade" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-6">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">6</div>
+        <h2 class="hot-model-name">LFM2.5-230M CoreML</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 4 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 Code and Canvas</span>
+        
+    </div>
+        <p class="hot-model-description">LFM2.5-230M是一款轻量级语言模型，专为CoreML设备端推理优化。支持safetensors格式，可在Apple设备上高效运行，适用于资源受限环境下的文本生成和理解任务。</p>
+        <div class="hot-highlights">
+            <h4>核心亮点</h4>
+            <ul><li>CoreML原生支持，Apple设备高效推理</li><li>仅230M参数，极致轻量</li><li>safetensors格式，安全快速加载</li><li>适合移动端和边缘计算部署</li><li>FP16精度，平衡性能与精度</li></ul>
+        </div>
+        <div class="hot-use-cases">
+            <h4>适用场景</h4>
+            <div class="hot-use-cases-list"><span class="hot-use-case">iOS/macOS应用内置AI功能</span><span class="hot-use-case">边缘设备上的文本处理</span><span class="hot-use-case">资源受限环境的本地推理</span><span class="hot-use-case">移动端的实时语言理解</span><span class="hot-use-case">离线AI助手</span></div>
+        </div>
+        <div class="hot-related-news">随着Apple Silicon芯片的普及，将大语言模型部署到端侧成为趋势。CoreML提供了高效的推理框架，使开发者能够在iPhone和Mac上运行本地化AI模型。</div>
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/code-and-canvas/lfm2.5-230m-coreML-fp16" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
     <article class="hot-model-card" id="model-7">
         <div class="hot-model-header">
         <div class="hot-rank-badge">7</div>
-        <h2 class="hot-model-name">TinyBrain-100M Base</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 68 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 Exnivo</span>
-        
-    </div>
-        <p class="hot-model-description">TinyBrain-100M是由Exnivo团队从头预训练的基础语言模型。该模型参数量仅为1亿，基于Llama架构，在20亿词元的英文语料上进行预训练。作为极小规模的基座模型，它主要用于教育、研究和原型验证，帮助开发者理解大语言模型的底层原理和训练过程。</p>
-        <div class="hot-highlights">
-            <h4>核心亮点</h4>
-            <ul><li>仅1亿参数的超小型语言模型，便于本地运行和快速实验</li><li>基于Llama架构设计，采用标准Transformer结构</li><li>使用20亿词元英文语料从头预训练，非微调模型</li><li>支持safetensors格式，加载速度快且内存效率高</li><li>专为教育和研究目的设计，是学习LLM架构的理想起点</li></ul>
-        </div>
-        <div class="hot-use-cases">
-            <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">语言模型教学与学术研究</span><span class="hot-use-case">快速原型开发与算法验证</span><span class="hot-use-case">资源受限环境下的基础推理测试</span></div>
-        </div>
-        <div class="hot-related-news">随着小型语言模型（SLM）在2024-2025年受到越来越多的关注，Exnivo团队推出的TinyBrain系列旨在为社区提供可复现的微型LLM基准。这类模型特别适用于理解大规模语言模型的核心机制，同时降低计算门槛。</div>
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/exnivo/tinybrain-100m-base" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-8">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">8</div>
-        <h2 class="hot-model-name">TinyBrain 100M Instruct</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 43 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 Exnivo</span>
-        
-    </div>
-        <p class="hot-model-description">TinyBrain 100M 是一个仅包含1亿参数的超小型语言模型，基于Llama架构，使用20万条指令微调数据进行SFT训练。该模型专为展示小参数模型的能力边界而设计，支持英文指令理解和文本生成任务。</p>
-        <div class="hot-highlights">
-            <h4>核心亮点</h4>
-            <ul><li>仅1亿参数，是已知最小的Llama架构模型之一</li><li>使用20万条指令数据精心微调</li><li>基于Llama架构，兼容主流推理框架</li><li>支持safetensors格式，加载速度快</li><li>适合研究小模型能力和边缘设备部署</li></ul>
-        </div>
-        <div class="hot-use-cases">
-            <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">小参数模型研究与教育演示</span><span class="hot-use-case">资源受限环境下的轻量级推理</span><span class="hot-use-case">边缘设备和移动端的本地AI应用</span><span class="hot-use-case">大模型能力的基线对比实验</span><span class="hot-use-case">模型压缩和量化技术研究</span></div>
-        </div>
-        <div class="hot-related-news">Exnivo团队专注于开发超小型语言模型，TinyBrain系列旨在探索参数效率的极限。随着对绿色AI和边缘计算的重视，小模型因其低资源消耗和高推理速度受到越来越多关注。</div>
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/exnivo/tinybrain-100m-instruct" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-9">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">9</div>
-        <h2 class="hot-model-name">MSS1.5 7.5e-06</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 25 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 omarabb315</span>
-        
-    </div>
-        <p class="hot-model-description">基于Moss TTS Delay架构的语音合成微调模型，使用7.5e-06学习率训练，支持16K采样率音频生成。采用safetensors格式，兼容自定义代码实现，适用于高质量文本转语音任务。</p>
-        <div class="hot-highlights">
-            <h4>核心亮点</h4>
-            <ul><li>支持16K采样率音频输出</li><li>集成Moss TTS Delay延迟机制</li><li>使用safetensors安全加载格式</li><li>支持自定义代码扩展</li><li>区域优化部署(US)</li></ul>
-        </div>
-        <div class="hot-use-cases">
-            <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">文本转语音合成</span><span class="hot-use-case">多语言语音生成</span><span class="hot-use-case">语音克隆与个性化</span><span class="hot-use-case">有声书朗读</span><span class="hot-use-case">智能助手语音交互</span></div>
-        </div>
-        <div class="hot-related-news">该模型由社区研究者omarabb315发布，基于Moss TTS Delay架构进行微调，针对特定语音合成任务进行了优化。</div>
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/omarabb315/MSS1.5_S2.5_L16K__7.5e-06" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-10">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">10</div>
-        <h2 class="hot-model-name">MyTes2</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 GRQ</span>
-        
-    </div>
-        <p class="hot-model-description">MyTes2是一个专注于测试与评估的AI模型，可能用于自动化测试生成、代码质量评估或模型性能基准测试。该模型在US区域部署，适用于需要本地化测试解决方案的场景。</p>
-        <div class="hot-highlights">
-            <h4>核心亮点</h4>
-            <ul><li>自动化测试生成能力</li><li>代码质量评估</li><li>模型性能基准测试</li><li>US区域部署</li><li>开源可访问</li></ul>
-        </div>
-        <div class="hot-use-cases">
-            <h4>适用场景</h4>
-            <div class="hot-use-cases-list"><span class="hot-use-case">软件测试自动化</span><span class="hot-use-case">代码质量检查</span><span class="hot-use-case">AI模型基准测试</span></div>
-        </div>
-        <div class="hot-related-news">暂无相关新闻信息</div>
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/grq/mytes2" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-11">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">11</div>
-        <h2 class="hot-model-name">EddieCheckpoints</h2>
+        <h2 class="hot-model-name">Eddie Checkpoints</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
@@ -611,7 +483,7 @@
         <span>👤 danielharkin21</span>
         
     </div>
-        <p class="hot-model-description">EddieCheckpoints</p>
+        <p class="hot-model-description">暂无详细信息。该模型由用户 danielharkin21 上传至 Hugging Face Hub，标签显示为 region:us（美国区域），但缺乏明确的模型卡片、pipeline tag 或详细描述。可能是一组用于特定任务的检查点文件，具体用途需查看模型仓库确认。</p>
         
         
         
@@ -620,9 +492,35 @@
         <a href="https://huggingface.co/danielharkin21/EddieCheckpoints" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
-    <article class="hot-model-card" id="model-12">
+    <article class="hot-model-card" id="model-8">
         <div class="hot-model-header">
-        <div class="hot-rank-badge">12</div>
+        <div class="hot-rank-badge">8</div>
+        <h2 class="hot-model-name">AGILLM 4.3</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 OpenTransformer</span>
+        
+    </div>
+        <p class="hot-model-description">AGILLM 4.3是由OpenTransformer开发的12.2亿参数语言模型，采用自回归+DiffusionBlock+MoE混合架构。模型配置d_model=1280，28层，20个注意力头，使用共享权重。目前处于训练恢复阶段，支持文本生成任务。</p>
+        <div class="hot-highlights">
+            <h4>核心亮点</h4>
+            <ul><li>创新的自回归与DiffusionBlock结合架构</li><li>MoE（混合专家）机制提升推理效率</li><li>12.2亿参数量，适合端侧部署</li><li>28层深度网络，20个注意力头</li><li>单文件实现，代码简洁便于研究</li></ul>
+        </div>
+        <div class="hot-use-cases">
+            <h4>适用场景</h4>
+            <div class="hot-use-cases-list"><span class="hot-use-case">文本生成</span><span class="hot-use-case">对话系统</span><span class="hot-use-case">语言建模</span><span class="hot-use-case">知识问答</span><span class="hot-use-case">内容创作</span></div>
+        </div>
+        <div class="hot-related-news">该模型由OpenTransformer团队持续开发中，当前处于训练检查点恢复阶段，采用FedC（联邦课程学习）策略进行训练优化，最新服务检查点为2026年7月4日部署。</div>
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/OpenTransformer/AGILLM-4.3" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-9">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">9</div>
         <h2 class="hot-model-name">image-to-ghibli</h2>
     </div>
         <div class="hot-model-stats">
@@ -640,44 +538,110 @@
         <a href="https://huggingface.co/NamanSoni78/image-to-ghibli" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
-    <article class="hot-model-card" id="model-13">
+    <article class="hot-model-card" id="model-10">
         <div class="hot-model-header">
-        <div class="hot-rank-badge">13</div>
-        <h2 class="hot-model-name">AGILLM-4.3</h2>
+        <div class="hot-rank-badge">10</div>
+        <h2 class="hot-model-name">Waxal语音识别模型</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 1 赞</span>
-        <span>👤 OpenTransformer</span>
+        <span>👤 Sulaimank</span>
         
     </div>
-        <p class="hot-model-description">AGILLM-4.3</p>
+        <p class="hot-model-description">基于wav2vec2架构的多语言语音识别模型，专为西非Waxal语言设计。采用XLSR（跨语言语音表示）技术，在仅400小时斯瓦希里语数据基础上微调，支持高准确率的语言转录。</p>
+        <div class="hot-highlights">
+            <h4>核心亮点</h4>
+            <ul><li>专为Waxal语言优化的语音识别模型</li><li>基于XLSR跨语言预训练架构</li><li>使用Apache 2.0开源许可证</li><li>支持safetensors格式高效加载</li><li>可在边缘设备部署的低资源语言方案</li></ul>
+        </div>
+        <div class="hot-use-cases">
+            <h4>适用场景</h4>
+            <div class="hot-use-cases-list"><span class="hot-use-case">Waxal语言语音转文字</span><span class="hot-use-case">低资源语言语音数据处理</span><span class="hot-use-case">非洲语言数字化保护</span><span class="hot-use-case">多语言语音识别系统扩展</span></div>
+        </div>
+        <div class="hot-related-news">该模型基于sulaimank开发的斯瓦希里语wav2vec2模型进行微调，体现了XLSR技术在低资源语言领域的广泛应用前景。随着人工智能对多语言支持的需求增长，这类特定语言的语音识别模型正变得越来越重要。</div>
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/sulaimank/xlsr-waxal-from-swahili" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-11">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">11</div>
+        <h2 class="hot-model-name">scam-guard-qwen06b</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 flowxai</span>
+        
+    </div>
+        <p class="hot-model-description">scam-guard-qwen06b，用于text-classification任务</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/OpenTransformer/AGILLM-4.3" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/flowxai/scam-guard-qwen06b" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-12">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">12</div>
+        <h2 class="hot-model-name">2607-mm</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 lundi-matin</span>
+        
+    </div>
+        <p class="hot-model-description">2607-mm</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/lundi-matin/2607-mm" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-13">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">13</div>
+        <h2 class="hot-model-name">co227</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 jervu</span>
+        
+    </div>
+        <p class="hot-model-description">co227</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/jervu/co227" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-14">
         <div class="hot-model-header">
         <div class="hot-rank-badge">14</div>
-        <h2 class="hot-model-name">xlsr-waxal-from-swahili</h2>
+        <h2 class="hot-model-name">co166</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 1 赞</span>
-        <span>👤 sulaimank</span>
+        <span>👤 jervu</span>
         
     </div>
-        <p class="hot-model-description">xlsr-waxal-from-swahili，用于automatic-speech-recognition任务</p>
+        <p class="hot-model-description">co166</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/sulaimank/xlsr-waxal-from-swahili" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/jervu/co166" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-15">
@@ -703,127 +667,127 @@
     <article class="hot-model-card" id="model-16">
         <div class="hot-model-header">
         <div class="hot-rank-badge">16</div>
-        <h2 class="hot-model-name">TEA-ASR-1.1-GGUF</h2>
+        <h2 class="hot-model-name">gemma-2b-brain-v2</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 mradermacher</span>
+        <span>👤 allapp</span>
         
     </div>
-        <p class="hot-model-description">TEA-ASR-1.1-GGUF</p>
+        <p class="hot-model-description">gemma-2b-brain-v2，用于text-generation任务</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/allapp/gemma-2b-brain-v2" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-17">
         <div class="hot-model-header">
         <div class="hot-rank-badge">17</div>
-        <h2 class="hot-model-name">Surogate-3.5-2B-GGUF</h2>
+        <h2 class="hot-model-name">tencent-ailab-embedding-zh-d200-v0.2.0-optim</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 mradermacher</span>
+        <span>👤 conanyu</span>
         
     </div>
-        <p class="hot-model-description">Surogate-3.5-2B-GGUF</p>
+        <p class="hot-model-description">tencent-ailab-embedding-zh-d200-v0.2.0-optim</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/conanyu/tencent-ailab-embedding-zh-d200-v0.2.0-optim" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-18">
         <div class="hot-model-header">
         <div class="hot-rank-badge">18</div>
-        <h2 class="hot-model-name">krea2_uwstyle_model_v1.0</h2>
+        <h2 class="hot-model-name">fuEAnGIoFR34hK8w</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 Scolpeccar76</span>
+        <span>👤 snoobvn20293</span>
         
     </div>
-        <p class="hot-model-description">krea2_uwstyle_model_v1.0，用于text-to-image任务</p>
+        <p class="hot-model-description">fuEAnGIoFR34hK8w</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/Scolpeccar76/krea2_uwstyle_model_v1.0" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/snoobvn20293/fuEAnGIoFR34hK8w" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-19">
         <div class="hot-model-header">
         <div class="hot-rank-badge">19</div>
-        <h2 class="hot-model-name">specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16</h2>
+        <h2 class="hot-model-name">AIKAR-4-omni-unquantized-i1-GGUF</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 rosgar</span>
+        <span>👤 mradermacher</span>
         
     </div>
-        <p class="hot-model-description">specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16</p>
+        <p class="hot-model-description">AIKAR-4-omni-unquantized-i1-GGUF</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/rosgar/specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-20">
         <div class="hot-model-header">
         <div class="hot-rank-badge">20</div>
-        <h2 class="hot-model-name">LFM2.5-8B-A1B-SOMPOA-heresy-GGUF</h2>
+        <h2 class="hot-model-name">Krea2_LoRAs</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 mradermacher</span>
+        <span>👤 Zabin</span>
         
     </div>
-        <p class="hot-model-description">LFM2.5-8B-A1B-SOMPOA-heresy-GGUF</p>
+        <p class="hot-model-description">Krea2_LoRAs</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/Zabin/Krea2_LoRAs" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-21">
         <div class="hot-model-header">
         <div class="hot-rank-badge">21</div>
-        <h2 class="hot-model-name">AAIKR-3.5-Pro-GGUF</h2>
+        <h2 class="hot-model-name">Huihui-Qwythos-9B-Claude-Mythos-5-1M-abliterated-AutoRound-W4A16-RTN</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 mradermacher</span>
+        <span>👤 LeaderboardModel1</span>
         
     </div>
-        <p class="hot-model-description">AAIKR-3.5-Pro-GGUF</p>
+        <p class="hot-model-description">Huihui-Qwythos-9B-Claude-Mythos-5-1M-abliterated-AutoRound-W4A16-RTN</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/LeaderboardModel1/Huihui-Qwythos-9B-Claude-Mythos-5-1M-abliterated-AutoRound-W4A16-RTN" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-22">
         <div class="hot-model-header">
         <div class="hot-rank-badge">22</div>
-        <h2 class="hot-model-name">Surogate-3.5-4B-GGUF</h2>
+        <h2 class="hot-model-name">LFM2.5-8B-A1B-SOMPOA-heresy-i1-GGUF</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
@@ -831,159 +795,79 @@
         <span>👤 mradermacher</span>
         
     </div>
-        <p class="hot-model-description">Surogate-3.5-4B-GGUF</p>
+        <p class="hot-model-description">LFM2.5-8B-A1B-SOMPOA-heresy-i1-GGUF</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-i1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-23">
         <div class="hot-model-header">
         <div class="hot-rank-badge">23</div>
-        <h2 class="hot-model-name">vit-resnet-mistral-NWPU-with-all-captioning</h2>
+        <h2 class="hot-model-name">tsfm-toto2-4m-vq-ce-native</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 swadhindas324</span>
+        <span>👤 tensorlink-dev</span>
         
     </div>
-        <p class="hot-model-description">vit-resnet-mistral-NWPU-with-all-captioning</p>
+        <p class="hot-model-description">tsfm-toto2-4m-vq-ce-native</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/swadhindas324/vit-resnet-mistral-NWPU-with-all-captioning" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/tensorlink-dev/tsfm-toto2-4m-vq-ce-native" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-24">
         <div class="hot-model-header">
         <div class="hot-rank-badge">24</div>
-        <h2 class="hot-model-name">wam_gr1_stepweight_action_argmax_p50k</h2>
+        <h2 class="hot-model-name">reasoning-sentiment-classifier-v1</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 huiwon</span>
+        <span>👤 asfahanjaved126</span>
         
     </div>
-        <p class="hot-model-description">wam_gr1_stepweight_action_argmax_p50k</p>
+        <p class="hot-model-description">reasoning-sentiment-classifier-v1</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/huiwon/wam_gr1_stepweight_action_argmax_p50k" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/asfahanjaved126/reasoning-sentiment-classifier-v1" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-25">
         <div class="hot-model-header">
         <div class="hot-rank-badge">25</div>
-        <h2 class="hot-model-name">qwen25vl-flickr8k-gguf</h2>
+        <h2 class="hot-model-name">gemma-4-12b-it-qat-q4_0-nvfp4</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 thisavros</span>
+        <span>👤 Zesales</span>
         
     </div>
-        <p class="hot-model-description">qwen25vl-flickr8k-gguf</p>
+        <p class="hot-model-description">gemma-4-12b-it-qat-q4_0-nvfp4</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/thisavros/qwen25vl-flickr8k-gguf" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/Zesales/gemma-4-12b-it-qat-q4_0-nvfp4" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-26">
         <div class="hot-model-header">
         <div class="hot-rank-badge">26</div>
-        <h2 class="hot-model-name">Qwen3.6-27B-NVFP4-mlx</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 Brooooooklyn</span>
-        
-    </div>
-        <p class="hot-model-description">Qwen3.6-27B-NVFP4-mlx，用于text-generation任务</p>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/Brooooooklyn/Qwen3.6-27B-NVFP4-mlx" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-27">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">27</div>
-        <h2 class="hot-model-name">MFV_Myfybragla</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 mullninja</span>
-        
-    </div>
-        <p class="hot-model-description">MFV_Myfybragla</p>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/mullninja/MFV_Myfybragla" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-28">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">28</div>
-        <h2 class="hot-model-name">my-comfy-loras</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 Studio97105</span>
-        
-    </div>
-        <p class="hot-model-description">my-comfy-loras</p>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/Studio97105/my-comfy-loras" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-29">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">29</div>
-        <h2 class="hot-model-name">m.i.d.e.6.1.9</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 beliyaf733</span>
-        
-    </div>
-        <p class="hot-model-description">m.i.d.e.6.1.9</p>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/beliyaf733/m.i.d.e.6.1.9" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-30">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">30</div>
-        <h2 class="hot-model-name">DropPilot-Gemma-1.0-GGUF</h2>
+        <h2 class="hot-model-name">LFM-2.5-1.2b-Instruct-roleplay-tuned-i1-GGUF</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
@@ -991,13 +875,93 @@
         <span>👤 mradermacher</span>
         
     </div>
-        <p class="hot-model-description">DropPilot-Gemma-1.0-GGUF</p>
+        <p class="hot-model-description">LFM-2.5-1.2b-Instruct-roleplay-tuned-i1-GGUF</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/mradermacher/LFM-2.5-1.2b-Instruct-roleplay-tuned-i1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-27">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">27</div>
+        <h2 class="hot-model-name">cattle-classification-models</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 manishraj7</span>
+        
+    </div>
+        <p class="hot-model-description">cattle-classification-models</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/manishraj7/cattle-classification-models" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-28">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">28</div>
+        <h2 class="hot-model-name">noir-qwen2.5-3b-GGUF</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 mradermacher</span>
+        
+    </div>
+        <p class="hot-model-description">noir-qwen2.5-3b-GGUF</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/mradermacher/noir-qwen2.5-3b-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-29">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">29</div>
+        <h2 class="hot-model-name">buEe0u1iAVl7jck0</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 snoobvn20293</span>
+        
+    </div>
+        <p class="hot-model-description">buEe0u1iAVl7jck0</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/snoobvn20293/buEe0u1iAVl7jck0" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-30">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">30</div>
+        <h2 class="hot-model-name">wavlm-large</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 kp-forks</span>
+        
+    </div>
+        <p class="hot-model-description">wavlm-large</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/kp-forks/wavlm-large" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     </div>
