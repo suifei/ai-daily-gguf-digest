@@ -31,17 +31,15 @@
     if (tocLinks.length > 0 && modelEntries.length > 0) {
         const tocObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
-                const id = entry.target.getAttribute('id');
-                const link = document.querySelector('.toc-list a[href="#' + id + '"]');
-                if (!link) return;
-
                 if (entry.isIntersecting) {
                     tocLinks.forEach(function(l) { l.classList.remove('active'); });
-                    link.classList.add('active');
+                    const id = entry.target.getAttribute('id');
+                    const link = document.querySelector('.toc-list a[href="#' + id + '"]');
+                    if (link) link.classList.add('active');
                 }
             });
         }, {
-            rootMargin: '-20% 0px -60% 0px',
+            rootMargin: '-10% 0px -70% 0px',
             threshold: 0
         });
 

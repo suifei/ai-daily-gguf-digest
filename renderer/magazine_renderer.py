@@ -122,19 +122,21 @@ def build_model_entry(model: dict, index: int, date_str: str) -> str:
     # Build quantification spec list (poetry-style, no table)
     specs_html = ""
     gguf_files = model.get("gguf_files", [])
-    for gi, gguf in enumerate(gguf_files):
-        quant = gguf.get("quantization", "Unknown")
-        size = gguf.get("size_human", "N/A")
-        filename = gguf.get("filename", "unknown.gguf")
-        browser_url = gguf.get("browser_url", "")
-        download_url = gguf.get("download_url", "")
-        specs_html += f'''<li>
-            <span class="spec-quant">{quant}</span>
-            <span class="spec-dot">·</span>
-            <span class="spec-size">{size}</span>
-            <span class="spec-dot">·</span>
-            <a href="{browser_url}" target="_blank" class="spec-link" data-copy title="复制链接">{filename}</a>
-        </li>'''
+    if gguf_files:
+        specs_items = []
+        for gi, gguf in enumerate(gguf_files):
+            quant = gguf.get("quantization", "Unknown")
+            size = gguf.get("size_human", "N/A")
+            filename = gguf.get("filename", "unknown.gguf")
+            browser_url = gguf.get("browser_url", "")
+            specs_items.append(f'''<li>
+                <span class="spec-quant">{quant}</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">{size}</span>
+                <span class="spec-dot">·</span>
+                <a href="{browser_url}" target="_blank" class="spec-link" data-copy title="复制链接">{filename}</a>
+            </li>''')
+        specs_html = '<ul class="spec-list">' + ''.join(specs_items) + '</ul>'
     
     # Tags display
     tags_html = ""
