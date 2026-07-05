@@ -35,11 +35,11 @@
         <p class="masthead-subtitle">GGUF 量化模型快报</p>
         <div class="masthead-date">2026-07-05</div>
         <div class="masthead-meta">
-            <span>3 个新模型</span>
+            <span>17 个新模型</span>
             <span>自动采集</span>
             <span>HuggingFace</span>
         </div>
-        <p class="masthead-generated">生成时间: 2026-07-05 11:01 UTC</p>
+        <p class="masthead-generated">生成时间: 2026-07-05 12:01 UTC</p>
     </header>
 
     <!-- Issue Navigation -->
@@ -55,9 +55,23 @@
         <aside class="toc-sticky">
             <div class="toc-title">目录</div>
             <ul class="toc-list">
-<li><a href="#model-sci4ai-qwen3.6-27b-ablit">sci4ai/Qwen3.6-27B-Ablit</a></li>
-<li><a href="#model-jcbtc-step-3.7-flash-rocmfpx-q3-qualityplus">jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus</a></li>
-<li><a href="#model-teleconnextions-llama-1b-ai-mentor">Teleconnextions/llama-1b-ai-mentor</a></li>
+<li><a href="#model-mradermacher-lfm2.5-8b-a1b-sompoa-heresy-gguf">mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF</a></li>
+<li><a href="#model-mradermacher-aaikr-3.5-pro-gguf">mradermacher/AAIKR-3.5-Pro-GGUF</a></li>
+<li><a href="#model-mradermacher-aikar-4-omni-unquantized-i1-gguf">mradermacher/AIKAR-4-omni-unquantized-i1-GGUF</a></li>
+<li><a href="#model-mullninja-mfv-myfybragla">mullninja/MFV_Myfybragla</a></li>
+<li><a href="#model-mradermacher-datasense-gpu-full-gguf">mradermacher/DataSense-GPU-Full-GGUF</a></li>
+<li><a href="#model-mradermacher-ray-3b-iq-llm-gguf">mradermacher/Ray-3B-IQ_LLM-GGUF</a></li>
+<li><a href="#model-zanish-labs-gemma-4-e4b-q4km-gguf">zanish-labs/gemma-4-e4b-q4km-gguf</a></li>
+<li><a href="#model-zanish-labs-gemma-4-e2b-q4km-gguf">zanish-labs/gemma-4-e2b-q4km-gguf</a></li>
+<li><a href="#model-mradermacher-drep-rl-qwen3-4b-thinking-2507-gguf">mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF</a></li>
+<li><a href="#model-mradermacher-droppilot-gemma-1.0-gguf">mradermacher/DropPilot-Gemma-1.0-GGUF</a></li>
+<li><a href="#model-mradermacher-surogate-3.5-4b-gguf">mradermacher/Surogate-3.5-4B-GGUF</a></li>
+<li><a href="#model-mradermacher-surogate-3.5-2b-gguf">mradermacher/Surogate-3.5-2B-GGUF</a></li>
+<li><a href="#model-mradermacher-tea-asr-1.1-gguf">mradermacher/TEA-ASR-1.1-GGUF</a></li>
+<li><a href="#model-rosgar-specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16">rosgar/specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16</a></li>
+<li><a href="#model-thisavros-qwen25vl-flickr8k-gguf">thisavros/qwen25vl-flickr8k-gguf</a></li>
+<li><a href="#model-cmdyc-qwen-3-1.7b-q4-0">cmdyc/Qwen-3-1.7B-Q4_0</a></li>
+<li><a href="#model-mradermacher-reasoncritic-7b-i1-gguf">mradermacher/ReasonCritic-7B-i1-GGUF</a></li>
             </ul>
             <div class="toc-nav">
                 <a href="/ai-daily-gguf-digest/digest-2026-07-04.html">← 上一期 (2026-07-04)</a>
@@ -73,9 +87,23 @@
             <button class="toc-panel-close" onclick="this.parentElement.classList.remove('open')">✕</button>
             <div class="toc-title">目录</div>
             <ul class="toc-list">
-<li><a href="#model-sci4ai-qwen3.6-27b-ablit">sci4ai/Qwen3.6-27B-Ablit</a></li>
-<li><a href="#model-jcbtc-step-3.7-flash-rocmfpx-q3-qualityplus">jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus</a></li>
-<li><a href="#model-teleconnextions-llama-1b-ai-mentor">Teleconnextions/llama-1b-ai-mentor</a></li>
+<li><a href="#model-mradermacher-lfm2.5-8b-a1b-sompoa-heresy-gguf">mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF</a></li>
+<li><a href="#model-mradermacher-aaikr-3.5-pro-gguf">mradermacher/AAIKR-3.5-Pro-GGUF</a></li>
+<li><a href="#model-mradermacher-aikar-4-omni-unquantized-i1-gguf">mradermacher/AIKAR-4-omni-unquantized-i1-GGUF</a></li>
+<li><a href="#model-mullninja-mfv-myfybragla">mullninja/MFV_Myfybragla</a></li>
+<li><a href="#model-mradermacher-datasense-gpu-full-gguf">mradermacher/DataSense-GPU-Full-GGUF</a></li>
+<li><a href="#model-mradermacher-ray-3b-iq-llm-gguf">mradermacher/Ray-3B-IQ_LLM-GGUF</a></li>
+<li><a href="#model-zanish-labs-gemma-4-e4b-q4km-gguf">zanish-labs/gemma-4-e4b-q4km-gguf</a></li>
+<li><a href="#model-zanish-labs-gemma-4-e2b-q4km-gguf">zanish-labs/gemma-4-e2b-q4km-gguf</a></li>
+<li><a href="#model-mradermacher-drep-rl-qwen3-4b-thinking-2507-gguf">mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF</a></li>
+<li><a href="#model-mradermacher-droppilot-gemma-1.0-gguf">mradermacher/DropPilot-Gemma-1.0-GGUF</a></li>
+<li><a href="#model-mradermacher-surogate-3.5-4b-gguf">mradermacher/Surogate-3.5-4B-GGUF</a></li>
+<li><a href="#model-mradermacher-surogate-3.5-2b-gguf">mradermacher/Surogate-3.5-2B-GGUF</a></li>
+<li><a href="#model-mradermacher-tea-asr-1.1-gguf">mradermacher/TEA-ASR-1.1-GGUF</a></li>
+<li><a href="#model-rosgar-specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16">rosgar/specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16</a></li>
+<li><a href="#model-thisavros-qwen25vl-flickr8k-gguf">thisavros/qwen25vl-flickr8k-gguf</a></li>
+<li><a href="#model-cmdyc-qwen-3-1.7b-q4-0">cmdyc/Qwen-3-1.7B-Q4_0</a></li>
+<li><a href="#model-mradermacher-reasoncritic-7b-i1-gguf">mradermacher/ReasonCritic-7B-i1-GGUF</a></li>
             </ul>
             <div class="toc-nav">
                 <a href="/ai-daily-gguf-digest/digest-2026-07-04.html">← 上一期 (2026-07-04)</a>
@@ -87,22 +115,1260 @@
         <div class="content">
             <div class="models-grid">
 
-    <article class="model-entry" id="model-sci4ai-qwen3.6-27b-ablit">
-        <h2 class="model-name">sci4ai/Qwen3.6-27B-Ablit</h2>
-        <p class="model-author">by sci4ai · 126 下载 · 0 赞</p>
+    <article class="model-entry" id="model-mradermacher-lfm2.5-8b-a1b-sompoa-heresy-gguf">
+        <h2 class="model-name">mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
         
-        <span class="risk-indicator high">高风险</span>
+        <span class="risk-indicator low">低风险</span>
         
-        <div class="tag-list"><span class="tag">qwen3_5_text</span><span class="tag">text-generation</span><span class="tag">abliteration</span><span class="tag">uncensored</span><span class="tag">qwen3</span><span class="tag">conversational</span><span class="tag">arxiv:2502.17420</span></div>
+        <div class="tag-list"><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
         
-        <div class="model-description"><p><strong>sci4ai/Qwen3.6-27B-Ablit</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 擅长领域：文本生成, 无限制。 提供1种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：50.11 GB ~ 50.11 GB。 已在HuggingFace获得126次下载，0个点赞。</p></div>
+        <div class="model-description"><p><strong>mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF</strong> 该模型参数量约未知，支持未知上下文窗口。 提供9种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：15.78 GB ~ 8.39 GB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.97 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.13 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.83 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.5 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.8 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.53 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">6.48 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">8.39 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">15.78 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF/blob/main/LFM2.5-8B-A1B-SOMPOA-heresy.f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">LFM2.5-8B-A1B-SOMPOA-heresy.f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/LFM2.5-8B-A1B-SOMPOA-heresy-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-aaikr-3.5-pro-gguf">
+        <h2 class="model-name">mradermacher/AAIKR-3.5-Pro-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/AAIKR-3.5-Pro-GGUF</strong> 该模型参数量约未知，支持未知上下文窗口。 提供9种量化规格(Q2~Q8)，推荐Q6_K版本在精度与体积间取得最佳平衡。 文件大小范围：1.11 GB ~ 9.86 GB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">9.86 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">12.88 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">12.37 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">11.38 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">14.4 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">21.08 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">25.02 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">769.05 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.mmproj-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.mmproj-Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.11 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF/blob/main/AAIKR-3.5-Pro.mmproj-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AAIKR-3.5-Pro.mmproj-f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/AAIKR-3.5-Pro-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-aikar-4-omni-unquantized-i1-gguf">
+        <h2 class="model-name">mradermacher/AIKAR-4-omni-unquantized-i1-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">text-generation-inference</span><span class="tag">unsloth</span><span class="tag">gemma4_unified</span><span class="tag">en</span><span class="tag">base_model:DFveloper/AIKAR-4-omni-unquantized</span><span class="tag">base_model:quantized:DFveloper/AIKAR-4-omni-unquantized</span><span class="tag">license:apache-2.0</span><span class="tag">endpoints_compatible</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/AIKAR-4-omni-unquantized-i1-GGUF</strong> 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 提供10种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：4.07 GB ~ 9.11 GB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.07 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ2_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-IQ2_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.34 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ3_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-IQ3_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.52 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ3_XXS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-IQ3_XXS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">6.5 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ4_NL.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-IQ4_NL.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.5 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.67 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">6.87 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">6.54 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">9.11 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.i1-Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">7.13 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.imatrix.gguf" target="_blank" class="spec-link" data-copy title="复制链接">AIKAR-4-omni-unquantized.imatrix.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mullninja-mfv-myfybragla">
+        <h2 class="model-name">mullninja/MFV_Myfybragla</h2>
+        <p class="model-author">by mullninja · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">keras</span><span class="tag">license:apache-2.0</span><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
+        
+        <div class="model-description"><p><strong>mullninja/MFV_Myfybragla</strong> 该模型参数量约未知，支持未知上下文窗口。 提供1种量化规格(Q2~Q8)，推荐Q6_K版本在精度与体积间取得最佳平衡。 文件大小范围：918.24 MB ~ 918.24 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">918.24 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mullninja/MFV_Myfybragla/blob/main/arbiter-1.2B-v2.0.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">arbiter-1.2B-v2.0.Q6_K.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mullninja/MFV_Myfybragla" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-datasense-gpu-full-gguf">
+        <h2 class="model-name">mradermacher/DataSense-GPU-Full-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">datasense</span><span class="tag">cudf</span><span class="tag">rapids</span><span class="tag">code-generation</span><span class="tag">gemma</span><span class="tag">en</span><span class="tag">base_model:sanjaymalladi/DataSense-GPU-Full</span><span class="tag">base_model:quantized:sanjaymalladi/DataSense-GPU-Full</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/DataSense-GPU-Full-GGUF</strong> 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 擅长领域：Gemma。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：2.78 GB ~ 939.99 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.08 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.78 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.06 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.98 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.9 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.19 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.13 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.38 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.35 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.58 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.63 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">8.67 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.f16.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">531.55 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.mmproj-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.mmproj-Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">939.99 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF/blob/main/DataSense-GPU-Full.mmproj-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DataSense-GPU-Full.mmproj-f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/DataSense-GPU-Full-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-ray-3b-iq-llm-gguf">
+        <h2 class="model-name">mradermacher/Ray-3B-IQ_LLM-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">text-generation-inference</span><span class="tag">unsloth</span><span class="tag">qwen2</span><span class="tag">en</span><span class="tag">ar</span><span class="tag">base_model:RasolKhaled/Ray-3B-IQ_LLM</span><span class="tag">base_model:quantized:RasolKhaled/Ray-3B-IQ_LLM</span><span class="tag">license:apache-2.0</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/Ray-3B-IQ_LLM-GGUF</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供12种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.19 GB ~ 5.75 GB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.63 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.19 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.59 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.48 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.35 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.8 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.71 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.07 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.02 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.36 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.06 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.75 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF/blob/main/Ray-3B-IQ_LLM.f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Ray-3B-IQ_LLM.f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/Ray-3B-IQ_LLM-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-zanish-labs-gemma-4-e4b-q4km-gguf">
+        <h2 class="model-name">zanish-labs/gemma-4-e4b-q4km-gguf</h2>
+        <p class="model-author">by zanish-labs · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">vision</span><span class="tag">multimodal</span><span class="tag">gemma</span><span class="tag">en</span><span class="tag">license:gemma</span><span class="tag">region:us</span></div>
+        
+        <div class="model-description"><p><strong>zanish-labs/gemma-4-e4b-q4km-gguf</strong> 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 擅长领域：Gemma。 提供1种量化规格(Q2~Q8)，推荐Q8_0版本在精度与体积间取得最佳平衡。 文件大小范围：533.94 MB ~ 533.94 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">533.94 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/zanish-labs/gemma-4-e4b-q4km-gguf/blob/main/mmproj-gemma-4-E4B-it-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">mmproj-gemma-4-E4B-it-Q8_0.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/zanish-labs/gemma-4-e4b-q4km-gguf" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-zanish-labs-gemma-4-e2b-q4km-gguf">
+        <h2 class="model-name">zanish-labs/gemma-4-e2b-q4km-gguf</h2>
+        <p class="model-author">by zanish-labs · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">vision</span><span class="tag">multimodal</span><span class="tag">gemma</span><span class="tag">en</span><span class="tag">license:gemma</span><span class="tag">region:us</span></div>
+        
+        <div class="model-description"><p><strong>zanish-labs/gemma-4-e2b-q4km-gguf</strong> 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 擅长领域：Gemma。 提供1种量化规格(Q2~Q8)，推荐Q8_0版本在精度与体积间取得最佳平衡。 文件大小范围：531.55 MB ~ 531.55 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">531.55 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/zanish-labs/gemma-4-e2b-q4km-gguf/blob/main/mmproj-gemma-4-E2B-it-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">mmproj-gemma-4-E2B-it-Q8_0.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/zanish-labs/gemma-4-e2b-q4km-gguf" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-drep-rl-qwen3-4b-thinking-2507-gguf">
+        <h2 class="model-name">mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">en</span><span class="tag">base_model:hahayhe/DReP-RL-Qwen3-4B-Thinking-2507</span><span class="tag">base_model:quantized:hahayhe/DReP-RL-Qwen3-4B-Thinking-2507</span><span class="tag">license:apache-2.0</span><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供12种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.67 GB ~ 8.22 GB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.32 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.67 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.24 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.09 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.91 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.53 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.42 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.94 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.88 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.38 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.37 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">8.22 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF/blob/main/DReP-RL-Qwen3-4B-Thinking-2507.f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DReP-RL-Qwen3-4B-Thinking-2507.f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/DReP-RL-Qwen3-4B-Thinking-2507-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-droppilot-gemma-1.0-gguf">
+        <h2 class="model-name">mradermacher/DropPilot-Gemma-1.0-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">en</span><span class="tag">base_model:MD-Mushfiqur123/DropPilot-Gemma-1.0</span><span class="tag">base_model:quantized:MD-Mushfiqur123/DropPilot-Gemma-1.0</span><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/DropPilot-Gemma-1.0-GGUF</strong> 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：2.78 GB ~ 939.99 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.08 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.78 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.06 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.98 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.9 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.19 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.13 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.38 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.35 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.58 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.63 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">8.67 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.f16.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">531.55 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.mmproj-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.mmproj-Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">939.99 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.mmproj-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">DropPilot-Gemma-1.0.mmproj-f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-surogate-3.5-4b-gguf">
+        <h2 class="model-name">mradermacher/Surogate-3.5-4B-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">romanian</span><span class="tag">bilingual</span><span class="tag">reasoning</span><span class="tag">dual-mode</span><span class="tag">ro</span><span class="tag">en</span><span class="tag">base_model:surogate/Surogate-3.5-4B</span><span class="tag">base_model:quantized:surogate/Surogate-3.5-4B</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/Surogate-3.5-4B-GGUF</strong> 该模型参数量约未知，支持未知上下文窗口。 擅长领域：逻辑推理。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.82 GB ~ 8.07 GB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.42 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.82 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.31 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.16 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.98 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.59 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.45 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.94 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.86 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.32 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.29 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">8.07 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.f16.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">349.9 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.mmproj-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.mmproj-Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">641.27 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF/blob/main/Surogate-3.5-4B.mmproj-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-4B.mmproj-f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/Surogate-3.5-4B-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-surogate-3.5-2b-gguf">
+        <h2 class="model-name">mradermacher/Surogate-3.5-2B-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">romanian</span><span class="tag">bilingual</span><span class="tag">reasoning</span><span class="tag">dual-mode</span><span class="tag">ro</span><span class="tag">en</span><span class="tag">base_model:surogate/Surogate-3.5-2B</span><span class="tag">base_model:quantized:surogate/Surogate-3.5-2B</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/Surogate-3.5-2B-GGUF</strong> 该模型参数量约未知，支持未知上下文窗口。 擅长领域：逻辑推理。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.08 GB ~ 637.27 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.4 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.08 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.32 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.25 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.18 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.49 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.43 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.68 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.64 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.88 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.44 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.58 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.f16.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">347.77 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.mmproj-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.mmproj-Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">637.27 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.mmproj-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Surogate-3.5-2B.mmproj-f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-tea-asr-1.1-gguf">
+        <h2 class="model-name">mradermacher/TEA-ASR-1.1-GGUF</h2>
+        <p class="model-author">by mradermacher · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">automatic-speech-recognition</span><span class="tag">taiwan-mandarin</span><span class="tag">traditional-chinese</span><span class="tag">code-switching</span><span class="tag">qwen3-asr</span><span class="tag">speech</span><span class="tag">zh</span><span class="tag">en</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/TEA-ASR-1.1-GGUF</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供13种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.03 GB ~ 968.94 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">968.94 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">741.51 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">956.76 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">895.76 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">826.82 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.03 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1010.82 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.17 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.15 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.32 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.71 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q8_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">339.23 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.mmproj-Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.mmproj-Q8_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">612.04 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.mmproj-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">TEA-ASR-1.1.mmproj-f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-rosgar-specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16">
+        <h2 class="model-name">rosgar/specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16</h2>
+        <p class="model-author">by rosgar · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
+        
+        <div class="model-description"><p><strong>rosgar/specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供1种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：8.07 GB ~ 8.07 GB。</p></div>
         
         <ul class="spec-list"><li>
                 <span class="spec-quant">FP16</span>
                 <span class="spec-dot">·</span>
-                <span class="spec-size">50.11 GB</span>
+                <span class="spec-size">8.07 GB</span>
                 <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/sci4ai/Qwen3.6-27B-Ablit/blob/main/Qwen3.6-27B-Ablit-BF16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Qwen3.6-27B-Ablit-BF16.gguf</a>
+                <a href="https://huggingface.co/rosgar/specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16/blob/main/f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/rosgar/specialist-qwen3.5-4b-lng-stc-027-001-gguf-f16" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-thisavros-qwen25vl-flickr8k-gguf">
+        <h2 class="model-name">thisavros/qwen25vl-flickr8k-gguf</h2>
+        <p class="model-author">by thisavros · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
+        
+        <div class="model-description"><p><strong>thisavros/qwen25vl-flickr8k-gguf</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供3种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.25 GB ~ 5.75 GB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.25 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/thisavros/qwen25vl-flickr8k-gguf/blob/main/mmproj-qwen25vl-flickr8k-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">mmproj-qwen25vl-flickr8k-f16.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.8 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/thisavros/qwen25vl-flickr8k-gguf/blob/main/qwen25vl-flickr8k-Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">qwen25vl-flickr8k-Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">FP16</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.75 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/thisavros/qwen25vl-flickr8k-gguf/blob/main/qwen25vl-flickr8k-f16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">qwen25vl-flickr8k-f16.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/thisavros/qwen25vl-flickr8k-gguf" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-cmdyc-qwen-3-1.7b-q4-0">
+        <h2 class="model-name">cmdyc/Qwen-3-1.7B-Q4_0</h2>
+        <p class="model-author">by cmdyc · 0 下载 · 0 赞</p>
+        
+        <span class="risk-indicator low">低风险</span>
+        
+        <div class="tag-list"><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
+        
+        <div class="model-description"><p><strong>cmdyc/Qwen-3-1.7B-Q4_0</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供1种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：5.66 MB ~ 5.66 MB。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.66 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/cmdyc/Qwen-3-1.7B-Q4_0/blob/main/vocab.gguf" target="_blank" class="spec-link" data-copy title="复制链接">vocab.gguf</a>
+            </li></ul>
+        
+        
+        
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
+        <div class="model-links">
+            <a href="https://huggingface.co/cmdyc/Qwen-3-1.7B-Q4_0" target="_blank">在 HuggingFace 查看 ↗</a>
+        </div>
+    </article>
+    <article class="model-entry" id="model-mradermacher-reasoncritic-7b-i1-gguf">
+        <h2 class="model-name">mradermacher/ReasonCritic-7B-i1-GGUF</h2>
+        <p class="model-author">by mradermacher · 1,234 下载 · 0 赞</p>
+        
+        <span class="risk-indicator high">高风险</span>
+        
+        <div class="tag-list"><span class="tag">reasoning</span><span class="tag">critic</span><span class="tag">verification</span><span class="tag">uncensored</span><span class="tag">qlora</span><span class="tag">agent</span><span class="tag">fableforge</span><span class="tag">edge</span></div>
+        
+        <div class="model-description"><p><strong>mradermacher/ReasonCritic-7B-i1-GGUF</strong> 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 擅长领域：逻辑推理, 无限制。 提供25种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.97 GB ~ 6.26 GB。 已在HuggingFace获得1,234次下载，0个点赞。</p></div>
+        
+        <ul class="spec-list"><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.1 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ1_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ1_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">1.97 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ1_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ1_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.84 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ2_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ2_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.67 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ2_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ2_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.51 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ2_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ2_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.32 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ2_XXS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ2_XXS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.63 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ3_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ3_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.53 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ3_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ3_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.38 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ3_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ3_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.14 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ3_XXS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ3_XXS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.46 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ4_NL.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ4_NL.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.25 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-IQ4_XS.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-IQ4_XS.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.06 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q2_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q2_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q2_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">2.87 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q2_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q2_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_L</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.13 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q3_K_L.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q3_K_L.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.84 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q3_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q3_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">3.51 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q3_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q3_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_0</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.46 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q4_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q4_0.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_1</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.89 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q4_1.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q4_1.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.68 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q4_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q4_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">4.47 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q4_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q4_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_M</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.45 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q5_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q5_K_M.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q5_K_S</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.33 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q5_K_S.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q5_K_S.gguf</a>
+            </li><li>
+                <span class="spec-quant">Q6_K</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">6.26 GB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.i1-Q6_K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.i1-Q6_K.gguf</a>
+            </li><li>
+                <span class="spec-quant">Unknown</span>
+                <span class="spec-dot">·</span>
+                <span class="spec-size">5.1 MB</span>
+                <span class="spec-dot">·</span>
+                <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF/blob/main/ReasonCritic-7B.imatrix.gguf" target="_blank" class="spec-link" data-copy title="复制链接">ReasonCritic-7B.imatrix.gguf</a>
             </li></ul>
         
         
@@ -110,107 +1376,7 @@
         <p class="review-note">审核备注: 模型包含不安全内容或去对齐标记，建议高级用户使用</p>
         
         <div class="model-links">
-            <a href="https://huggingface.co/sci4ai/Qwen3.6-27B-Ablit" target="_blank">在 HuggingFace 查看 ↗</a>
-        </div>
-    </article>
-    <article class="model-entry" id="model-jcbtc-step-3.7-flash-rocmfpx-q3-qualityplus">
-        <h2 class="model-name">jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus</h2>
-        <p class="model-author">by jcbtc · 0 下载 · 0 赞</p>
-        
-        <span class="risk-indicator low">低风险</span>
-        
-        <div class="tag-list"><span class="tag">llama.cpp</span><span class="tag">stepfun</span><span class="tag">step3p7</span><span class="tag">step-3.7</span><span class="tag">step-3.7-flash</span><span class="tag">mtp</span><span class="tag">speculative-decoding</span><span class="tag">rocm</span><span class="tag">vulkan</span></div>
-        
-        <div class="model-description"><p><strong>jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus</strong> 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：文本生成。 提供9种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：5.05 GB ~ 9.62 GB。</p></div>
-        
-        <ul class="spec-list"><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.39 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00001-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00001-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.62 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00002-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00002-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.6 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00003-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00003-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.62 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00004-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00004-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.62 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00005-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00005-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.62 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00006-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00006-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.6 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00007-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00007-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">9.62 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00008-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00008-of-00009.gguf</a>
-            </li><li>
-                <span class="spec-quant">Unknown</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">5.05 GB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00009-of-00009.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00009-of-00009.gguf</a>
-            </li></ul>
-        
-        
-        
-        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
-        
-        <div class="model-links">
-            <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus" target="_blank">在 HuggingFace 查看 ↗</a>
-        </div>
-    </article>
-    <article class="model-entry" id="model-teleconnextions-llama-1b-ai-mentor">
-        <h2 class="model-name">Teleconnextions/llama-1b-ai-mentor</h2>
-        <p class="model-author">by Teleconnextions · 0 下载 · 0 赞</p>
-        
-        <span class="risk-indicator low">低风险</span>
-        
-        <div class="tag-list"><span class="tag">llama</span><span class="tag">llama.cpp</span><span class="tag">unsloth</span><span class="tag">endpoints_compatible</span><span class="tag">region:us</span><span class="tag">conversational</span></div>
-        
-        <div class="model-description"><p><strong>Teleconnextions/llama-1b-ai-mentor</strong> 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：Llama基座。 提供1种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：770.28 MB ~ 770.28 MB。</p></div>
-        
-        <ul class="spec-list"><li>
-                <span class="spec-quant">Q4_K_M</span>
-                <span class="spec-dot">·</span>
-                <span class="spec-size">770.28 MB</span>
-                <span class="spec-dot">·</span>
-                <a href="https://huggingface.co/Teleconnextions/llama-1b-ai-mentor/blob/main/llama-3.2-1b-instruct.Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">llama-3.2-1b-instruct.Q4_K_M.gguf</a>
-            </li></ul>
-        
-        
-        
-        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
-        
-        <div class="model-links">
-            <a href="https://huggingface.co/Teleconnextions/llama-1b-ai-mentor" target="_blank">在 HuggingFace 查看 ↗</a>
+            <a href="https://huggingface.co/mradermacher/ReasonCritic-7B-i1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
         </div>
     </article>
             </div>

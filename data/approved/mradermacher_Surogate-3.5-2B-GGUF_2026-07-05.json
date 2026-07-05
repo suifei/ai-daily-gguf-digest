@@ -1,0 +1,154 @@
+{
+  "repo_id": "mradermacher/Surogate-3.5-2B-GGUF",
+  "model_name": "mradermacher/Surogate-3.5-2B-GGUF",
+  "author": "mradermacher",
+  "tags": [
+    "transformers",
+    "gguf",
+    "romanian",
+    "bilingual",
+    "reasoning",
+    "dual-mode",
+    "ro",
+    "en",
+    "base_model:surogate/Surogate-3.5-2B",
+    "base_model:quantized:surogate/Surogate-3.5-2B",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "transformers",
+  "model_family": "surogate/Surogate-3.5-2B",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T11:53:14.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "Surogate-3.5-2B.IQ4_XS.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 1504550112,
+      "size_human": "1.4 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.IQ4_XS.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.IQ4_XS.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q2_K.gguf",
+      "quantization": "Q2_K",
+      "size_bytes": 1157362912,
+      "size_human": "1.08 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q2_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q2_K.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q3_K_L.gguf",
+      "quantization": "Q3_K_L",
+      "size_bytes": 1413826784,
+      "size_human": "1.32 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q3_K_L.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q3_K_L.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 1346324704,
+      "size_human": "1.25 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q3_K_M.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q3_K_S.gguf",
+      "quantization": "Q3_K_S",
+      "size_bytes": 1264871648,
+      "size_human": "1.18 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q3_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q3_K_S.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 1598229728,
+      "size_human": "1.49 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q4_K_M.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q4_K_S.gguf",
+      "quantization": "Q4_K_S",
+      "size_bytes": 1532374240,
+      "size_human": "1.43 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q4_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q4_K_S.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 1804422368,
+      "size_human": "1.68 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q5_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q5_K_M.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q5_K_S.gguf",
+      "quantization": "Q5_K_S",
+      "size_bytes": 1765567712,
+      "size_human": "1.64 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q5_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q5_K_S.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q6_K.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 2023502048,
+      "size_human": "1.88 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q6_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q6_K.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 2617019616,
+      "size_human": "2.44 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.Q8_0.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 4914506976,
+      "size_human": "4.58 GB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.f16.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.mmproj-Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 364664288,
+      "size_human": "347.77 MB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.mmproj-Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.mmproj-Q8_0.gguf"
+    },
+    {
+      "filename": "Surogate-3.5-2B.mmproj-f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 668227040,
+      "size_human": "637.27 MB",
+      "download_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/resolve/main/Surogate-3.5-2B.mmproj-f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/Surogate-3.5-2B-GGUF/blob/main/Surogate-3.5-2B.mmproj-f16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T12:01:03.692981+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**mradermacher/Surogate-3.5-2B-GGUF** 该模型参数量约未知，支持未知上下文窗口。 擅长领域：逻辑推理。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.08 GB ~ 637.27 MB。",
+  "chinese_description": "**mradermacher/Surogate-3.5-2B-GGUF** 该模型参数量约未知，支持未知上下文窗口。 擅长领域：逻辑推理。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.08 GB ~ 637.27 MB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T12:01:23.751290+00:00",
+  "approved_date": "2026-07-05"
+}

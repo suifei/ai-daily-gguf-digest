@@ -1,0 +1,121 @@
+{
+  "repo_id": "mradermacher/AIKAR-4-omni-unquantized-i1-GGUF",
+  "model_name": "mradermacher/AIKAR-4-omni-unquantized-i1-GGUF",
+  "author": "mradermacher",
+  "tags": [
+    "transformers",
+    "gguf",
+    "text-generation-inference",
+    "unsloth",
+    "gemma4_unified",
+    "en",
+    "base_model:DFveloper/AIKAR-4-omni-unquantized",
+    "base_model:quantized:DFveloper/AIKAR-4-omni-unquantized",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us",
+    "imatrix",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "transformers",
+  "model_family": "DFveloper/AIKAR-4-omni-unquantized",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T11:59:56.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-IQ2_M.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 4371801728,
+      "size_human": "4.07 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-IQ2_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ2_M.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-IQ3_M.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 5733987968,
+      "size_human": "5.34 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-IQ3_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ3_M.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-IQ3_XXS.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 4849190528,
+      "size_human": "4.52 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-IQ3_XXS.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ3_XXS.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-IQ4_NL.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 6975874688,
+      "size_human": "6.5 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-IQ4_NL.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-IQ4_NL.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-Q2_K.gguf",
+      "quantization": "Q2_K",
+      "size_bytes": 4830144128,
+      "size_human": "4.5 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-Q2_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q2_K.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 6087083648,
+      "size_human": "5.67 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q3_K_M.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 7381378688,
+      "size_human": "6.87 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q4_K_M.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-Q4_K_S.gguf",
+      "quantization": "Q4_K_S",
+      "size_bytes": 7024043648,
+      "size_human": "6.54 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-Q4_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q4_K_S.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.i1-Q6_K.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 9786017408,
+      "size_human": "9.11 GB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.i1-Q6_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.i1-Q6_K.gguf"
+    },
+    {
+      "filename": "AIKAR-4-omni-unquantized.imatrix.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 7480608,
+      "size_human": "7.13 MB",
+      "download_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/resolve/main/AIKAR-4-omni-unquantized.imatrix.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/AIKAR-4-omni-unquantized-i1-GGUF/blob/main/AIKAR-4-omni-unquantized.imatrix.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T12:00:35.762674+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**mradermacher/AIKAR-4-omni-unquantized-i1-GGUF** 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 提供10种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：4.07 GB ~ 9.11 GB。",
+  "chinese_description": "**mradermacher/AIKAR-4-omni-unquantized-i1-GGUF** 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 提供10种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：4.07 GB ~ 9.11 GB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T12:01:23.689581+00:00",
+  "approved_date": "2026-07-05"
+}

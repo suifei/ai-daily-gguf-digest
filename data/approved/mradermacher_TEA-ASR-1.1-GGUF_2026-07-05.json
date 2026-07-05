@@ -1,0 +1,148 @@
+{
+  "repo_id": "mradermacher/TEA-ASR-1.1-GGUF",
+  "model_name": "mradermacher/TEA-ASR-1.1-GGUF",
+  "author": "mradermacher",
+  "tags": [
+    "transformers",
+    "gguf",
+    "automatic-speech-recognition",
+    "taiwan-mandarin",
+    "traditional-chinese",
+    "code-switching",
+    "qwen3-asr",
+    "speech",
+    "zh",
+    "en",
+    "base_model:JacobLinCool/TEA-ASR-1.1",
+    "base_model:quantized:JacobLinCool/TEA-ASR-1.1",
+    "license:mit",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "automatic-speech-recognition",
+  "library_name": "transformers",
+  "model_family": "JacobLinCool/TEA-ASR-1.1",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T11:53:14.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "TEA-ASR-1.1.IQ4_XS.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 1016011168,
+      "size_human": "968.94 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.IQ4_XS.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.IQ4_XS.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q2_K.gguf",
+      "quantization": "Q2_K",
+      "size_bytes": 777525664,
+      "size_human": "741.51 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q2_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q2_K.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q3_K_L.gguf",
+      "quantization": "Q3_K_L",
+      "size_bytes": 1003231648,
+      "size_human": "956.76 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q3_K_L.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q3_K_L.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 939268512,
+      "size_human": "895.76 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q3_K_M.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q3_K_S.gguf",
+      "quantization": "Q3_K_S",
+      "size_bytes": 866982304,
+      "size_human": "826.82 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q3_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q3_K_S.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 1107138976,
+      "size_human": "1.03 GB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q4_K_M.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q4_K_S.gguf",
+      "quantization": "Q4_K_S",
+      "size_bytes": 1059920288,
+      "size_human": "1010.82 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q4_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q4_K_S.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 1257609632,
+      "size_human": "1.17 GB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q5_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q5_K_M.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q5_K_S.gguf",
+      "quantization": "Q5_K_S",
+      "size_bytes": 1230313888,
+      "size_human": "1.15 GB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q5_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q5_K_S.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q6_K.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 1417484704,
+      "size_human": "1.32 GB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q6_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q6_K.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 1834156448,
+      "size_human": "1.71 GB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.Q8_0.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.mmproj-Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 355709856,
+      "size_human": "339.23 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.mmproj-Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.mmproj-Q8_0.gguf"
+    },
+    {
+      "filename": "TEA-ASR-1.1.mmproj-f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 641774496,
+      "size_human": "612.04 MB",
+      "download_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/resolve/main/TEA-ASR-1.1.mmproj-f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/TEA-ASR-1.1-GGUF/blob/main/TEA-ASR-1.1.mmproj-f16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T12:01:04.219138+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**mradermacher/TEA-ASR-1.1-GGUF** 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供13种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.03 GB ~ 968.94 MB。",
+  "chinese_description": "**mradermacher/TEA-ASR-1.1-GGUF** 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供13种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：1.03 GB ~ 968.94 MB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T12:01:23.760546+00:00",
+  "approved_date": "2026-07-05"
+}

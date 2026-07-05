@@ -1,0 +1,148 @@
+{
+  "repo_id": "mradermacher/DropPilot-Gemma-1.0-GGUF",
+  "model_name": "mradermacher/DropPilot-Gemma-1.0-GGUF",
+  "author": "mradermacher",
+  "tags": [
+    "transformers",
+    "gguf",
+    "en",
+    "base_model:MD-Mushfiqur123/DropPilot-Gemma-1.0",
+    "base_model:quantized:MD-Mushfiqur123/DropPilot-Gemma-1.0",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "transformers",
+  "model_family": "MD-Mushfiqur123/DropPilot-Gemma-1.0",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T11:53:14.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "DropPilot-Gemma-1.0.IQ4_XS.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 3309827904,
+      "size_human": "3.08 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.IQ4_XS.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.IQ4_XS.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q2_K.gguf",
+      "quantization": "Q2_K",
+      "size_bytes": 2989086528,
+      "size_human": "2.78 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q2_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q2_K.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q3_K_L.gguf",
+      "quantization": "Q3_K_L",
+      "size_bytes": 3282351936,
+      "size_human": "3.06 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q3_K_L.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q3_K_L.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 3201349440,
+      "size_human": "2.98 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q3_K_M.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q3_K_S.gguf",
+      "quantization": "Q3_K_S",
+      "size_bytes": 3110215488,
+      "size_human": "2.9 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q3_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q3_K_S.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 3427878720,
+      "size_human": "3.19 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q4_K_M.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q4_K_S.gguf",
+      "quantization": "Q4_K_S",
+      "size_bytes": 3365074752,
+      "size_human": "3.13 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q4_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q4_K_S.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 3630286656,
+      "size_human": "3.38 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q5_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q5_K_M.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q5_K_S.gguf",
+      "quantization": "Q5_K_S",
+      "size_bytes": 3595401024,
+      "size_human": "3.35 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q5_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q5_K_S.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q6_K.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 3845345088,
+      "size_human": "3.58 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q6_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q6_K.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 4967495488,
+      "size_human": "4.63 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.Q8_0.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 9311303488,
+      "size_human": "8.67 GB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.f16.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.mmproj-Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 557367744,
+      "size_human": "531.55 MB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.mmproj-Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.mmproj-Q8_0.gguf"
+    },
+    {
+      "filename": "DropPilot-Gemma-1.0.mmproj-f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 985653696,
+      "size_human": "939.99 MB",
+      "download_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/resolve/main/DropPilot-Gemma-1.0.mmproj-f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/DropPilot-Gemma-1.0-GGUF/blob/main/DropPilot-Gemma-1.0.mmproj-f16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T12:01:02.255769+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**mradermacher/DropPilot-Gemma-1.0-GGUF** 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：2.78 GB ~ 939.99 MB。",
+  "chinese_description": "**mradermacher/DropPilot-Gemma-1.0-GGUF** 该模型由Google开发，基于Gemini技术研究，参数量为未知。擅长多语言理解、代码生成和对话任务，开源友好。 提供14种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：2.78 GB ~ 939.99 MB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T12:01:23.731405+00:00",
+  "approved_date": "2026-07-05"
+}
