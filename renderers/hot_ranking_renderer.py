@@ -210,6 +210,42 @@ MAGAZINE_TEMPLATE = """<!DOCTYPE html>
             background: rgba(0,0,0,0.01);
         }
         
+        /* Reviews & News from web search */
+        .hot-reviews-news {
+            margin-bottom: 1.25rem;
+        }
+        .hot-reviews-news h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+        }
+        .hot-review-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        .hot-review-item:last-child {
+            border-bottom: none;
+        }
+        .hot-review-item a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1a5fb4;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        .hot-review-item a:hover {
+            text-decoration: underline;
+            color: #0d3d7a;
+        }
+        .hot-review-snippet {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin: 0;
+        }
+        
         .hot-model-links {
             margin-top: 1.25rem;
         }
@@ -345,8 +381,26 @@ def build_hot_model_card(model: dict, index: int) -> str:
             <div class="hot-use-cases-list">{use_case_items}</div>
         </div>'''
     
-    # Related news
+    # Related news (from knowledge base)
     news_html = f'<div class="hot-related-news">{related_news}</div>' if related_news else ''
+    
+    # Reviews & news links (from web search)
+    reviews_news_html = ""
+    reviews_news = model.get('reviews_news', [])
+    if reviews_news:
+        news_links = ''
+        for item in reviews_news:
+            title = item.get('title', '')
+            url = item.get('url', '#')
+            snippet = item.get('snippet', '')
+            news_links += f'''<div class="hot-review-item">
+                <a href="{url}" target="_blank" rel="noopener">{title}</a>
+                {f'<p class="hot-review-snippet">{snippet}</p>' if snippet else ''}
+            </div>'''
+        reviews_news_html = f'''<div class="hot-reviews-news">
+            <h4>📰 相关评测与新闻</h4>
+            {news_links}
+        </div>'''
     
     # Links
     links_html = f'''<div class="hot-model-links">
@@ -361,6 +415,7 @@ def build_hot_model_card(model: dict, index: int) -> str:
         {highlights_html}
         {use_cases_html}
         {news_html}
+        {reviews_news_html}
         {links_html}
     </article>'''
 

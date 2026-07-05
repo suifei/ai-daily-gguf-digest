@@ -1,28 +1,54 @@
 #!/usr/bin/env python3
 """
 热门模型榜单采集器
-采集HuggingFace最热门的模型（不限GGUF），中文化展示
+采集HuggingFace最热门的模型（不限GGUF），中文化展示，全网搜索评测/新闻
 """
 import math
 import os
 import json
+import re
 import logging
-import subprocess
+import time
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote_plus
+
+import requests
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# Proxy configuration
-PROXY_URL = "http://localhost:8080"
-os.environ["HTTPS_PROXY"] = PROXY_URL
-os.environ["HTTP_PROXY"] = PROXY_URL
-
 OUTPUT_DIR = Path(__file__).parent.parent / "dist"
 HOT_RANKING_FILE = OUTPUT_DIR / "hot-ranking.json"
 
-# 热门模型知识库 - 提供详细的中文介绍
+# ── Browser-like headers for HuggingFace ──────────────────────────────
+HF_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/125.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json",
+    "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+    "Referer": "https://huggingface.co/models",
+}
+
+# ── Browser-like headers for web search ───────────────────────────────
+SEARCH_HEADERS = {
+    "User-Agent": HF_HEADERS["User-Agent"],
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Referer": "https://html.duckduckgo.com/",
+}
+
+# ── Proxy (optional) ──────────────────────────────────────────────────
+PROXY_URL = os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY") or None
+REQUESTS_KWARGS = {"proxies": {"http": PROXY_URL, "https": PROXY_URL}} if PROXY_URL else {}
+
+
+# =====================================================================
+# Knowledge base – structured Chinese info for well-known models
+# =====================================================================
 MODEL_KNOWLEDGE_BASE = {
     # Qwen系列
     "Qwen/Qwen3-0.6B": {
@@ -257,36 +283,128 @@ MODEL_KNOWLEDGE_BASE = {
         "highlights": ["1.3B参数", "图像转视频", "高质量视频生成", "开源可商用", "边缘设备友好"],
         "use_cases": ["视频生成", "图像动画化", "内容创作", "广告制作"],
         "related_news": "LTX系列是开源视频生成模型的代表作之一，在视频质量上接近闭源模型。"
-    }
+    },
 }
 
-def fetch_trending_models(sort_by="downloads", limit=50, pipeline_tag=None):
-    """Fetch trending models from HuggingFace API via curl with proxy."""
-    params = f"sort={sort_by}&direction=-1&limit={limit}&full=true"
-    if pipeline_tag:
-        params += f"&pipeline_tag={pipeline_tag}"
-    
+
+# =====================================================================
+# HuggingFace model scraping via requests (browser-like UA)
+# =====================================================================
+def _fetch(url: str, params=None, timeout: int = 30):
+    """GET request with browser-like User-Agent. Returns parsed JSON or None."""
     try:
-        result = subprocess.run(
-            ['curl', '-x', PROXY_URL, '-s', 
-             f'https://huggingface.co/api/models?{params}'],
-            capture_output=True,
-            text=True,
-            timeout=60
+        resp = requests.get(url, headers=HF_HEADERS, params=params, timeout=timeout, **REQUESTS_KWARGS)
+        resp.raise_for_status()
+        return resp.json()
+    except requests.RequestException as e:
+        logger.warning(f"HF fetch failed [{url}]: {e}")
+        return None
+
+
+def fetch_trending_models(sort_by="downloads", limit=100):
+    """Fetch trending models from HuggingFace API via requests with browser UA."""
+    params = {"sort": sort_by, "direction": "-1", "limit": limit, "full": "true"}
+    data = _fetch("https://huggingface.co/api/models", params=params)
+    if isinstance(data, list):
+        logger.info(f"Fetched {len(data)} models sorted by {sort_by}")
+        return data
+    logger.warning(f"Unexpected response for sort={sort_by}")
+    return []
+
+
+def fetch_model_details(model_id: str) -> dict:
+    """Fetch full model details (including cardData) from HF API."""
+    data = _fetch(f"https://huggingface.co/api/models/{model_id}")
+    if isinstance(data, dict):
+        return data
+    return {}
+
+
+# =====================================================================
+# Web search: reviews & news via Google
+# =====================================================================
+def search_ddg(query, max_results=5):
+    """Search DuckDuckGo HTML version for a query and extract results.
+    
+    DuckDuckGo HTML version works without JS and is scraper-friendly.
+    """
+    results = []
+    try:
+        url = f"https://html.duckduckgo.com/html/?q={quote_plus(query)}"
+        resp = requests.get(url, headers=SEARCH_HEADERS, timeout=20, **REQUESTS_KWARGS)
+        resp.raise_for_status()
+        
+        html = resp.text
+        
+        # DDG HTML results: <a class="result__a" href="..."> + <a class="result__snippet" ...>
+        links = re.findall(
+            r'<a[^>]*class="result__a"[^>]*href="([^"]*)"[^>]*>(.*?)</a>',
+            html, re.DOTALL
+        )
+        snippets = re.findall(
+            r'<a[^>]*class="result__snippet"[^>]*>(.*?)</a>',
+            html, re.DOTALL
         )
         
-        if result.returncode != 0:
-            logger.error(f"curl failed: {result.stderr[:200]}")
-            return []
+        for (href, title), snippet in zip(links, snippets):
+            title = re.sub(r'<[^>]+>', '', title).strip()
+            snippet = re.sub(r'<[^>]+>', '', snippet).strip()
+            if title and len(title) > 5:
+                # Extract real URL from DDG redirect
+                real_url = href
+                if '/l/?uddg=' in href:
+                    real_url = href.split('/l/?uddg=')[1].split('&')[0]
+                    import urllib.parse
+                    real_url = urllib.parse.unquote(real_url)
+                
+                results.append({
+                    "title": title,
+                    "snippet": snippet[:300],
+                    "url": real_url,
+                })
         
-        models = json.loads(result.stdout)
-        logger.info(f"Fetched {len(models)} models sorted by {sort_by}")
-        return models
-        
+        if results:
+            logger.info(f"DuckDuckGo search '{query}': found {len(results)} results")
+        else:
+            logger.debug(f"DuckDuckGo search '{query}': no results extracted")
+            
+    except requests.RequestException as e:
+        logger.warning(f"DuckDuckGo search failed for '{query}': {e}")
     except Exception as e:
-        logger.error(f"Error fetching models: {e}")
-        return []
+        logger.warning(f"DuckDuckGo search parse error for '{query}': {e}")
+    
+    return results[:max_results]
 
+
+def search_model_reviews_and_news(model_name, model_id):
+    """Search for reviews and news about a model, return top results."""
+    all_results = []
+    
+    # Search queries for different angles
+    queries = [
+        f"{model_name} review",
+        f"{model_name} benchmark",
+        f"{model_name} evaluation",
+        f"{model_name} 评测",
+        f"{model_name} 新闻",
+    ]
+    
+    seen_urls = set()
+    for query in queries:
+        results = search_ddg(query, max_results=3)
+        for r in results:
+            if r["url"] not in seen_urls:
+                seen_urls.add(r["url"])
+                all_results.append(r)
+        time.sleep(0.3)  # Rate limiting
+    
+    # Limit to top results
+    return all_results[:10]
+
+
+# =====================================================================
+# Enrichment pipeline
+# =====================================================================
 def enrich_model_with_knowledge(model_data: dict) -> dict:
     """Enrich model data with Chinese knowledge base and HF API details."""
     model_id = model_data.get('modelId', '')
@@ -336,9 +454,11 @@ def enrich_model_with_knowledge(model_data: dict) -> dict:
         "hf_url": f"https://huggingface.co/{model_id}",
         "trending_rank": 0,
         "trending_score": 0,
+        "reviews_news": [],  # Will be populated below
     }
     
     return enriched
+
 
 def calculate_trending_score(model: dict) -> float:
     """Calculate a trending score based on downloads, likes, and recency."""
@@ -346,13 +466,9 @@ def calculate_trending_score(model: dict) -> float:
     likes = model.get('likes', 0)
     created = model.get('createdAt', '')
     
-    # Normalize downloads (log scale)
     log_downloads = math.log10(downloads + 1)
-    
-    # Normalize likes (log scale)
     log_likes = math.log10(likes + 1)
     
-    # Recency bonus (models created/updated recently get bonus)
     recency_bonus = 0
     if created:
         try:
@@ -362,42 +478,35 @@ def calculate_trending_score(model: dict) -> float:
                 recency_bonus = 10
             elif days_since < 90:
                 recency_bonus = 5
-        except:
+        except Exception:
             pass
     
-    # Trending score = weighted combination
     trending_score = log_downloads * 0.6 + log_likes * 0.3 + recency_bonus
-    
     return round(trending_score, 4)
 
-def get_top_models_by_metric(models: list, metric="downloads", top_n=30):
+
+def get_top_models_by_metric(models, metric="downloads", top_n=30):
     """Get top N models by a specific metric."""
     sorted_models = sorted(models, key=lambda x: x.get(metric, 0), reverse=True)
     return sorted_models[:top_n]
 
-def scrape_hot_ranking():
-    """Main function to scrape and generate hot ranking."""
+
+# =====================================================================
+# Main pipeline
+# =====================================================================
+def scrape_hot_ranking(top_n=30, search_per_model=5):
+    """Main function to scrape and generate hot ranking with web search."""
     logger.info("Starting hot ranking scrape...")
     
-    # Fetch models sorted by different metrics
+    # 1. Fetch models from HF (browser-like requests)
     all_models = []
     
-    # Get top models by downloads
-    logger.info("Fetching top models by downloads...")
-    download_models = fetch_trending_models(sort_by="downloads", limit=100)
-    all_models.extend(download_models)
+    for sort_key in ["downloads", "likes", "lastModified"]:
+        logger.info(f"Fetching top models by {sort_key}...")
+        models = fetch_trending_models(sort_by=sort_key, limit=100)
+        all_models.extend(models)
     
-    # Get top models by likes
-    logger.info("Fetching top models by likes...")
-    like_models = fetch_trending_models(sort_by="likes", limit=100)
-    all_models.extend(like_models)
-    
-    # Get top models by recent downloads
-    logger.info("Fetching top models by recent downloads...")
-    recent_models = fetch_trending_models(sort_by="lastModified", limit=100)
-    all_models.extend(recent_models)
-    
-    # Deduplicate by model ID
+    # 2. Deduplicate
     unique_models = {}
     for model in all_models:
         model_id = model.get('modelId', '')
@@ -406,36 +515,50 @@ def scrape_hot_ranking():
     
     logger.info(f"Total unique models: {len(unique_models)}")
     
-    # Calculate trending scores and sort
+    # 3. Score & rank
     scored_models = []
     for model_id, model_data in unique_models.items():
         trending_score = calculate_trending_score(model_data)
         model_data['trending_score'] = trending_score
         scored_models.append(model_data)
     
-    # Sort by trending score
     scored_models.sort(key=lambda x: x['trending_score'], reverse=True)
     
-    # Enrich with knowledge base
+    # 4. Enrich top N models
     hot_ranking = []
-    for rank, model_data in enumerate(scored_models[:30], 1):
+    for rank, model_data in enumerate(scored_models[:top_n], 1):
+        model_id = model_data.get('modelId', '')
         trending_score = model_data.get('trending_score', 0)
+        
         enriched = enrich_model_with_knowledge(model_data)
         enriched['trending_rank'] = rank
         enriched['trending_score'] = round(trending_score, 4)
+        
+        # 5. Web search for reviews & news (only for top models to save time)
+        if rank <= 10:
+            name_for_search = enriched.get('name_cn', enriched.get('name', ''))
+            logger.info(f"Searching reviews/news for #{rank} {name_for_search}...")
+            try:
+                reviews_news = search_model_reviews_and_news(name_for_search, model_id)
+                enriched['reviews_news'] = reviews_news
+                logger.info(f"  Found {len(reviews_news)} results")
+            except Exception as e:
+                logger.warning(f"  Search failed for {name_for_search}: {e}")
+        
         hot_ranking.append(enriched)
     
-    # Save to file
+    # 6. Save
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(HOT_RANKING_FILE, 'w', encoding='utf-8') as f:
         json.dump(hot_ranking, f, ensure_ascii=False, indent=2)
     
     logger.info(f"Saved hot ranking to {HOT_RANKING_FILE}")
-    logger.info(f"Top 5 models:")
+    logger.info("Top 5 models:")
     for model in hot_ranking[:5]:
         logger.info(f"  #{model['trending_rank']} {model['name_cn']} ({model['downloads']:,} downloads)")
     
     return hot_ranking
+
 
 if __name__ == "__main__":
     scrape_hot_ranking()

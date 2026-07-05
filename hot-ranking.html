@@ -193,6 +193,42 @@
             background: rgba(0,0,0,0.01);
         }
         
+        /* Reviews & News from web search */
+        .hot-reviews-news {
+            margin-bottom: 1.25rem;
+        }
+        .hot-reviews-news h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+        }
+        .hot-review-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        .hot-review-item:last-child {
+            border-bottom: none;
+        }
+        .hot-review-item a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1a5fb4;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        .hot-review-item a:hover {
+            text-decoration: underline;
+            color: #0d3d7a;
+        }
+        .hot-review-snippet {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin: 0;
+        }
+        
         .hot-model-links {
             margin-top: 1.25rem;
         }
@@ -255,7 +291,7 @@
         <div class="hot-ranking-meta">
             <span>30 个热门模型</span>
             <span>综合下载量与点赞数</span>
-            <span>最后更新: 2026-07-05 10:23 UTC</span>
+            <span>最后更新: 2026-07-05 10:48 UTC</span>
         </div>
     </header>
 
@@ -283,6 +319,28 @@
             <div class="hot-use-cases-list"><span class="hot-use-case">代码生成</span><span class="hot-use-case">代码补全</span><span class="hot-use-case">代码翻译</span><span class="hot-use-case">Bug检测</span></div>
         </div>
         <div class="hot-related-news">Gemma-4是Google在2025年推出的新一代开源模型系列，代码能力显著提升。</div>
+        <div class="hot-reviews-news">
+            <h4>📰 相关评测与新闻</h4>
+            <div class="hot-review-item">
+                <a href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fdevelopers.googleblog.com%2Fgemma%2D4%2D12b%2Dthe%2Ddeveloper%2Dguide%2F&amp;rut=f89c0fef544b99f728ce543a17a1a709df9e428ee4c3c84419a5ad19b06fa693" target="_blank" rel="noopener">Gemma 4 12B: The Developer Guide - Google Developers Blog</a>
+                <p class="hot-review-snippet">Meet Gemma 4 12B: the first medium-sized, encoder-free multimodal model capable of natively ingesting audio and video. Ideal for local AI development with 16GB VRAM, Hugging Face integrations, and drop-in local API servers.</p>
+            </div><div class="hot-review-item">
+                <a href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhuggingface.co%2Fgoogle%2Fgemma%2D4%2D12B&amp;rut=5f3b2987ebf874a32c6e66a1763fbe72183001b2f994d39bf0b961dacfc30f12" target="_blank" rel="noopener">google/gemma-4-12B · Hugging Face</a>
+                <p class="hot-review-snippet">Developed by Google DeepMind, Gemma 4 undergoes the same rigorous safety evaluations as our proprietary Gemini models. Evaluation Approach Gemma 4 models were developed in partnership with internal safety and responsible AI teams. A range of automated as well as human evaluations were conducted to h</p>
+            </div><div class="hot-review-item">
+                <a href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.xda%2Ddevelopers.com%2Ftested%2Dgoogle%2Dgemma%2D4%2D12b%2Don%2D8gb%2Dgpu%2Dand%2Ddont%2Dwant%2Dto%2Dgo%2Dback%2Dto%2Dsmaller%2Dmodels%2F&amp;rut=9253129f7276faf5b8bb07ffd1f81bf785b7cf390cc4759ae069d3d22fe2aad1" target="_blank" rel="noopener">I tested Google&#x27;s new Gemma 4 12B on my 8GB GPU, and now I don&#x27;t want ...</a>
+                <p class="hot-review-snippet">Putting Gemma 4 12B to use What a couple of tests revealed Gemma 4 12B is supposedly good for coding too, but I don&#x27;t code. So testing for me was about how it handles reasoning.</p>
+            </div><div class="hot-review-item">
+                <a href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftechsy.io%2Fen%2Fblog%2Fgemma%2D4%2D12b&amp;rut=79fc173252b7570c4ee9dc5676a466a691a98ac0b11c1f7fb8608f550681523d" target="_blank" rel="noopener">Gemma 4 12B: Benchmarks, VRAM &amp; How to Run It | TECHSY</a>
+                <p class="hot-review-snippet">Gemma 4 12B beats last year&#x27;s 27B on MMLU Pro: full benchmarks, VRAM by quantization, published tokens/sec, and the exact commands to run it locally.</p>
+            </div><div class="hot-review-item">
+                <a href="//duckduckgo.com/l/?uddg=https%3A%2F%2Flushbinary.com%2Fblog%2Fgemma%2D4%2D12b%2Ddeveloper%2Dguide%2Dbenchmarks%2Dmultimodal%2F&amp;rut=34e92be7e3a0b9c604a0d3619bd56b0014cef1dc5dcc417c852edd0b97b1b6b8" target="_blank" rel="noopener">Gemma 4 12B Developer Guide: Benchmarks &amp; Specs | Lushbinary</a>
+                <p class="hot-review-snippet">Gemma 4 12B explained: encoder-free multimodal architecture, benchmarks (77.2% MMLU Pro, beats Gemma 3 27B), 256K context &amp; local use. Updated June 2026.</p>
+            </div><div class="hot-review-item">
+                <a href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fbenchlm.ai%2Fmodels%2Fgemma%2D4%2D12b&amp;rut=9453df62eff2d9154d0c1dde544521c87a0fe110fa3c2a7a63352d3237fd765f" target="_blank" rel="noopener">Gemma 4 12B Benchmarks 2026: Scores, Rankings &amp; Performance</a>
+                <p class="hot-review-snippet">Gemma 4 12B currently has 27 published benchmark scores out of the 251 benchmarks BenchLM tracks. BenchLM only exposes non-generated public benchmark rows, so missing categories stay blank until a sourced evaluation is available.</p>
+            </div>
+        </div>
         <div class="hot-model-links">
         <a href="https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
@@ -294,7 +352,7 @@
     </div>
         <div class="hot-model-stats">
         <span>📥 220,379 下载</span>
-        <span>❤️ 3,419 赞</span>
+        <span>❤️ 3,423 赞</span>
         <span>👤 智谱AI</span>
         <span>🏷️ GLM5</span>
     </div>
@@ -308,6 +366,7 @@
             <div class="hot-use-cases-list"><span class="hot-use-case">中文对话</span><span class="hot-use-case">文本生成</span><span class="hot-use-case">代码编写</span><span class="hot-use-case">知识问答</span><span class="hot-use-case">逻辑推理</span></div>
         </div>
         <div class="hot-related-news">GLM-5是智谱AI在2025年推出的新一代开源模型系列，中文能力持续领先。</div>
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
@@ -324,6 +383,7 @@
         
     </div>
         <p class="hot-model-description">，用于text-generation任务</p>
+        
         
         
         
@@ -352,6 +412,7 @@
             <div class="hot-use-cases-list"><span class="hot-use-case">端侧推理</span><span class="hot-use-case">移动应用</span><span class="hot-use-case">实时对话</span><span class="hot-use-case">文本分类</span></div>
         </div>
         <div class="hot-related-news">Qwen3.5系列是Qwen3的升级版，在中文理解和生成能力上有显著提升。</div>
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/ReliquaryForge/qwen3.5-2b-reliquary" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
@@ -371,6 +432,7 @@
         
         
         
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/hotdogs/qwen27b-abliterated-Fable-MTP" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
@@ -378,96 +440,101 @@
     <article class="hot-model-card" id="model-6">
         <div class="hot-model-header">
         <div class="hot-rank-badge">6</div>
-        <h2 class="hot-model-name">MSP-Visual</h2>
+        <h2 class="hot-model-name">Pixtral-12B-W4A16</h2>
     </div>
         <div class="hot-model-stats">
-        <span>📥 321 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 MahmoodAnaam</span>
+        <span>📥 74 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 aleada</span>
         
     </div>
+        <p class="hot-model-description">，用于image-text-to-text任务</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/MahmoodAnaam/MSP-Visual" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/aleada/Pixtral-12B-W4A16" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-7">
         <div class="hot-model-header">
         <div class="hot-rank-badge">7</div>
-        <h2 class="hot-model-name">gvr-model</h2>
+        <h2 class="hot-model-name">Qwen3.5-4B-EU</h2>
     </div>
         <div class="hot-model-stats">
-        <span>📥 305 下载</span>
+        <span>📥 66 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 ahmedxg</span>
+        <span>👤 birgermoell</span>
         
     </div>
+        <p class="hot-model-description">，用于text-generation任务</p>
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/ahmedxg/gvr-model" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/birgermoell/Qwen3.5-4B-EU" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-8">
         <div class="hot-model-header">
         <div class="hot-rank-badge">8</div>
-        <h2 class="hot-model-name">qupus_tts_0.8Bsbaselora</h2>
+        <h2 class="hot-model-name">LTX2.3-10Eros_split</h2>
     </div>
         <div class="hot-model-stats">
-        <span>📥 93 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 Nikya</span>
+        <span>📥 0 下载</span>
+        <span>❤️ 4 赞</span>
+        <span>👤 AX1Y2JP</span>
         
     </div>
-        <p class="hot-model-description">，用于text-to-speech任务</p>
+        <p class="hot-model-description">，用于image-to-video任务</p>
+        
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/Nikya/qupus_tts_0.8Bsbaselora" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/AX1Y2JP/LTX2.3-10Eros_split" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-9">
         <div class="hot-model-header">
         <div class="hot-rank-badge">9</div>
-        <h2 class="hot-model-name">confessionRL-Qwen3-4B</h2>
+        <h2 class="hot-model-name">mytes2</h2>
     </div>
         <div class="hot-model-stats">
-        <span>📥 67 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 WilliamSheltonWu</span>
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 grq</span>
         
     </div>
+        
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/WilliamSheltonWu/confessionRL-Qwen3-4B" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/grq/mytes2" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-10">
         <div class="hot-model-header">
         <div class="hot-rank-badge">10</div>
-        <h2 class="hot-model-name">Meta-Llama-3-8B-Emotion-Recognition-MSP-Podcast</h2>
+        <h2 class="hot-model-name">image-to-ghibli</h2>
     </div>
         <div class="hot-model-stats">
-        <span>📥 4 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 junhao21</span>
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 NamanSoni78</span>
         
     </div>
+        
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/junhao21/Meta-Llama-3-8B-Emotion-Recognition-MSP-Podcast" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/NamanSoni78/image-to-ghibli" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-11">
@@ -485,6 +552,7 @@
         
         
         
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/danielharkin21/EddieCheckpoints" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
@@ -492,177 +560,26 @@
     <article class="hot-model-card" id="model-12">
         <div class="hot-model-header">
         <div class="hot-rank-badge">12</div>
-        <h2 class="hot-model-name">mytes2</h2>
+        <h2 class="hot-model-name">metacot-h200-triobj-dcpo-v3</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 1 赞</span>
-        <span>👤 grq</span>
+        <span>👤 iamseungpil</span>
         
     </div>
+        
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/grq/mytes2" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/iamseungpil/metacot-h200-triobj-dcpo-v3" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-13">
         <div class="hot-model-header">
         <div class="hot-rank-badge">13</div>
-        <h2 class="hot-model-name">AGILLM-4.3</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 OpenTransformer</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/OpenTransformer/AGILLM-4.3" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-14">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">14</div>
-        <h2 class="hot-model-name">scugnizz-1b</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 Daisuke675</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/Daisuke675/scugnizz-1b" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-15">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">15</div>
-        <h2 class="hot-model-name">co08</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 best-87</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/best-87/co08" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-16">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">16</div>
-        <h2 class="hot-model-name">co07</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 best-87</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/best-87/co07" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-17">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">17</div>
-        <h2 class="hot-model-name">image-to-ghibli</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 NamanSoni78</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/NamanSoni78/image-to-ghibli" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-18">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">18</div>
-        <h2 class="hot-model-name">co06</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 best-87</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/best-87/co06" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-19">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">19</div>
-        <h2 class="hot-model-name">co05</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 best-87</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/best-87/co05" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-20">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">20</div>
-        <h2 class="hot-model-name">co02</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 1 赞</span>
-        <span>👤 best-87</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/best-87/co02" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-21">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">21</div>
         <h2 class="hot-model-name">vla</h2>
     </div>
         <div class="hot-model-stats">
@@ -675,13 +592,94 @@
         
         
         
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/anhtld/vla" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
-    <article class="hot-model-card" id="model-22">
+    <article class="hot-model-card" id="model-14">
         <div class="hot-model-header">
-        <div class="hot-rank-badge">22</div>
+        <div class="hot-rank-badge">14</div>
+        <h2 class="hot-model-name">co166</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 jervu</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/jervu/co166" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-15">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">15</div>
+        <h2 class="hot-model-name">ppo-LunarLander-v3</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 EverVissionAI</span>
+        
+    </div>
+        <p class="hot-model-description">，用于reinforcement-learning任务</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/EverVissionAI/ppo-LunarLander-v3" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-16">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">16</div>
+        <h2 class="hot-model-name">co227</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 jervu</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/jervu/co227" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-17">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">17</div>
+        <h2 class="hot-model-name">2607-mm</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 1 赞</span>
+        <span>👤 lundi-matin</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/lundi-matin/2607-mm" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-18">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">18</div>
         <h2 class="hot-model-name">Qwen3.6-35B-A3B</h2>
     </div>
         <div class="hot-model-stats">
@@ -700,70 +698,14 @@
             <div class="hot-use-cases-list"><span class="hot-use-case">复杂推理</span><span class="hot-use-case">代码生成</span><span class="hot-use-case">长文档分析</span><span class="hot-use-case">专业领域问答</span></div>
         </div>
         <div class="hot-related-news">Qwen3.6系列是Qwen3的进一步升级，性能全面超越前代。</div>
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/Qwen/Qwen3.6-35B-A3B" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
-    <article class="hot-model-card" id="model-23">
+    <article class="hot-model-card" id="model-19">
         <div class="hot-model-header">
-        <div class="hot-rank-badge">23</div>
-        <h2 class="hot-model-name">PlantGeneAnn-v1.5-flower-plants</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 qzzhang</span>
-        
-    </div>
-        <p class="hot-model-description">，用于feature-extraction任务</p>
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/qzzhang/PlantGeneAnn-v1.5-flower-plants" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-24">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">24</div>
-        <h2 class="hot-model-name">Darwin-31B-Opus-mlx-4bit</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 cudo528</span>
-        
-    </div>
-        <p class="hot-model-description">，用于text-generation任务</p>
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/cudo528/Darwin-31B-Opus-mlx-4bit" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-25">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">25</div>
-        <h2 class="hot-model-name">quipus-0.6-speechv1</h2>
-    </div>
-        <div class="hot-model-stats">
-        <span>📥 0 下载</span>
-        <span>❤️ 0 赞</span>
-        <span>👤 hyperneuronAILabs</span>
-        
-    </div>
-        
-        
-        
-        
-        <div class="hot-model-links">
-        <a href="https://huggingface.co/hyperneuronAILabs/quipus-0.6-speechv1" target="_blank">在 HuggingFace 查看 ↗</a>
-    </div>
-    </article>
-    <article class="hot-model-card" id="model-26">
-        <div class="hot-model-header">
-        <div class="hot-rank-badge">26</div>
+        <div class="hot-rank-badge">19</div>
         <h2 class="hot-model-name">Step-3.7-Flash-ROCmFPX-Q3-QualityPlus</h2>
     </div>
         <div class="hot-model-stats">
@@ -776,84 +718,229 @@
         
         
         
+        
         <div class="hot-model-links">
         <a href="https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-20">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">20</div>
+        <h2 class="hot-model-name">RAG_SYSTEM</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 veerchoudhary01</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/veerchoudhary01/RAG_SYSTEM" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-21">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">21</div>
+        <h2 class="hot-model-name">oursllama</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 ChuGyouk</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/ChuGyouk/oursllama" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-22">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">22</div>
+        <h2 class="hot-model-name">Darwin-35B-A3B-Opus-mlx-8bit</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 cudo528</span>
+        
+    </div>
+        <p class="hot-model-description">，用于text-generation任务</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/cudo528/Darwin-35B-A3B-Opus-mlx-8bit" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-23">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">23</div>
+        <h2 class="hot-model-name">wam_gr1_stepweight_action_tau07_p50k</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 huiwon</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/huiwon/wam_gr1_stepweight_action_tau07_p50k" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-24">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">24</div>
+        <h2 class="hot-model-name">Qwen-3-1.7B-Q4_0</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 cmdyc</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/cmdyc/Qwen-3-1.7B-Q4_0" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-25">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">25</div>
+        <h2 class="hot-model-name">GLM-5.2-7layer-bucket</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 o-ss-beck</span>
+        
+    </div>
+        
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/o-ss-beck/GLM-5.2-7layer-bucket" target="_blank">在 HuggingFace 查看 ↗</a>
+    </div>
+    </article>
+    <article class="hot-model-card" id="model-26">
+        <div class="hot-model-header">
+        <div class="hot-rank-badge">26</div>
+        <h2 class="hot-model-name">Darwin-31B-Opus-mlx-4bit</h2>
+    </div>
+        <div class="hot-model-stats">
+        <span>📥 0 下载</span>
+        <span>❤️ 0 赞</span>
+        <span>👤 cudo528</span>
+        
+    </div>
+        <p class="hot-model-description">，用于text-generation任务</p>
+        
+        
+        
+        
+        <div class="hot-model-links">
+        <a href="https://huggingface.co/cudo528/Darwin-31B-Opus-mlx-4bit" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-27">
         <div class="hot-model-header">
         <div class="hot-rank-badge">27</div>
-        <h2 class="hot-model-name">image</h2>
+        <h2 class="hot-model-name">cee-pii</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 MuthurajaL</span>
+        <span>👤 flowxai</span>
         
     </div>
+        
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/MuthurajaL/image" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/flowxai/cee-pii" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-28">
         <div class="hot-model-header">
         <div class="hot-rank-badge">28</div>
-        <h2 class="hot-model-name">llmtuna_nca_1pct_1e18_3e18_9e18_v1</h2>
+        <h2 class="hot-model-name">test1</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 alexkstern</span>
+        <span>👤 gretelgoh</span>
         
     </div>
+        
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/alexkstern/llmtuna_nca_1pct_1e18_3e18_9e18_v1" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/gretelgoh/test1" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-29">
         <div class="hot-model-header">
         <div class="hot-rank-badge">29</div>
-        <h2 class="hot-model-name">DuckyMix-Anima-v1</h2>
+        <h2 class="hot-model-name">PlantGeneAnn-v1.5-flower-plants</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 Duck1ng</span>
+        <span>👤 qzzhang</span>
         
     </div>
-        <p class="hot-model-description">，用于text-to-image任务</p>
+        <p class="hot-model-description">，用于feature-extraction任务</p>
+        
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/Duck1ng/DuckyMix-Anima-v1" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/qzzhang/PlantGeneAnn-v1.5-flower-plants" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     <article class="hot-model-card" id="model-30">
         <div class="hot-model-header">
         <div class="hot-rank-badge">30</div>
-        <h2 class="hot-model-name">co-hk14</h2>
+        <h2 class="hot-model-name">olmo2_1b-exp_04-16700</h2>
     </div>
         <div class="hot-model-stats">
         <span>📥 0 下载</span>
         <span>❤️ 0 赞</span>
-        <span>👤 funny790</span>
+        <span>👤 Ilia2003Mah</span>
         
     </div>
+        
         
         
         
         
         <div class="hot-model-links">
-        <a href="https://huggingface.co/funny790/co-hk14" target="_blank">在 HuggingFace 查看 ↗</a>
+        <a href="https://huggingface.co/Ilia2003Mah/olmo2_1b-exp_04-16700" target="_blank">在 HuggingFace 查看 ↗</a>
     </div>
     </article>
     </div>
