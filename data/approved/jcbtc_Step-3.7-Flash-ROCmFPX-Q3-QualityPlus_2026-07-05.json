@@ -1,0 +1,130 @@
+{
+  "repo_id": "jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus",
+  "model_name": "jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus",
+  "author": "jcbtc",
+  "tags": [
+    "llama.cpp",
+    "gguf",
+    "stepfun",
+    "step3p7",
+    "step-3.7",
+    "step-3.7-flash",
+    "mtp",
+    "speculative-decoding",
+    "rocm",
+    "vulkan",
+    "rocmfpx",
+    "fpx3",
+    "q3",
+    "q3_0_rocmfpx",
+    "qualityplus",
+    "amd",
+    "ryzen-ai-max-395",
+    "strix-halo",
+    "agentic",
+    "tool-calling",
+    "long-context",
+    "text-generation",
+    "en",
+    "base_model:notSnix/Step-3.7-Flash-MTP-Draft-GGUF",
+    "base_model:quantized:notSnix/Step-3.7-Flash-MTP-Draft-GGUF",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us",
+    "imatrix",
+    "conversational"
+  ],
+  "pipeline_tag": "text-generation",
+  "library_name": "llama.cpp",
+  "model_family": "notSnix/Step-3.7-Flash-MTP-Draft-GGUF",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T09:47:44.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00001-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10078683520,
+      "size_human": "9.39 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00001-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00001-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00002-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10334240736,
+      "size_human": "9.62 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00002-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00002-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00003-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10311114752,
+      "size_human": "9.6 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00003-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00003-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00004-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10334240768,
+      "size_human": "9.62 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00004-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00004-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00005-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10334240768,
+      "size_human": "9.62 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00005-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00005-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00006-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10334240768,
+      "size_human": "9.62 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00006-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00006-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00007-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10311114752,
+      "size_human": "9.6 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00007-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00007-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00008-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 10334240768,
+      "size_human": "9.62 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00008-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00008-of-00009.gguf"
+    },
+    {
+      "filename": "Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00009-of-00009.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 5426323840,
+      "size_human": "5.05 GB",
+      "download_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/resolve/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00009-of-00009.gguf",
+      "browser_url": "https://huggingface.co/jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus/blob/main/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus-00009-of-00009.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T10:01:31.510558+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：文本生成。 提供9种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：5.05 GB ~ 9.62 GB。",
+  "chinese_description": "**jcbtc/Step-3.7-Flash-ROCmFPX-Q3-QualityPlus** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：文本生成。 提供9种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：5.05 GB ~ 9.62 GB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T10:01:38.353532+00:00",
+  "approved_date": "2026-07-05"
+}

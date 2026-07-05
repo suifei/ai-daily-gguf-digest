@@ -1,0 +1,51 @@
+{
+  "repo_id": "SvalTek/Q2.5-TheGrimoire-7B-GGUF",
+  "model_name": "SvalTek/Q2.5-TheGrimoire-7B-GGUF",
+  "author": "SvalTek",
+  "tags": [
+    "gguf",
+    "qwen2",
+    "llama.cpp",
+    "unsloth",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "",
+  "model_family": "",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T09:49:41.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/SvalTek/Q2.5-TheGrimoire-7B-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "Q2.5-TheGrimoire-7B-Base3.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 4681089696,
+      "size_human": "4.36 GB",
+      "download_url": "https://huggingface.co/SvalTek/Q2.5-TheGrimoire-7B-GGUF/resolve/main/Q2.5-TheGrimoire-7B-Base3.Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/SvalTek/Q2.5-TheGrimoire-7B-GGUF/blob/main/Q2.5-TheGrimoire-7B-Base3.Q4_K_M.gguf"
+    },
+    {
+      "filename": "Q2.5-TheGrimoire-7B-Base3.Q6_K.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 6251847200,
+      "size_human": "5.82 GB",
+      "download_url": "https://huggingface.co/SvalTek/Q2.5-TheGrimoire-7B-GGUF/resolve/main/Q2.5-TheGrimoire-7B-Base3.Q6_K.gguf",
+      "browser_url": "https://huggingface.co/SvalTek/Q2.5-TheGrimoire-7B-GGUF/blob/main/Q2.5-TheGrimoire-7B-Base3.Q6_K.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T10:01:23.081153+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**SvalTek/Q2.5-TheGrimoire-7B-GGUF** 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供2种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：4.36 GB ~ 5.82 GB。",
+  "chinese_description": "**SvalTek/Q2.5-TheGrimoire-7B-GGUF** 该模型属于阿里巴巴通义千问系列，参数量为未知，在中文和英文双语任务上表现优异。擅长长文本理解、代码生成、数学计算和知识问答。GGUF量化版本可在本地设备流畅运行。 提供2种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：4.36 GB ~ 5.82 GB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T10:01:38.348269+00:00",
+  "approved_date": "2026-07-05"
+}
