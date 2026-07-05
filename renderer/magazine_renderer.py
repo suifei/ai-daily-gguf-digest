@@ -329,6 +329,22 @@ MAGAZINE_TEMPLATE = """<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating Toolbar -->
+    <div class="floating-toolbar">
+        <a href="https://github.com/suifei/ai-daily-gguf-digest" class="toolbar-btn github-btn" target="_blank" title="GitHub 仓库" aria-label="GitHub 仓库">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="/" class="toolbar-btn" title="返回首页" aria-label="返回首页">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </a>
+        <button class="toolbar-btn" onclick="window.scrollTo({{top:0,behavior:'smooth'}})" title="回到顶部" aria-label="回到顶部">
+            <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+        <button class="toolbar-btn" onclick="window.scrollTo({{top:document.body.scrollHeight,behavior:'smooth'}})" title="跳到底部" aria-label="跳到底部">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+    </div>
+
     <!-- Reading Progress Bar -->
     <div class="progress-bar"></div>
 
@@ -471,6 +487,23 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating Toolbar -->
+    <div class="floating-toolbar">
+        <a href="https://github.com/suifei/ai-daily-gguf-digest" class="toolbar-btn github-btn" target="_blank" title="GitHub 仓库" aria-label="GitHub 仓库">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="/" class="toolbar-btn" title="返回首页" aria-label="返回首页">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </a>
+        <button class="toolbar-btn" onclick="window.scrollTo({{top:0,behavior:'smooth'}})" title="回到顶部" aria-label="回到顶部">
+            <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+        <button class="toolbar-btn" onclick="window.scrollTo({{top:document.body.scrollHeight,behavior:'smooth'}})" title="跳到底部" aria-label="跳到底部">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+    </div>
+
+    <!-- Reading Progress Bar -->
     <div class="progress-bar"></div>
 
     <header class="masthead">
