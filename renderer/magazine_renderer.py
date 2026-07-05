@@ -6,6 +6,7 @@ AI日报 电子杂志HTML渲染引擎
 
 import os
 import json
+import re
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
@@ -307,8 +308,45 @@ def generate_index_page(history: list[dict], output_path: str) -> str:
         f.write(html)
     
     logger.info(f"Generated index page: {output_path}")
+    
     return output_path
 
+
+def update_readme_table(history: list[dict]) -> str:
+    """Update the README.md with the latest digest table.
+    
+    Returns the path to the updated README.md.
+    """
+    readme_path = Path("/tmp/ai-daily-repo/README.md")
+    if not readme_path.exists():
+        logger.warning("README.md not found, skipping update")
+        return ""
+    
+    # Read current README
+    with open(readme_path, "r", encoding="utf-8") as f:
+        readme_content = f.read()
+    
+    # Build the new table rows
+    table_rows = ""
+    for entry in sorted(history, key=lambda x: x["date"], reverse=True):
+        date = entry["date"]
+        html_path = f"digest-{date}.html"
+        model_count = entry.get("model_count", "?")
+        table_rows += f"| [{date}]({html_path}) | 第 {date.replace('-', '.')} 期 | {model_count} 个模型 | [阅读](https://suifei.github.io/ai-daily-gguf-digest/{html_path}) |\n"
+    
+    # Replace the table section in README
+    # Find the table and replace it
+    old_table_pattern = r"(\|\s*日期\s*\|\s*期数\s*\|\s*模型数量\s*\|\s*阅读\s*\|\n\|\s*------\s*\|\s*------\s*\|\s*----------\s*\|\s*------\s*\|)(\n\|\s*\*每晚20:00.*?$)"
+    new_table = f"\\1\n{table_rows}\\2"
+    
+    updated_readme = re.sub(old_table_pattern, new_table, readme_content, flags=re.MULTILINE | re.DOTALL)
+    
+    # Write updated README
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.write(updated_readme)
+    
+    logger.info(f"Updated README.md with digest table")
+    return str(readme_path)
 
 INDEX_TEMPLATE = """<!DOCTYPE html>
 <html lang="zh-CN">
