@@ -145,10 +145,19 @@ def build_model_entry(model: dict, index: int, date_str: str) -> str:
         if tag not in ("gguf", "diffusers", "safetensors", "pytorch", "transformers"):
             tags_html += f'<span class="tag">{tag}</span>'
     
-    # Description
+    # Description - parse markdown if present
     desc_text = chinese_summary if chinese_summary else chinese_desc
     if desc_text:
         desc_text = desc_text[:500] + ('...' if len(desc_text) > 500 else '')
+        desc_html = _parse_markdown(desc_text)
+    else:
+        desc_html = ""
+    
+    # Benchmark section (if available)
+    benchmark_html = ""
+    benchmark_data = model.get("benchmark")
+    if benchmark_data:
+        benchmark_html = _build_benchmark_section(benchmark_data)
     
     # Review notes
     notes_html = ""
@@ -164,9 +173,11 @@ def build_model_entry(model: dict, index: int, date_str: str) -> str:
         
         {f'<div class="tag-list">{tags_html}</div>' if tags_html else ''}
         
-        {f'<p class="model-description"><strong>{desc_text}</strong></p>' if desc_text else ''}
+        {f'<div class="model-description">{desc_html}</div>' if desc_html else ''}
         
         {specs_html if specs_html else ''}
+        
+        {benchmark_html}
         
         {notes_html}
         
@@ -174,6 +185,104 @@ def build_model_entry(model: dict, index: int, date_str: str) -> str:
             <a href="{model.get('hf_url', '')}" target="_blank">在 HuggingFace 查看 ↗</a>
         </div>
     </article>'''
+
+
+def _parse_markdown(text: str) -> str:
+    """Parse simple markdown to HTML for model descriptions."""
+    html = text
+    
+    # Code blocks (```...```)
+    def replace_code_block(match):
+        code = match.group(1).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        return f'<pre><code>{code}</code></pre>'
+    
+    html = re.sub(r'```([\s\S]*?)```', replace_code_block, html)
+    
+    # Inline code
+    html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
+    
+    # Bold
+    html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
+    
+    # Italic
+    html = re.sub(r'\*(.+?)\*', r'<em>\1</em>', html)
+    
+    # Links [text](url)
+    html = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank">\1</a>', html)
+    
+    # Blockquotes
+    html = re.sub(r'^>\s?(.+)$', r'<blockquote>\1</blockquote>', html, flags=re.MULTILINE)
+    
+    # Unordered lists
+    lines = html.split('\n')
+    result = []
+    in_list = False
+    for line in lines:
+        if line.strip().startswith('- '):
+            if not in_list:
+                result.append('<ul>')
+                in_list = True
+            item = re.sub(r'^-\s?', '', line.strip())
+            result.append(f'<li>{item}</li>')
+        else:
+            if in_list:
+                result.append('</ul>')
+                in_list = False
+            result.append(line)
+    if in_list:
+        result.append('</ul>')
+    
+    html = '\n'.join(result)
+    
+    # Paragraphs: wrap non-tag lines
+    paragraphs = re.split(r'\n\n+', html)
+    html = ''
+    for p in paragraphs:
+        p = p.strip()
+        if not p:
+            continue
+        # Don't wrap if already a block element
+        if p.startswith(('<pre', '<ul', '<li', '<blockquote', '<h', '<div')):
+            html += p
+        else:
+            html += f'<p>{p}</p>'
+        html += '\n'
+    
+    return html.strip()
+
+
+def _build_benchmark_section(benchmark_data: dict) -> str:
+    """Build expandable benchmark section."""
+    html_parts = []
+    
+    if benchmark_data.get("image_url"):
+        html_parts.append(f'<img src="{benchmark_data["image_url"]}" alt="Benchmark" loading="lazy">')
+    
+    if benchmark_data.get("table"):
+        table_html = '<table><thead><tr>'
+        headers = benchmark_data["table"].get("headers", [])
+        for h in headers:
+            table_html += f'<th>{h}</th>'
+        table_html += '</tr></thead><tbody>'
+        
+        rows = benchmark_data["table"].get("rows", [])
+        for row in rows:
+            table_html += '<tr>'
+            for cell in row:
+                table_html += f'<td>{cell}</td>'
+            table_html += '</tr>'
+        table_html += '</tbody></table>'
+        html_parts.append(table_html)
+    
+    if not html_parts:
+        return ""
+    
+    content = '\n'.join(html_parts)
+    return f'''
+    <div class="benchmark-section">
+        <button class="benchmark-toggle" onclick="this.nextElementSibling.classList.toggle('visible'); this.textContent = this.nextElementSibling.classList.contains('visible') ? '收起 Benchmark ▲' : '查看 Benchmark ▼'">查看 Benchmark ▼</button>
+        <div class="benchmark-content">{content}</div>
+    </div>'''
 
 
 def get_digest_history() -> list[dict]:
@@ -273,7 +382,9 @@ MAGAZINE_TEMPLATE = """<!DOCTYPE html>
 
         <!-- Main Content -->
         <div class="content">
+            <div class="models-grid">
 %s
+            </div>
 %s
         </div>
     </div>

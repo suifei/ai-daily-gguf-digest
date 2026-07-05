@@ -16,8 +16,9 @@
     --sans: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     --font-body: 17px;
     --leading: 1.75;
-    --max-width: 720px;
-    --toc-width: 240px;
+    --max-width: 1200px;
+    --toc-width: 220px;
+    --column-gap: 2.5rem;
 }
 
 /* --- Reset --- */
@@ -240,38 +241,113 @@ body {
     min-width: 0;
 }
 
-/* --- Model Entry --- */
-.model-entry {
-    margin-bottom: 4rem;
-    padding-bottom: 3rem;
+/* --- Multi-column Newspaper Layout --- */
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    column-gap: var(--column-gap);
+    row-gap: 0;
+}
+
+.models-grid .model-entry {
+    margin-bottom: 0;
+    padding-bottom: 2.5rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
     border-bottom: 1px solid var(--rule);
 }
 
-.model-entry:last-child {
+.models-grid .model-entry:last-child {
     border-bottom: none;
 }
 
-.model-name {
-    font-family: var(--sans);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    letter-spacing: -0.01em;
-    margin-bottom: 0.15rem;
+.models-grid .model-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
 }
 
-.model-author {
-    font-size: 0.78rem;
-    color: var(--text-muted);
+.models-grid .model-author {
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+}
+
+.models-grid .model-description {
     margin-bottom: 1.25rem;
-    letter-spacing: 0.02em;
+    font-size: 0.88rem;
 }
 
-.model-description {
-    font-size: 0.92rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+.models-grid .tag-list {
+    margin-bottom: 1rem;
+    gap: 0.35rem;
+}
+
+.models-grid .tag {
+    font-size: 0.6rem;
+    padding: 0.08rem 0.4rem;
+}
+
+.models-grid .risk-indicator {
+    margin-bottom: 1rem;
+    font-size: 0.65rem;
+    padding: 0.12rem 0.45rem;
+}
+
+.models-grid .model-links {
+    margin-top: 1.25rem;
+}
+
+.models-grid .model-links a {
+    font-size: 0.75rem;
+}
+
+.models-grid .review-note {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+}
+
+/* --- Markdown Rendering --- */
+.model-description p {
+    margin-bottom: 0.75rem;
+}
+
+.model-description p:last-child {
+    margin-bottom: 0;
+}
+
+.model-description code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    background: rgba(0,0,0,0.03);
+    padding: 0.1em 0.3em;
+    border-radius: 2px;
+    color: var(--text-primary);
+}
+
+.model-description pre {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    line-height: 1.6;
+    background: rgba(0,0,0,0.02);
+    padding: 1rem 1.25rem;
+    border-left: 2px solid var(--rule);
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.model-description pre code {
+    background: none;
+    padding: 0;
+}
+
+.model-description ul,
+.model-description ol {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.model-description li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9em;
 }
 
 .model-description strong {
@@ -279,7 +355,96 @@ body {
     color: var(--text-primary);
 }
 
-/* --- Risk Badge --- */
+.model-description em {
+    font-style: italic;
+}
+
+.model-description a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--rule);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s ease;
+}
+
+.model-description a:hover {
+    text-decoration-color: var(--text-primary);
+}
+
+.model-description blockquote {
+    margin: 1rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-left: 2px solid var(--rule);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* --- Benchmark Expand Section --- */
+.benchmark-section {
+    margin-top: 1rem;
+}
+
+.benchmark-toggle {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--rule);
+    padding-bottom: 1px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    background: none;
+    border: none;
+    font-family: var(--sans);
+    letter-spacing: 0.02em;
+}
+
+.benchmark-toggle:hover {
+    color: var(--text-primary);
+    border-bottom-style: solid;
+}
+
+.benchmark-content {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+}
+
+.benchmark-content.visible {
+    display: block;
+}
+
+.benchmark-content img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+}
+
+.benchmark-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+    margin-top: 0.75rem;
+}
+
+.benchmark-content th,
+.benchmark-content td {
+    text-align: left;
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.benchmark-content th {
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--text-muted);
+}
+
+.benchmark-content td {
+    color: var(--text-secondary);
+}
+
+/* --- Tags --- */
 .risk-indicator {
     display: inline-block;
     font-size: 0.7rem;
@@ -305,7 +470,7 @@ body {
     border-color: #FADBD8;
 }
 
-/* --- Quantification Spec List (Poetry-style) --- */
+/* --- Quantification Spec List (Poetry-style, aligned) --- */
 .specs-heading {
     font-family: var(--sans);
     font-size: 0.7rem;
@@ -324,7 +489,7 @@ body {
 
 .spec-list li {
     font-family: var(--mono);
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     line-height: 2;
     color: var(--text-secondary);
     counter-increment: spec-counter;
@@ -332,14 +497,18 @@ body {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0;
+    padding-left: 2rem;
+    position: relative;
 }
 
 .spec-list li::before {
     content: counter(spec-counter, decimal-leading-zero);
     font-size: 0.65rem;
     color: var(--text-muted);
-    width: 2rem;
-    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    text-align: right;
     font-family: var(--sans);
 }
 
@@ -516,6 +685,10 @@ body {
 
     .masthead-brand {
         font-size: 2rem;
+    }
+
+    .models-grid {
+        grid-template-columns: 1fr;
     }
 
     .model-entry {
