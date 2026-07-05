@@ -1,0 +1,134 @@
+{
+  "repo_id": "mradermacher/SylReg-LM-7B-GGUF",
+  "model_name": "mradermacher/SylReg-LM-7B-GGUF",
+  "author": "mradermacher",
+  "tags": [
+    "transformers",
+    "gguf",
+    "en",
+    "dataset:ryota-komatsu/SylReg",
+    "base_model:ryota-komatsu/SylReg-LM-7B",
+    "base_model:quantized:ryota-komatsu/SylReg-LM-7B",
+    "license:cc-by-nc-sa-4.0",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "transformers",
+  "model_family": "ryota-komatsu/SylReg-LM-7B",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T12:55:43.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "SylReg-LM-7B.IQ4_XS.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 4288185792,
+      "size_human": "3.99 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.IQ4_XS.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.IQ4_XS.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q2_K.gguf",
+      "quantization": "Q2_K",
+      "size_bytes": 3048154208,
+      "size_human": "2.84 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q2_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q2_K.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q3_K_L.gguf",
+      "quantization": "Q3_K_L",
+      "size_bytes": 4123510048,
+      "size_human": "3.84 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q3_K_L.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q3_K_L.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 3843441952,
+      "size_human": "3.58 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q3_K_M.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q3_K_S.gguf",
+      "quantization": "Q3_K_S",
+      "size_bytes": 3527419168,
+      "size_human": "3.29 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q3_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q3_K_S.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 4721833760,
+      "size_human": "4.4 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q4_K_M.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q4_K_S.gguf",
+      "quantization": "Q4_K_S",
+      "size_bytes": 4496529184,
+      "size_human": "4.19 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q4_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q4_K_S.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 5487082720,
+      "size_human": "5.11 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q5_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q5_K_M.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q5_K_S.gguf",
+      "quantization": "Q5_K_S",
+      "size_bytes": 5357427936,
+      "size_human": "4.99 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q5_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q5_K_S.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q6_K.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 6300159744,
+      "size_human": "5.87 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q6_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q6_K.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 8158014784,
+      "size_human": "7.6 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.Q8_0.gguf"
+    },
+    {
+      "filename": "SylReg-LM-7B.f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 15349711744,
+      "size_human": "14.3 GB",
+      "download_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/resolve/main/SylReg-LM-7B.f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/SylReg-LM-7B-GGUF/blob/main/SylReg-LM-7B.f16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T13:00:59.225302+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**mradermacher/SylReg-LM-7B-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供12种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：14.3 GB ~ 7.6 GB。",
+  "chinese_description": "**mradermacher/SylReg-LM-7B-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供12种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：14.3 GB ~ 7.6 GB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T13:01:27.564407+00:00",
+  "approved_date": "2026-07-05"
+}

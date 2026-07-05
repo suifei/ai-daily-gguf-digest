@@ -1,0 +1,132 @@
+{
+  "repo_id": "mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF",
+  "model_name": "mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF",
+  "author": "mradermacher",
+  "tags": [
+    "transformers",
+    "gguf",
+    "en",
+    "base_model:OccultAI/G2-Darkest-Writer-Dirty-Shirley-9B-v2",
+    "base_model:quantized:OccultAI/G2-Darkest-Writer-Dirty-Shirley-9B-v2",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "transformers",
+  "model_family": "OccultAI/G2-Darkest-Writer-Dirty-Shirley-9B-v2",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T12:54:52.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.IQ4_XS.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 5223171456,
+      "size_human": "4.86 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.IQ4_XS.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.IQ4_XS.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q2_K.gguf",
+      "quantization": "Q2_K",
+      "size_bytes": 3805398400,
+      "size_human": "3.54 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q2_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q2_K.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_L.gguf",
+      "quantization": "Q3_K_L",
+      "size_bytes": 5132453248,
+      "size_human": "4.78 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_L.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_L.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 4761781632,
+      "size_human": "4.43 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_M.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_S.gguf",
+      "quantization": "Q3_K_S",
+      "size_bytes": 4337665408,
+      "size_human": "4.04 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q3_K_S.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 5761058176,
+      "size_human": "5.37 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q4_K_M.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q4_K_S.gguf",
+      "quantization": "Q4_K_S",
+      "size_bytes": 5478925696,
+      "size_human": "5.1 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q4_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q4_K_S.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 6647367040,
+      "size_human": "6.19 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q5_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q5_K_M.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q5_K_S.gguf",
+      "quantization": "Q5_K_S",
+      "size_bytes": 6483592576,
+      "size_human": "6.04 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q5_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q5_K_S.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q6_K.gguf",
+      "quantization": "Q6_K",
+      "size_bytes": 7589070208,
+      "size_human": "7.07 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q6_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q6_K.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 9827149184,
+      "size_human": "9.15 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.Q8_0.gguf"
+    },
+    {
+      "filename": "G2-Darkest-Writer-Dirty-Shirley-9B-v2.f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 18490680704,
+      "size_human": "17.22 GB",
+      "download_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/resolve/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF/blob/main/G2-Darkest-Writer-Dirty-Shirley-9B-v2.f16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T13:01:01.776877+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供12种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：17.22 GB ~ 9.15 GB。",
+  "chinese_description": "**mradermacher/G2-Darkest-Writer-Dirty-Shirley-9B-v2-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供12种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：17.22 GB ~ 9.15 GB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T13:01:27.575920+00:00",
+  "approved_date": "2026-07-05"
+}

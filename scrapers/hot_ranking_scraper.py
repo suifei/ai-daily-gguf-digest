@@ -17,13 +17,30 @@ from urllib.parse import quote_plus
 
 import requests
 
-# Lazy import JA3 client (requires curl_cffi, may not be installed)
-try:
-    from scrapers.ja3_client import ja3_get
-    HAS_JA3 = True
-except ImportError:
-    HAS_JA3 = False
-    ja3_get = None
+HAS_JA3 = False
+ja3_get = None
+
+def _ensure_ja3():
+    """Ensure JA3 client is initialized (called before first use)."""
+    global HAS_JA3, ja3_get
+    if HAS_JA3:
+        return True
+    try:
+        import sys, os
+        # Ensure parent dir is in path for absolute import
+        scraper_dir = os.path.dirname(os.path.abspath(__file__))
+        if scraper_dir not in sys.path:
+            sys.path.insert(0, scraper_dir)
+        from ja3_client import ja3_get as _jg
+        ja3_get = _jg
+        HAS_JA3 = True
+        return True
+    except ImportError as e:
+        logger.warning(f"_ensure_ja3 ImportError: {e}")
+        return False
+    except Exception as e:
+        logger.warning(f"_ensure_ja3 unexpected error: {e}")
+        return False
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -166,6 +183,8 @@ def llm_enrich_model(model_id, tags, pipeline_tag, card_data):
 # =====================================================================
 def search_ddg(query, max_results=5):
     """Search DuckDuckGo HTML version with JA3 fingerprint."""
+    if not _ensure_ja3() or not HAS_JA3 or ja3_get is None:
+        return []
     results = []
     try:
         url = f"https://html.duckduckgo.com/html/?q={quote_plus(query)}"
@@ -211,6 +230,10 @@ def search_ddg(query, max_results=5):
 
 def search_bing(query, max_results=5):
     """Search Bing with JA3 browser fingerprint to bypass anti-bot."""
+    if not _ensure_ja3() or not HAS_JA3 or ja3_get is None:
+        logger.warning(f"Bing search skipped: JA3 not ready (HAS_JA3={HAS_JA3}, ja3_get={ja3_get is not None})")
+        return []
+    logger.debug(f"Bing JA3 search: query='{query}'")
     results = []
     try:
         url = f"https://www.bing.com/search?q={quote_plus(query)}&count={max_results}"
@@ -256,17 +279,19 @@ def search_model_reviews_and_news(model_name, model_id):
     """Search for reviews and news about a model.
     
     Priority: 1) JA3 web search (Bing/DDG) → 2) LLM-generated links
+    Returns: (results_list, method_string)
     """
     # Try JA3 web search first (Bing)
     results = search_bing(f"{model_name} review benchmark", max_results=5)
     
     if results:
         logger.info(f"Web search for '{model_name}': found {len(results)} results")
-        return results
+        return results, "ja3_bing"
     
     # Fallback to LLM-generated links
     logger.info(f"Web search returned 0 for '{model_name}', trying LLM...")
-    return _llm_search_links(model_name, model_id)
+    llm_results = _llm_search_links(model_name, model_id)
+    return llm_results, "llm_fallback"
 
 
 def _llm_search_links(model_name, model_id):
@@ -432,12 +457,15 @@ def scrape_hot_ranking(top_n=30, llm_limit=10, search_limit=3):
         
         # 4c. Web search for reviews/news (top models only)
         reviews_news = []
+        search_method = None
         if rank <= search_limit:
             name_for_search = name_cn or model_id.split('/')[-1]
             logger.info(f"  Searching reviews/news for {name_for_search}...")
             try:
-                reviews_news = search_model_reviews_and_news(name_for_search, model_id)
-                logger.info(f"    Found {len(reviews_news)} results")
+                results_tuple = search_model_reviews_and_news(name_for_search, model_id)
+                reviews_news = results_tuple[0] if isinstance(results_tuple, (list, tuple)) else results_tuple
+                search_method = results_tuple[1] if isinstance(results_tuple, (list, tuple)) and len(results_tuple) > 1 else "unknown"
+                logger.info(f"    Found {len(reviews_news)} results (method: {search_method})")
             except Exception as e:
                 logger.warning(f"    Search failed: {e}")
         
@@ -460,6 +488,7 @@ def scrape_hot_ranking(top_n=30, llm_limit=10, search_limit=3):
             "trending_rank": rank,
             "trending_score": round(trending_score, 4),
             "reviews_news": reviews_news,
+            "search_method": search_method or "none",
             "enrichment_method": "llm" if enrichment else "fallback",
         }
         

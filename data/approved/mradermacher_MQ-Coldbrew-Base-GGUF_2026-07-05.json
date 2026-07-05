@@ -1,0 +1,118 @@
+{
+  "repo_id": "mradermacher/MQ-Coldbrew-Base-GGUF",
+  "model_name": "mradermacher/MQ-Coldbrew-Base-GGUF",
+  "author": "mradermacher",
+  "tags": [
+    "transformers",
+    "gguf",
+    "mergekit",
+    "merge",
+    "en",
+    "base_model:SvalTek/MQ-Coldbrew-Base",
+    "base_model:quantized:SvalTek/MQ-Coldbrew-Base",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "",
+  "library_name": "transformers",
+  "model_family": "SvalTek/MQ-Coldbrew-Base",
+  "downloads": 0,
+  "likes": 0,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T12:51:17.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "MQ-Coldbrew-Base.IQ4_XS.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 4248360192,
+      "size_human": "3.96 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.IQ4_XS.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.IQ4_XS.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q2_K.gguf",
+      "quantization": "Q2_K",
+      "size_bytes": 3014291680,
+      "size_human": "2.81 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q2_K.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q2_K.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q3_K_L.gguf",
+      "quantization": "Q3_K_L",
+      "size_bytes": 4086665984,
+      "size_human": "3.81 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q3_K_L.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q3_K_L.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 3806597888,
+      "size_human": "3.55 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q3_K_M.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q3_K_S.gguf",
+      "quantization": "Q3_K_S",
+      "size_bytes": 3490575104,
+      "size_human": "3.25 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q3_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q3_K_S.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 4681090784,
+      "size_human": "4.36 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q4_K_M.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q4_K_S.gguf",
+      "quantization": "Q4_K_S",
+      "size_bytes": 4455786208,
+      "size_human": "4.15 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q4_K_S.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q4_K_S.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 5442670176,
+      "size_human": "5.07 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q5_K_M.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q5_K_M.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 8095483744,
+      "size_human": "7.54 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.Q8_0.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.Q8_0.gguf"
+    },
+    {
+      "filename": "MQ-Coldbrew-Base.f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 15232137184,
+      "size_human": "14.19 GB",
+      "download_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/resolve/main/MQ-Coldbrew-Base.f16.gguf",
+      "browser_url": "https://huggingface.co/mradermacher/MQ-Coldbrew-Base-GGUF/blob/main/MQ-Coldbrew-Base.f16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T13:01:18.993203+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**mradermacher/MQ-Coldbrew-Base-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供10种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：14.19 GB ~ 7.54 GB。",
+  "chinese_description": "**mradermacher/MQ-Coldbrew-Base-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供10种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：14.19 GB ~ 7.54 GB。",
+  "risk_level": "low",
+  "review_notes": "新模型，尚无社区反馈",
+  "approved_at": "2026-07-05T13:01:27.608696+00:00",
+  "approved_date": "2026-07-05"
+}

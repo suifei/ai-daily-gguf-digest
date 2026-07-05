@@ -3,7 +3,6 @@
 Provides browser-like TLS fingerprints that evade anti-bot detection.
 Supports Chrome/Edge/Firefox JA3 profiles.
 """
-from curl_cffi import requests as cffi_requests
 import logging
 
 logger = logging.getLogger(__name__)
@@ -31,6 +30,7 @@ def ja3_session(profile="chrome", impersonate=None):
         impersonate = profile
     
     try:
+        from curl_cffi import requests as cffi_requests
         sess = cffi_requests.Session(impersonate=impersonate)
         logger.info(f"JA3 session created: profile={profile}, impersonate={impersonate}")
         return sess
