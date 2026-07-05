@@ -42,48 +42,50 @@ def generate_magazine_html(models: list[dict], date_str: str, output_path: str) 
     prev_date = digest_dates[current_idx] if current_idx >= 0 else None
     next_date = digest_dates[current_idx + 1] if current_idx + 1 < len(digest_dates) else None
     
-    # Build model cards HTML
-    model_cards = ""
+    # Build model entries HTML
+    model_entries = ""
     for idx, model in enumerate(models):
-        model_cards += build_model_card(model, idx, date_str)
+        model_entries += build_model_entry(model, idx, date_str)
     
     # Build TOC entries
     toc_entries = ""
-    for idx, model in enumerate(models):
+    for model in models:
         safe_id = model["repo_id"].replace("/", "-").replace("_", "-").lower()
-        toc_entries += f'<a href="#model-{safe_id}" class="toc-link">{model["model_name"]}</a>\n'
+        model_name = model.get("model_name", model["repo_id"])
+        toc_entries += f'<li><a href="#model-{safe_id}">{model_name}</a></li>\n'
     
     title = f"AI日报 GGUF模型快报 {date_str}"
     generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     
     # Build TOC nav links
-    toc_prev = f'<a href="/ai-daily-gguf-digest/digest-{prev_date}.html" class="toc-nav-link">← 上一期 ({prev_date})</a>' if prev_date else '<span class="toc-nav-blank">← 更早</span>'
-    toc_next = f'<a href="/ai-daily-gguf-digest/digest-{next_date}.html" class="toc-nav-link">下一期 ({next_date}) →</a>' if next_date else '<span class="toc-nav-blank">更晚 →</span>'
+    toc_prev = f'<a href="/ai-daily-gguf-digest/digest-{prev_date}.html">← 上一期 ({prev_date})</a>' if prev_date else '<span>← 更早</span>'
+    toc_next = f'<a href="/ai-daily-gguf-digest/digest-{next_date}.html">下一期 ({next_date}) →</a>' if next_date else '<span>更晚 →</span>'
     
     # Build issue nav links
-    issue_prev = f'<a href="/ai-daily-gguf-digest/digest-{prev_date}.html" class="issue-link prev-issue">← 上一期: {prev_date}</a>' if prev_date else '<span class="issue-link prev-issue disabled">← 上一期</span>'
-    issue_next = f'<a href="/ai-daily-gguf-digest/digest-{next_date}.html" class="issue-link next-issue">下一期: {next_date} →</a>' if next_date else '<span class="issue-link next-issue disabled">下一期 →</span>'
+    issue_prev = f'<a href="/ai-daily-gguf-digest/digest-{prev_date}.html">← 上一期: {prev_date}</a>' if prev_date else '<span class="disabled">← 上一期</span>'
+    issue_next = f'<a href="/ai-daily-gguf-digest/digest-{next_date}.html">下一期: {next_date} →</a>' if next_date else '<span class="disabled">下一期 →</span>'
     
     # Empty state placeholder
-    empty_state = '<div class="empty-state"><h2>📭 今日暂无新模型</h2><p>今天没有发现新的 GGUF 量化模型。</p></div>' if not models else ''
+    empty_state = '<p class="empty-state">今日暂无新模型发现。</p>' if not models else ''
     
     # Count total digests
     total_issues = len(get_digest_history())
     
     html = MAGAZINE_TEMPLATE % (
         title,                          # %s title
-        date_str[:4],                   # %s year
-        date_str[5:],                   # %s month-day
+        date_str,                       # %s date_str  
         len(models),                    # %s model_count
         generated_at,                   # %s generated_at
-        date_str,                       # %s nav-date
-        toc_entries,                    # %s toc-list
-        toc_prev,                       # %s toc-nav-prev
-        toc_next,                       # %s toc-nav-next
         issue_prev,                     # %s issue-nav-prev
         total_issues,                   # %s issue-counter
         issue_next,                     # %s issue-nav-next
-        model_cards,                    # %s model-cards
+        toc_entries,                    # %s toc-list (sticky)
+        toc_prev,                       # %s toc-nav-prev
+        toc_next,                       # %s toc-nav-next
+        toc_entries,                    # %s toc-list (mobile)
+        toc_prev,                       # %s toc-nav-prev (mobile)
+        toc_next,                       # %s toc-nav-next (mobile)
+        model_entries,                  # %s model-cards
         empty_state,                    # %s empty-state
         date_str,                       # %s footer-date
     )
@@ -95,13 +97,14 @@ def generate_magazine_html(models: list[dict], date_str: str, output_path: str) 
     return output_path
 
 
-def build_model_card(model: dict, index: int, date_str: str) -> str:
-    """Build HTML for a single model card."""
+def build_model_entry(model: dict, index: int, date_str: str) -> str:
+    """Build HTML for a single model entry (journal style, no cards/tables)."""
     repo_id = model["repo_id"]
     safe_id = repo_id.replace("/", "-").replace("_", "-").lower()
     author = model.get("author", "")
+    model_name = model.get("model_name", repo_id)
     
-    # Use Chinese description if available, otherwise fall back to English
+    # Use Chinese description if available
     chinese_desc = model.get("chinese_description", "") or model.get("description", "")
     chinese_summary = model.get("chinese_summary", "")
     risk_level = model.get("risk_level", "low")
@@ -109,105 +112,65 @@ def build_model_card(model: dict, index: int, date_str: str) -> str:
     
     downloads = model.get("downloads", 0)
     likes = model.get("likes", 0)
-    trending = model.get("trending_score", 0)
     tags = model.get("tags", [])
-    pipeline = model.get("pipeline_tag", "")
     
-    # Risk badge
-    risk_badge = ""
-    if risk_level == "high":
-        risk_badge = '<span class="risk-badge risk-high">⚠️ 高风险</span>'
-    elif risk_level == "medium":
-        risk_badge = '<span class="risk-badge risk-medium">⚡ 中等风险</span>'
-    else:
-        risk_badge = '<span class="risk-badge risk-low">✅ 低风险</span>'
+    # Risk indicator
+    risk_class = "low" if risk_level == "low" else ("medium" if risk_level == "medium" else "high")
+    risk_label = "低风险" if risk_level == "low" else ("中等风险" if risk_level == "medium" else "高风险")
+    risk_badge = f'<span class="risk-indicator {risk_class}">{risk_label}</span>'
     
-    # Build GGUF variants table
-    variants_html = ""
-    for gguf in model.get("gguf_files", []):
+    # Build quantification spec list (poetry-style, no table)
+    specs_html = ""
+    gguf_files = model.get("gguf_files", [])
+    for gi, gguf in enumerate(gguf_files):
         quant = gguf.get("quantization", "Unknown")
         size = gguf.get("size_human", "N/A")
         filename = gguf.get("filename", "unknown.gguf")
         browser_url = gguf.get("browser_url", "")
         download_url = gguf.get("download_url", "")
-        variants_html += f"""
-        <tr class="variant-row">
-            <td class="quant-badge">{quant}</td>
-            <td>{size}</td>
-            <td><a href="{browser_url}" target="_blank" class="file-link">📄 {filename}</a></td>
-            <td><a href="{download_url}" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>"""
+        specs_html += f'''<li>
+            <span class="spec-quant">{quant}</span>
+            <span class="spec-dot">·</span>
+            <span class="spec-size">{size}</span>
+            <span class="spec-dot">·</span>
+            <a href="{browser_url}" target="_blank" class="spec-link" data-copy title="复制链接">{filename}</a>
+        </li>'''
     
     # Tags display
     tags_html = ""
-    for tag in tags[:8]:
-        if tag != "gguf":
+    for tag in tags[:10]:
+        if tag not in ("gguf", "diffusers", "safetensors", "pytorch", "transformers"):
             tags_html += f'<span class="tag">{tag}</span>'
     
-    # Build summary section
-    summary_html = ""
-    if chinese_summary:
-        summary_html = f'''
-        <div class="model-summary">
-            <h3>📝 能力介绍</h3>
-            <p>{chinese_summary}</p>
-        </div>'''
+    # Description
+    desc_text = chinese_summary if chinese_summary else chinese_desc
+    if desc_text:
+        desc_text = desc_text[:500] + ('...' if len(desc_text) > 500 else '')
     
-    # Build review notes
+    # Review notes
     notes_html = ""
     if review_notes:
-        notes_html = f'''
-        <div class="review-notes">
-            <p>📋 审核备注: {review_notes}</p>
-        </div>'''
+        notes_html = f'<p class="review-note">审核备注: {review_notes}</p>'
     
-    return f"""
-    <article class="model-page" id="model-{safe_id}">
-        <div class="model-header">
-            <span class="model-number">{index + 1}</span>
-            <h2 class="model-title">{model.get('model_name', repo_id)}</h2>
-            <p class="model-author">by {author}</p>
-        </div>
+    return f'''
+    <article class="model-entry" id="model-{safe_id}">
+        <h2 class="model-name">{model_name}</h2>
+        <p class="model-author">by {author} · {downloads:,} 下载 · {likes:,} 赞</p>
         
-        <div class="model-meta">
-            <span class="meta-item">⬇️ {downloads:,} 下载</span>
-            <span class="meta-item">❤️ {likes:,} 点赞</span>
-            <span class="meta-item">📈 热度: {trending:.1f}</span>
-            {f'<span class="meta-item">🏷️ {pipeline}</span>' if pipeline else ''}
-            {risk_badge}
-        </div>
+        {risk_badge}
         
-        <div class="model-description">
-            <p>{chinese_desc[:300]}{'...' if len(chinese_desc) > 300 else ''}</p>
-        </div>
+        {f'<div class="tag-list">{tags_html}</div>' if tags_html else ''}
         
-{summary_html}
-        <div class="model-tags">
-            {tags_html}
-        </div>
+        {f'<p class="model-description"><strong>{desc_text}</strong></p>' if desc_text else ''}
         
-        <div class="variants-section">
-            <h3>📦 GGUF量化规格</h3>
-            <table class="variants-table">
-                <thead>
-                    <tr>
-                        <th>量化版本</th>
-                        <th>大小</th>
-                        <th>文件</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {variants_html}
-                </tbody>
-            </table>
-        </div>
+        {specs_html if specs_html else ''}
         
-{notes_html}
+        {notes_html}
+        
         <div class="model-links">
-            <a href="{model.get('hf_url', '')}" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+            <a href="{model.get('hf_url', '')}" target="_blank">在 HuggingFace 查看 ↗</a>
         </div>
-    </article>"""
+    </article>'''
 
 
 def get_digest_history() -> list[dict]:
@@ -250,87 +213,73 @@ MAGAZINE_TEMPLATE = """<!DOCTYPE html>
     <title>%s</title>
     <link rel="stylesheet" href="/ai-daily-gguf-digest/static/magazine.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Magazine Cover -->
-    <header class="magazine-cover">
-        <div class="cover-content">
-            <div class="cover-brand">
-                <span class="brand-icon">🤖</span>
-                <h1 class="brand-title">AI日报</h1>
-                <span class="brand-subtitle">GGUF 量化模型快报</span>
-            </div>
-            <div class="cover-date">
-                <span class="date-year">%s</span>
-                <span class="date-separator">/</span>
-                <span class="date-month-day">%s</span>
-            </div>
-            <div class="cover-stats">
-                <span class="stat-item">📊 %s 个新模型</span>
-                <span class="stat-divider">·</span>
-                <span class="stat-item">🔄 自动采集</span>
-                <span class="stat-divider">·</span>
-                <span class="stat-item">📡 HuggingFace</span>
-            </div>
-            <div class="cover-footer">
-                <p>Powered by AI · 每小时自动扫描 · 每日发布</p>
-                <p class="generated-at">生成时间: %s</p>
-            </div>
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Masthead / Cover -->
+    <header class="masthead">
+        <h1 class="masthead-brand">AI日报</h1>
+        <p class="masthead-subtitle">GGUF 量化模型快报</p>
+        <div class="masthead-date">%s</div>
+        <div class="masthead-meta">
+            <span>%s 个新模型</span>
+            <span>自动采集</span>
+            <span>HuggingFace</span>
         </div>
+        <p class="masthead-generated">生成时间: %s</p>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav class="magazine-nav">
-        <div class="nav-inner">
-            <button class="nav-btn prev-btn" onclick="scrollPage(-1)" title="上一页">◀</button>
-            <button class="nav-btn toc-toggle" onclick="toggleTOC()" title="目录">☰ 目录</button>
-            <span class="nav-date">%s</span>
-            <button class="nav-btn next-btn" onclick="scrollPage(1)" title="下一页">▶</button>
-        </div>
+    <!-- Issue Navigation -->
+    <nav class="issue-nav">
+        %s
+        <span class="issue-counter">第 %s 期</span>
+        %s
     </nav>
 
-    <!-- Table of Contents Sidebar -->
-    <aside class="toc-sidebar" id="tocSidebar">
-        <div class="toc-header">
-            <h3>📋 本期目录</h3>
-            <button class="toc-close" onclick="toggleTOC()">✕</button>
-        </div>
-        <div class="toc-list">
-%s
-        </div>
-        <div class="toc-nav">
-%s
-%s
-        </div>
-    </aside>
+    <!-- Layout: Sticky TOC + Content -->
+    <div class="layout">
+        <!-- Sticky TOC -->
+        <aside class="toc-sticky">
+            <div class="toc-title">目录</div>
+            <ul class="toc-list">
+%s            </ul>
+            <div class="toc-nav">
+                %s
+                %s
+            </div>
+        </aside>
 
-    <!-- Overlay for mobile TOC -->
-    <div class="toc-overlay" id="tocOverlay" onclick="toggleTOC()"></div>
+        <!-- Mobile TOC Toggle Button -->
+        <button class="toc-toggle-btn" onclick="document.querySelector('.toc-panel').classList.toggle('open')" aria-label="目录">☰</button>
 
-    <!-- Main Content -->
-    <main class="magazine-content">
-        <!-- Issue Navigation -->
-        <div class="issue-nav">
-%s
-            <span class="issue-counter">第 %s 期</span>
-%s
+        <!-- Mobile TOC Panel -->
+        <div class="toc-panel">
+            <button class="toc-panel-close" onclick="this.parentElement.classList.remove('open')">✕</button>
+            <div class="toc-title">目录</div>
+            <ul class="toc-list">
+%s            </ul>
+            <div class="toc-nav">
+                %s
+                %s
+            </div>
         </div>
 
-        <!-- Model Cards -->
+        <!-- Main Content -->
+        <div class="content">
 %s
-
-        <!-- Empty State -->
 %s
-    </main>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="magazine-footer">
-        <div class="footer-inner">
-            <p>📰 AI日报 GGUF量化模型快报 · %s</p>
-            <p>数据来源: <a href="https://huggingface.co/models?search=gguf" target="_blank">HuggingFace</a> · 自动化采集与审核</p>
-            <p>项目地址: <a href="https://github.com/suifei/ai-daily-gguf-digest" target="_blank">GitHub</a></p>
-        </div>
+    <footer class="footer">
+        <p>📰 AI日报 GGUF量化模型快报 · %s</p>
+        <p>数据来源: <a href="https://huggingface.co/models?search=gguf" target="_blank">HuggingFace</a> · 自动化采集与审核</p>
+        <p>项目地址: <a href="https://github.com/suifei/ai-daily-gguf-digest" target="_blank">GitHub</a></p>
     </footer>
 
     <script src="/ai-daily-gguf-digest/static/magazine.js"></script>
@@ -348,10 +297,7 @@ def generate_index_page(history: list[dict], output_path: str) -> str:
         html_path = f"digest-{date}.html"
         repo_prefix = "/ai-daily-gguf-digest/"
         entries_html += f"""
-        <a href="{repo_prefix}{html_path}" class="digest-entry">
-            <span class="entry-date">{date}</span>
-            <span class="entry-arrow">→</span>
-        </a>"""
+        <li><a href="{repo_prefix}{html_path}">{date}</a></li>"""
     
     html = INDEX_TEMPLATE.format(entries=entries_html)
     
@@ -367,26 +313,39 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI日报 GGUF量化模型快报 - 目录</title>
+    <title>AI日报 GGUF量化模型快报</title>
     <link rel="stylesheet" href="/ai-daily-gguf-digest/static/magazine.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="index-page">
-    <header class="index-header">
-        <h1>📰 AI日报 GGUF量化模型快报</h1>
-        <p>每日自动发现、整理和发布最新开源LLM GGUF量化模型</p>
-        <a href="https://github.com/suifei/ai-daily-gguf-digest" target="_blank" class="github-link">⭐ GitHub</a>
+<body>
+    <div class="progress-bar"></div>
+
+    <header class="masthead">
+        <h1 class="masthead-brand">AI日报</h1>
+        <p class="masthead-subtitle">GGUF 量化模型快报 · 目录</p>
+        <div class="masthead-meta">
+            <span>每日更新</span>
+            <span>自动采集</span>
+            <span>HuggingFace</span>
+        </div>
+        <p class="masthead-generated" style="margin-top: 2rem;">
+            <a href="https://github.com/suifei/ai-daily-gguf-digest" target="_blank" style="color: #8A8A8A; text-decoration: none; border-bottom: 1px solid #E5E5E5;">⭐ GitHub 项目地址</a>
+        </p>
     </header>
     
-    <main class="index-main">
-        <h2>往期快报</h2>
-        <div class="digest-list">
+    <main class="content" style="max-width: var(--max-width); margin: 0 auto; padding: 2rem;">
+        <div class="toc-title" style="margin-bottom: 1.5rem;">往期快报</div>
+        <ul class="toc-list" style="border-right: none;">
             {entries}
-        </div>
+        </ul>
     </main>
     
-    <footer class="index-footer">
+    <footer class="footer">
         <p>🤖 由AI驱动 · 每小时自动扫描 · 每日发布</p>
     </footer>
+    
+    <script src="/ai-daily-gguf-digest/static/magazine.js"></script>
 </body>
 </html>"""

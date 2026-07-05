@@ -6,370 +6,169 @@
     <title>AI日报 GGUF模型快报 2026-07-05</title>
     <link rel="stylesheet" href="/ai-daily-gguf-digest/static/magazine.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Magazine Cover -->
-    <header class="magazine-cover">
-        <div class="cover-content">
-            <div class="cover-brand">
-                <span class="brand-icon">🤖</span>
-                <h1 class="brand-title">AI日报</h1>
-                <span class="brand-subtitle">GGUF 量化模型快报</span>
-            </div>
-            <div class="cover-date">
-                <span class="date-year">2026</span>
-                <span class="date-separator">/</span>
-                <span class="date-month-day">07-05</span>
-            </div>
-            <div class="cover-stats">
-                <span class="stat-item">📊 5 个新模型</span>
-                <span class="stat-divider">·</span>
-                <span class="stat-item">🔄 自动采集</span>
-                <span class="stat-divider">·</span>
-                <span class="stat-item">📡 HuggingFace</span>
-            </div>
-            <div class="cover-footer">
-                <p>Powered by AI · 每小时自动扫描 · 每日发布</p>
-                <p class="generated-at">生成时间: 2026-07-04 23:21 UTC</p>
-            </div>
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Masthead / Cover -->
+    <header class="masthead">
+        <h1 class="masthead-brand">AI日报</h1>
+        <p class="masthead-subtitle">GGUF 量化模型快报</p>
+        <div class="masthead-date">2026-07-05</div>
+        <div class="masthead-meta">
+            <span>3 个新模型</span>
+            <span>自动采集</span>
+            <span>HuggingFace</span>
         </div>
+        <p class="masthead-generated">生成时间: 2026-07-05 07:01 UTC</p>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav class="magazine-nav">
-        <div class="nav-inner">
-            <button class="nav-btn prev-btn" onclick="scrollPage(-1)" title="上一页">◀</button>
-            <button class="nav-btn toc-toggle" onclick="toggleTOC()" title="目录">☰ 目录</button>
-            <span class="nav-date">2026-07-05</span>
-            <button class="nav-btn next-btn" onclick="scrollPage(1)" title="下一页">▶</button>
-        </div>
+    <!-- Issue Navigation -->
+    <nav class="issue-nav">
+        <a href="/ai-daily-gguf-digest/digest-2026-07-04.html">← 上一期: 2026-07-04</a>
+        <span class="issue-counter">第 2 期</span>
+        <span class="disabled">下一期 →</span>
     </nav>
 
-    <!-- Table of Contents Sidebar -->
-    <aside class="toc-sidebar" id="tocSidebar">
-        <div class="toc-header">
-            <h3>📋 本期目录</h3>
-            <button class="toc-close" onclick="toggleTOC()">✕</button>
-        </div>
-        <div class="toc-list">
-<a href="#model-test-model1" class="toc-link">test/model1</a>
-<a href="#model-erebus007-ncert-3b-v0.1" class="toc-link">Erebus007/NCERT_3B_v0.1</a>
-<a href="#model-rumiii-llamatron-rs1-rolex" class="toc-link">Rumiii/LlamaTron-RS1-Rolex</a>
-<a href="#model-fadedredstar-anubis-mini-8b-v1-heretic-gguf" class="toc-link">FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF</a>
-<a href="#model-fadedredstar-anubis-mini-8b-v1-heretic-imatrix-gguf" class="toc-link">FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF</a>
+    <!-- Layout: Sticky TOC + Content -->
+    <div class="layout">
+        <!-- Sticky TOC -->
+        <aside class="toc-sticky">
+            <div class="toc-title">目录</div>
+            <ul class="toc-list">
+<li><a href="#model-abiray-ltx2.3-10eros-1.3-gguf">Abiray/LTX2.3-10Eros-1.3-GGUF</a></li>
+<li><a href="#model-ewinregirgojr-minicpm5-stock-analyst-v2-forward-return">ewinregirgojr/minicpm5-stock-analyst-v2-forward-return</a></li>
+<li><a href="#model-vinpix-bonsai-8b-tq-gguf">vinpix/Bonsai-8B-TQ-GGUF</a></li>
+            </ul>
+            <div class="toc-nav">
+                <a href="/ai-daily-gguf-digest/digest-2026-07-04.html">← 上一期 (2026-07-04)</a>
+                <span>更晚 →</span>
+            </div>
+        </aside>
 
-        </div>
-        <div class="toc-nav">
-<a href="/ai-daily-gguf-digest/digest-2026-07-04.html" class="toc-nav-link">← 上一期 (2026-07-04)</a>
-<span class="toc-nav-blank">更晚 →</span>
-        </div>
-    </aside>
+        <!-- Mobile TOC Toggle Button -->
+        <button class="toc-toggle-btn" onclick="document.querySelector('.toc-panel').classList.toggle('open')" aria-label="目录">☰</button>
 
-    <!-- Overlay for mobile TOC -->
-    <div class="toc-overlay" id="tocOverlay" onclick="toggleTOC()"></div>
-
-    <!-- Main Content -->
-    <main class="magazine-content">
-        <!-- Issue Navigation -->
-        <div class="issue-nav">
-<a href="/ai-daily-gguf-digest/digest-2026-07-04.html" class="issue-link prev-issue">← 上一期: 2026-07-04</a>
-            <span class="issue-counter">第 2 期</span>
-<span class="issue-link next-issue disabled">下一期 →</span>
+        <!-- Mobile TOC Panel -->
+        <div class="toc-panel">
+            <button class="toc-panel-close" onclick="this.parentElement.classList.remove('open')">✕</button>
+            <div class="toc-title">目录</div>
+            <ul class="toc-list">
+<li><a href="#model-abiray-ltx2.3-10eros-1.3-gguf">Abiray/LTX2.3-10Eros-1.3-GGUF</a></li>
+<li><a href="#model-ewinregirgojr-minicpm5-stock-analyst-v2-forward-return">ewinregirgojr/minicpm5-stock-analyst-v2-forward-return</a></li>
+<li><a href="#model-vinpix-bonsai-8b-tq-gguf">vinpix/Bonsai-8B-TQ-GGUF</a></li>
+            </ul>
+            <div class="toc-nav">
+                <a href="/ai-daily-gguf-digest/digest-2026-07-04.html">← 上一期 (2026-07-04)</a>
+                <span>更晚 →</span>
+            </div>
         </div>
 
-        <!-- Model Cards -->
+        <!-- Main Content -->
+        <div class="content">
 
-    <article class="model-page" id="model-test-model1">
-        <div class="model-header">
-            <span class="model-number">1</span>
-            <h2 class="model-title">test/model1</h2>
-            <p class="model-author">by </p>
-        </div>
+    <article class="model-entry" id="model-abiray-ltx2.3-10eros-1.3-gguf">
+        <h2 class="model-name">Abiray/LTX2.3-10Eros-1.3-GGUF</h2>
+        <p class="model-author">by Abiray · 0 下载 · 4 赞</p>
         
-        <div class="model-meta">
-            <span class="meta-item">⬇️ 0 下载</span>
-            <span class="meta-item">❤️ 0 点赞</span>
-            <span class="meta-item">📈 热度: 0.0</span>
-            
-            <span class="risk-badge risk-low">✅ 低风险</span>
-        </div>
+        <span class="risk-indicator low">低风险</span>
         
-        <div class="model-description">
-            <p></p>
-        </div>
+        <div class="tag-list"><span class="tag">image-to-video</span><span class="tag">base_model:TenStrip/LTX2.3-10Eros</span><span class="tag">base_model:quantized:TenStrip/LTX2.3-10Eros</span><span class="tag">license:other</span><span class="tag">region:us</span></div>
         
-
-        <div class="model-tags">
-            
-        </div>
+        <p class="model-description"><strong>**Abiray/LTX2.3-10Eros-1.3-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供2种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：10.37 GB ~ 13.31 GB。</strong></p>
         
-        <div class="variants-section">
-            <h3>📦 GGUF量化规格</h3>
-            <table class="variants-table">
-                <thead>
-                    <tr>
-                        <th>量化版本</th>
-                        <th>大小</th>
-                        <th>文件</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr class="variant-row">
-            <td class="quant-badge">Q4_K_M</td>
-            <td>N/A</td>
-            <td><a href="https://huggingface.co/test/model1/blob/main/test.gguf" target="_blank" class="file-link">📄 test.gguf</a></td>
-            <td><a href="https://huggingface.co/test/model1/resolve/main/test.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-                </tbody>
-            </table>
-        </div>
+        <li>
+            <span class="spec-quant">Q3_K_M</span>
+            <span class="spec-dot">·</span>
+            <span class="spec-size">10.37 GB</span>
+            <span class="spec-dot">·</span>
+            <a href="https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF/blob/main/10Eros_v1.3-Q3_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">10Eros_v1.3-Q3_K_M.gguf</a>
+        </li><li>
+            <span class="spec-quant">Q4_K_M</span>
+            <span class="spec-dot">·</span>
+            <span class="spec-size">13.31 GB</span>
+            <span class="spec-dot">·</span>
+            <a href="https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF/blob/main/10Eros_v1.3-Q4_K_M.gguf" target="_blank" class="spec-link" data-copy title="复制链接">10Eros_v1.3-Q4_K_M.gguf</a>
+        </li>
         
-
+        <p class="review-note">审核备注: AI自动审核通过</p>
+        
         <div class="model-links">
-            <a href="" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+            <a href="https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
         </div>
     </article>
-    <article class="model-page" id="model-erebus007-ncert-3b-v0.1">
-        <div class="model-header">
-            <span class="model-number">2</span>
-            <h2 class="model-title">Erebus007/NCERT_3B_v0.1</h2>
-            <p class="model-author">by Erebus007</p>
-        </div>
+    <article class="model-entry" id="model-ewinregirgojr-minicpm5-stock-analyst-v2-forward-return">
+        <h2 class="model-name">ewinregirgojr/minicpm5-stock-analyst-v2-forward-return</h2>
+        <p class="model-author">by ewinregirgojr · 0 下载 · 0 赞</p>
         
-        <div class="model-meta">
-            <span class="meta-item">⬇️ 0 下载</span>
-            <span class="meta-item">❤️ 1 点赞</span>
-            <span class="meta-item">📈 热度: 0.0</span>
-            <span class="meta-item">🏷️ text-generation</span>
-            <span class="risk-badge risk-low">✅ 低风险</span>
-        </div>
+        <span class="risk-indicator low">低风险</span>
         
-        <div class="model-description">
-            <p></p>
-        </div>
+        <div class="tag-list"><span class="tag">peft</span><span class="tag">finance</span><span class="tag">stock-prediction</span><span class="tag">stock-market</span><span class="tag">stock-market-prediction</span><span class="tag">trading</span><span class="tag">algorithmic-trading</span><span class="tag">quantitative-finance</span></div>
         
-
-        <div class="model-tags">
-            <span class="tag">medical</span><span class="tag">education</span><span class="tag">ncert</span><span class="tag">text-generation</span><span class="tag">en</span><span class="tag">license:apache-2.0</span><span class="tag">endpoints_compatible</span>
-        </div>
+        <p class="model-description"><strong>**ewinregirgojr/minicpm5-stock-analyst-v2-forward-return** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：文本生成。 提供2种量化规格(Q2~Q8)，推荐Q8_0版本在精度与体积间取得最佳平衡。 文件大小范围：1.07 GB ~ 2.02 GB。</strong></p>
         
-        <div class="variants-section">
-            <h3>📦 GGUF量化规格</h3>
-            <table class="variants-table">
-                <thead>
-                    <tr>
-                        <th>量化版本</th>
-                        <th>大小</th>
-                        <th>文件</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr class="variant-row">
-            <td class="quant-badge">Unknown</td>
-            <td>1.88 GB</td>
-            <td><a href="https://huggingface.co/Erebus007/NCERT_3B_v0.1/blob/main/NCERT_3B_v0.1.gguf" target="_blank" class="file-link">📄 NCERT_3B_v0.1.gguf</a></td>
-            <td><a href="https://huggingface.co/Erebus007/NCERT_3B_v0.1/resolve/main/NCERT_3B_v0.1.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-                </tbody>
-            </table>
-        </div>
+        <li>
+            <span class="spec-quant">FP16</span>
+            <span class="spec-dot">·</span>
+            <span class="spec-size">2.02 GB</span>
+            <span class="spec-dot">·</span>
+            <a href="https://huggingface.co/ewinregirgojr/minicpm5-stock-analyst-v2-forward-return/blob/main/MiniCPM5-1B-stock-v2.F16.gguf" target="_blank" class="spec-link" data-copy title="复制链接">MiniCPM5-1B-stock-v2.F16.gguf</a>
+        </li><li>
+            <span class="spec-quant">Q8_0</span>
+            <span class="spec-dot">·</span>
+            <span class="spec-size">1.07 GB</span>
+            <span class="spec-dot">·</span>
+            <a href="https://huggingface.co/ewinregirgojr/minicpm5-stock-analyst-v2-forward-return/blob/main/MiniCPM5-1B-stock-v2.Q8_0.gguf" target="_blank" class="spec-link" data-copy title="复制链接">MiniCPM5-1B-stock-v2.Q8_0.gguf</a>
+        </li>
         
-
+        <p class="review-note">审核备注: 新模型，尚无社区反馈</p>
+        
         <div class="model-links">
-            <a href="https://huggingface.co/Erebus007/NCERT_3B_v0.1" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+            <a href="https://huggingface.co/ewinregirgojr/minicpm5-stock-analyst-v2-forward-return" target="_blank">在 HuggingFace 查看 ↗</a>
         </div>
     </article>
-    <article class="model-page" id="model-rumiii-llamatron-rs1-rolex">
-        <div class="model-header">
-            <span class="model-number">3</span>
-            <h2 class="model-title">Rumiii/LlamaTron-RS1-Rolex</h2>
-            <p class="model-author">by Rumiii</p>
-        </div>
+    <article class="model-entry" id="model-vinpix-bonsai-8b-tq-gguf">
+        <h2 class="model-name">vinpix/Bonsai-8B-TQ-GGUF</h2>
+        <p class="model-author">by vinpix · 860 下载 · 0 赞</p>
         
-        <div class="model-meta">
-            <span class="meta-item">⬇️ 1 下载</span>
-            <span class="meta-item">❤️ 1 点赞</span>
-            <span class="meta-item">📈 热度: 0.0</span>
-            <span class="meta-item">🏷️ text-generation</span>
-            <span class="risk-badge risk-low">✅ 低风险</span>
-        </div>
+        <span class="risk-indicator low">低风险</span>
         
-        <div class="model-description">
-            <p></p>
-        </div>
+        <div class="tag-list"><span class="tag">llama.cpp</span><span class="tag">ternary</span><span class="tag">1.58-bit</span><span class="tag">bitnet</span><span class="tag">cpu</span><span class="tag">qwen3</span><span class="tag">text-generation</span><span class="tag">en</span><span class="tag">base_model:prism-ml/Ternary-Bonsai-8B-gguf</span></div>
         
-
-        <div class="model-tags">
-            <span class="tag">transformers</span><span class="tag">medical</span><span class="tag">reasoning</span><span class="tag">chain-of-thought</span><span class="tag">lora</span><span class="tag">conversational</span><span class="tag">apache-2.0</span>
-        </div>
+        <p class="model-description"><strong>**vinpix/Bonsai-8B-TQ-GGUF** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：文本生成。 提供2种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：2.33 GB ~ 3.04 GB。 已在HuggingFace获得860次下载，0个点赞。</strong></p>
         
-        <div class="variants-section">
-            <h3>📦 GGUF量化规格</h3>
-            <table class="variants-table">
-                <thead>
-                    <tr>
-                        <th>量化版本</th>
-                        <th>大小</th>
-                        <th>文件</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr class="variant-row">
-            <td class="quant-badge">Unknown</td>
-            <td>2.31 GB</td>
-            <td><a href="https://huggingface.co/Rumiii/LlamaTron-RS1-Rolex/blob/main/llama3.2-1b-medical-reasonmed-fp16.gguf" target="_blank" class="file-link">📄 llama3.2-1b-medical-reasonmed-fp16.gguf</a></td>
-            <td><a href="https://huggingface.co/Rumiii/LlamaTron-RS1-Rolex/resolve/main/llama3.2-1b-medical-reasonmed-fp16.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-                </tbody>
-            </table>
-        </div>
+        <li>
+            <span class="spec-quant">Unknown</span>
+            <span class="spec-dot">·</span>
+            <span class="spec-size">3.04 GB</span>
+            <span class="spec-dot">·</span>
+            <a href="https://huggingface.co/vinpix/Bonsai-8B-TQ-GGUF/blob/main/Bonsai-8B-Q2K.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Bonsai-8B-Q2K.gguf</a>
+        </li><li>
+            <span class="spec-quant">Unknown</span>
+            <span class="spec-dot">·</span>
+            <span class="spec-size">2.33 GB</span>
+            <span class="spec-dot">·</span>
+            <a href="https://huggingface.co/vinpix/Bonsai-8B-TQ-GGUF/blob/main/Bonsai-8B-TQ2_0-Q4out-llamacpp.gguf" target="_blank" class="spec-link" data-copy title="复制链接">Bonsai-8B-TQ2_0-Q4out-llamacpp.gguf</a>
+        </li>
         
-
+        <p class="review-note">审核备注: AI自动审核通过</p>
+        
         <div class="model-links">
-            <a href="https://huggingface.co/Rumiii/LlamaTron-RS1-Rolex" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
-        </div>
-    </article>
-    <article class="model-page" id="model-fadedredstar-anubis-mini-8b-v1-heretic-gguf">
-        <div class="model-header">
-            <span class="model-number">4</span>
-            <h2 class="model-title">FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF</h2>
-            <p class="model-author">by FadedRedStar</p>
-        </div>
-        
-        <div class="model-meta">
-            <span class="meta-item">⬇️ 478 下载</span>
-            <span class="meta-item">❤️ 1 点赞</span>
-            <span class="meta-item">📈 热度: 0.0</span>
-            <span class="meta-item">🏷️ text-generation</span>
-            <span class="risk-badge risk-low">✅ 低风险</span>
-        </div>
-        
-        <div class="model-description">
-            <p></p>
-        </div>
-        
-
-        <div class="model-tags">
-            <span class="tag">text-generation</span><span class="tag">roleplay</span><span class="tag">creative-writing</span><span class="tag">chat</span><span class="tag">abliterated</span><span class="tag">uncensored</span><span class="tag">llama-3.3</span>
-        </div>
-        
-        <div class="variants-section">
-            <h3>📦 GGUF量化规格</h3>
-            <table class="variants-table">
-                <thead>
-                    <tr>
-                        <th>量化版本</th>
-                        <th>大小</th>
-                        <th>文件</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr class="variant-row">
-            <td class="quant-badge">Q4_K_M</td>
-            <td>4.58 GB</td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q4_K_M.gguf" target="_blank" class="file-link">📄 Anubis-Mini-8B-v1-heretic-Q4_K_M.gguf</a></td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q4_K_M.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-        <tr class="variant-row">
-            <td class="quant-badge">Q5_K_M</td>
-            <td>5.34 GB</td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q5_K_M.gguf" target="_blank" class="file-link">📄 Anubis-Mini-8B-v1-heretic-Q5_K_M.gguf</a></td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q5_K_M.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-                </tbody>
-            </table>
-        </div>
-        
-
-        <div class="model-links">
-            <a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-GGUF" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
-        </div>
-    </article>
-    <article class="model-page" id="model-fadedredstar-anubis-mini-8b-v1-heretic-imatrix-gguf">
-        <div class="model-header">
-            <span class="model-number">5</span>
-            <h2 class="model-title">FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF</h2>
-            <p class="model-author">by FadedRedStar</p>
-        </div>
-        
-        <div class="model-meta">
-            <span class="meta-item">⬇️ 703 下载</span>
-            <span class="meta-item">❤️ 0 点赞</span>
-            <span class="meta-item">📈 热度: 0.0</span>
-            <span class="meta-item">🏷️ text-generation</span>
-            <span class="risk-badge risk-low">✅ 低风险</span>
-        </div>
-        
-        <div class="model-description">
-            <p></p>
-        </div>
-        
-
-        <div class="model-tags">
-            <span class="tag">text-generation</span><span class="tag">roleplay</span><span class="tag">creative-writing</span><span class="tag">chat</span><span class="tag">abliterated</span><span class="tag">uncensored</span><span class="tag">llama-3.3</span>
-        </div>
-        
-        <div class="variants-section">
-            <h3>📦 GGUF量化规格</h3>
-            <table class="variants-table">
-                <thead>
-                    <tr>
-                        <th>量化版本</th>
-                        <th>大小</th>
-                        <th>文件</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr class="variant-row">
-            <td class="quant-badge">Unknown</td>
-            <td>4.36 GB</td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf" target="_blank" class="file-link">📄 Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf</a></td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-IQ4_NL-imatrix.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-        <tr class="variant-row">
-            <td class="quant-badge">Q4_K_M</td>
-            <td>4.58 GB</td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf" target="_blank" class="file-link">📄 Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf</a></td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q4_K_M-imatrix.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-        <tr class="variant-row">
-            <td class="quant-badge">Q5_K_M</td>
-            <td>5.34 GB</td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/blob/main/Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf" target="_blank" class="file-link">📄 Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf</a></td>
-            <td><a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF/resolve/main/Anubis-Mini-8B-v1-heretic-Q5_K_M-imatrix.gguf" target="_blank" class="dl-link">⬇️ Download</a></td>
-        </tr>
-                </tbody>
-            </table>
-        </div>
-        
-
-        <div class="model-links">
-            <a href="https://huggingface.co/FadedRedStar/Anubis-Mini-8B-v1-heretic-imatrix-GGUF" target="_blank" class="primary-link">在 HuggingFace 查看 ↗</a>
+            <a href="https://huggingface.co/vinpix/Bonsai-8B-TQ-GGUF" target="_blank">在 HuggingFace 查看 ↗</a>
         </div>
     </article>
 
-        <!-- Empty State -->
-
-    </main>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="magazine-footer">
-        <div class="footer-inner">
-            <p>📰 AI日报 GGUF量化模型快报 · 2026-07-05</p>
-            <p>数据来源: <a href="https://huggingface.co/models?search=gguf" target="_blank">HuggingFace</a> · 自动化采集与审核</p>
-            <p>项目地址: <a href="https://github.com/suifei/ai-daily-gguf-digest" target="_blank">GitHub</a></p>
-        </div>
+    <footer class="footer">
+        <p>📰 AI日报 GGUF量化模型快报 · 2026-07-05</p>
+        <p>数据来源: <a href="https://huggingface.co/models?search=gguf" target="_blank">HuggingFace</a> · 自动化采集与审核</p>
+        <p>项目地址: <a href="https://github.com/suifei/ai-daily-gguf-digest" target="_blank">GitHub</a></p>
     </footer>
 
     <script src="/ai-daily-gguf-digest/static/magazine.js"></script>

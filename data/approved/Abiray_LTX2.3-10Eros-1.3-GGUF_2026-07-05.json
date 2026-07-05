@@ -1,0 +1,51 @@
+{
+  "repo_id": "Abiray/LTX2.3-10Eros-1.3-GGUF",
+  "model_name": "Abiray/LTX2.3-10Eros-1.3-GGUF",
+  "author": "Abiray",
+  "tags": [
+    "diffusers",
+    "gguf",
+    "image-to-video",
+    "base_model:TenStrip/LTX2.3-10Eros",
+    "base_model:quantized:TenStrip/LTX2.3-10Eros",
+    "license:other",
+    "region:us"
+  ],
+  "pipeline_tag": "image-to-video",
+  "library_name": "diffusers",
+  "model_family": "TenStrip/LTX2.3-10Eros",
+  "downloads": 0,
+  "likes": 4,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T06:57:43.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "10Eros_v1.3-Q3_K_M.gguf",
+      "quantization": "Q3_K_M",
+      "size_bytes": 11130418991,
+      "size_human": "10.37 GB",
+      "download_url": "https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF/resolve/main/10Eros_v1.3-Q3_K_M.gguf",
+      "browser_url": "https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF/blob/main/10Eros_v1.3-Q3_K_M.gguf"
+    },
+    {
+      "filename": "10Eros_v1.3-Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 14296161071,
+      "size_human": "13.31 GB",
+      "download_url": "https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF/resolve/main/10Eros_v1.3-Q4_K_M.gguf",
+      "browser_url": "https://huggingface.co/Abiray/LTX2.3-10Eros-1.3-GGUF/blob/main/10Eros_v1.3-Q4_K_M.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T07:00:45.786609+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**Abiray/LTX2.3-10Eros-1.3-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供2种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：10.37 GB ~ 13.31 GB。",
+  "chinese_description": "**Abiray/LTX2.3-10Eros-1.3-GGUF** 该模型参数量约未知，支持未知上下文窗口。 提供2种量化规格(Q2~Q8)，推荐Q4_K_M版本在精度与体积间取得最佳平衡。 文件大小范围：10.37 GB ~ 13.31 GB。",
+  "risk_level": "low",
+  "review_notes": "AI自动审核通过",
+  "approved_at": "2026-07-05T07:01:21.979123+00:00",
+  "approved_date": "2026-07-05"
+}

@@ -1,119 +1,43 @@
 /**
- * AI日报 GGUF量化模型快报 — 交互脚本
- * 提供目录切换、平滑滚动、键盘导航等功能
+ * AI日报 GGUF量化模型快报 — 期刊策展交互
+ * 粘性目录高亮 · 阅读进度条 · 复制反馈 · 极简悬停
  */
-
 (function() {
     'use strict';
 
-    // --- TOC Sidebar Toggle ---
-    const tocSidebar = document.getElementById('tocSidebar');
-    const tocOverlay = document.getElementById('tocOverlay');
+    // --- Reading Progress Bar ---
+    const progressBar = document.createElement('div');
+    progressBar.className = 'progress-bar';
+    document.body.insertBefore(progressBar, document.body.firstChild);
 
-    window.toggleTOC = function() {
-        const isOpen = tocSidebar.classList.contains('open');
-        if (isOpen) {
-            closeTOC();
-        } else {
-            openTOC();
+    function updateProgress() {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) {
+            progressBar.style.width = '0%';
+            return;
         }
-    };
-
-    function openTOC() {
-        tocSidebar.classList.add('open');
-        if (tocOverlay) tocOverlay.classList.add('visible');
-        document.body.style.overflow = 'hidden';
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const progress = (scrollTop / docHeight) * 100;
+        progressBar.style.width = Math.min(progress, 100) + '%';
     }
 
-    function closeTOC() {
-        tocSidebar.classList.remove('open');
-        if (tocOverlay) tocOverlay.classList.remove('visible');
-        document.body.style.overflow = '';
-    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
 
-    // Close TOC on Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeTOC();
-    });
+    // --- Sticky TOC Highlight ---
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const modelEntries = document.querySelectorAll('.model-entry');
 
-    // --- Page Scroll Navigation ---
-    window.scrollPage = function(direction) {
-        const content = document.querySelector('.magazine-content');
-        if (!content) return;
-        
-        const models = content.querySelectorAll('.model-page');
-        if (models.length === 0) return;
-
-        // Find current visible model
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        let currentIndex = 0;
-
-        for (let i = 0; i < models.length; i++) {
-            const rect = models[i].getBoundingClientRect();
-            if (rect.top <= windowHeight / 2) {
-                currentIndex = i;
-            }
-        }
-
-        // Navigate to next/previous
-        let targetIndex = currentIndex + direction;
-        targetIndex = Math.max(0, Math.min(models.length - 1, targetIndex));
-
-        models[targetIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    };
-
-    // --- Keyboard Navigation ---
-    document.addEventListener('keydown', function(e) {
-        // Left arrow / Space: previous
-        if (e.key === 'ArrowLeft' || e.key === ' ') {
-            e.preventDefault();
-            scrollPage(-1);
-        }
-        // Right arrow: next
-        if (e.key === 'ArrowRight') {
-            e.preventDefault();
-            scrollPage(1);
-        }
-        // H: toggle TOC
-        if (e.key === 'h' || e.key === 'H') {
-            toggleTOC();
-        }
-    });
-
-    // --- Smooth scroll for TOC links ---
-    document.querySelectorAll('.toc-link').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const target = document.getElementById(targetId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                closeTOC();
-            }
-        });
-    });
-
-    // --- Intersection Observer for active TOC highlight ---
-    if ('IntersectionObserver' in window) {
-        const models = document.querySelectorAll('.model-page');
-        const tocLinks = document.querySelectorAll('.toc-link');
-
-        const observer = new IntersectionObserver(function(entries) {
+    if (tocLinks.length > 0 && modelEntries.length > 0) {
+        const tocObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
+                const id = entry.target.getAttribute('id');
+                const link = document.querySelector('.toc-list a[href="#' + id + '"]');
+                if (!link) return;
+
                 if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    tocLinks.forEach(function(link) {
-                        link.style.color = '';
-                        link.style.background = '';
-                        if (link.getAttribute('href') === '#' + id) {
-                            link.style.color = '#6c63ff';
-                            link.style.background = 'rgba(108,99,255,0.1)';
-                        }
-                    });
+                    tocLinks.forEach(function(l) { l.classList.remove('active'); });
+                    link.classList.add('active');
                 }
             });
         }, {
@@ -121,68 +45,92 @@
             threshold: 0
         });
 
-        models.forEach(function(model) {
-            observer.observe(model);
+        modelEntries.forEach(function(entry) {
+            tocObserver.observe(entry);
         });
     }
 
-    // --- Reading Progress Bar ---
-    const progressBar = document.createElement('div');
-    progressBar.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #6c63ff, #ff6584);
-        z-index: 9999;
-        transition: width 0.1s ease;
-        width: 0%;
-    `;
-    document.body.appendChild(progressBar);
-
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        progressBar.style.width = progress + '%';
+    // --- Smooth Scroll for TOC Links ---
+    document.querySelectorAll('.toc-list a, .toc-nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile TOC panel if open
+                    const panel = document.querySelector('.toc-panel');
+                    if (panel) panel.classList.remove('open');
+                }
+            }
+        });
     });
 
-    // --- Animate model cards on scroll ---
-    if ('IntersectionObserver' in window) {
-        const cards = document.querySelectorAll('.model-page');
-        cards.forEach(function(card, index) {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
-        });
+    // --- Copy Link Feedback ---
+    document.querySelectorAll('.spec-link[data-copy]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = this.getAttribute('href');
+            const originalText = this.textContent;
 
-        const cardObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    cardObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        cards.forEach(function(card) {
-            cardObserver.observe(card);
+            if (navigator.clipboard && url) {
+                navigator.clipboard.writeText(url).then(function() {
+                    showCopyFeedback(link, '已复制');
+                }).catch(function() {
+                    fallbackCopy(url, link, '已复制');
+                });
+            } else {
+                window.open(url, '_blank');
+            }
         });
-        
-        // Fallback: if cards are still hidden after 2 seconds, reveal them
+    });
+
+    function showCopyFeedback(el, text) {
+        el.setAttribute('data-original', el.textContent);
+        el.textContent = text;
+        el.style.color = '#2D6A4F';
         setTimeout(function() {
-            cards.forEach(function(card) {
-                if (card.style.opacity === '0') {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }
-            });
+            el.textContent = el.getAttribute('data-original');
+            el.style.color = '';
         }, 2000);
     }
 
-    // --- Console welcome message ---
-    console.log('%c📰 AI日报 GGUF量化模型快报', 'font-size: 20px; font-weight: bold; color: #6c63ff;');
-    console.log('%cKeyboard shortcuts: ←/→ navigate, H toggle TOC, Esc close', 'color: #9898b0;');
+    function fallbackCopy(text, el, feedback) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            document.execCommand('copy');
+            showCopyFeedback(el, feedback);
+        } catch(e) {
+            window.open(text, '_blank');
+        }
+        document.body.removeChild(ta);
+    }
+
+    // --- Mobile TOC Panel ---
+    const tocToggleBtn = document.querySelector('.toc-toggle-btn');
+    const tocPanel = document.querySelector('.toc-panel');
+    const tocPanelClose = document.querySelector('.toc-panel-close');
+
+    if (tocToggleBtn && tocPanel) {
+        tocToggleBtn.addEventListener('click', function() {
+            tocPanel.classList.toggle('open');
+        });
+    }
+
+    if (tocPanelClose && tocPanel) {
+        tocPanelClose.addEventListener('click', function() {
+            tocPanel.classList.remove('open');
+        });
+    }
+
+    // --- Console Welcome ---
+    console.log('%c📰 AI日报 GGUF量化模型快报', 'font-size: 14px; font-weight: bold; color: #1A1A1A;');
+    console.log('%c期刊策展风格 · 人文与极客交织', 'font-size: 11px; color: #8A8A8A;');
 
 })();
