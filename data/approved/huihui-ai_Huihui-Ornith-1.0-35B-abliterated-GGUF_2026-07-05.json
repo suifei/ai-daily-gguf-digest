@@ -1,0 +1,86 @@
+{
+  "repo_id": "huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF",
+  "model_name": "huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF",
+  "author": "huihui-ai",
+  "tags": [
+    "transformers",
+    "gguf",
+    "llama.cpp",
+    "speculative-decoding",
+    "mtp",
+    "multi-token-prediction",
+    "qwen3.5",
+    "abliterated",
+    "uncensored",
+    "GGUF",
+    "huihui",
+    "text-generation",
+    "base_model:deepreinforce-ai/Ornith-1.0-35B",
+    "base_model:quantized:deepreinforce-ai/Ornith-1.0-35B",
+    "license:mit",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "pipeline_tag": "text-generation",
+  "library_name": "transformers",
+  "model_family": "deepreinforce-ai/Ornith-1.0-35B",
+  "downloads": 0,
+  "likes": 3,
+  "trending_score": 0,
+  "last_modified": "2026-07-05T09:03:30.000Z",
+  "created_at": "",
+  "description": "",
+  "hf_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF",
+  "card_data": {},
+  "gguf_files": [
+    {
+      "filename": "mmproj-model-f16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 902822048,
+      "size_human": "861.0 MB",
+      "download_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/resolve/main/mmproj-model-f16.gguf",
+      "browser_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/blob/main/mmproj-model-f16.gguf"
+    },
+    {
+      "filename": "ornith-1.0-35b-Q3_K.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 16764763808,
+      "size_human": "15.61 GB",
+      "download_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/resolve/main/ornith-1.0-35b-Q3_K.gguf",
+      "browser_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/blob/main/ornith-1.0-35b-Q3_K.gguf"
+    },
+    {
+      "filename": "ornith-1.0-35b-Q4_K.gguf",
+      "quantization": "Unknown",
+      "size_bytes": 21166757536,
+      "size_human": "19.71 GB",
+      "download_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/resolve/main/ornith-1.0-35b-Q4_K.gguf",
+      "browser_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/blob/main/ornith-1.0-35b-Q4_K.gguf"
+    },
+    {
+      "filename": "ornith-1.0-35b-Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 36903138880,
+      "size_human": "34.37 GB",
+      "download_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/resolve/main/ornith-1.0-35b-Q8_0.gguf",
+      "browser_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/blob/main/ornith-1.0-35b-Q8_0.gguf"
+    },
+    {
+      "filename": "ornith-1.0-35b-bf16.gguf",
+      "quantization": "FP16",
+      "size_bytes": 69376636896,
+      "size_human": "64.61 GB",
+      "download_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/resolve/main/ornith-1.0-35b-bf16.gguf",
+      "browser_url": "https://huggingface.co/huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF/blob/main/ornith-1.0-35b-bf16.gguf"
+    }
+  ],
+  "scraped_at": "2026-07-05T09:10:25.507239+00:00",
+  "scrape_date": "2026-07-05",
+  "chinese_summary": "**huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：abliterated（去除对齐限制）, 无限制, 文本生成。 提供5种量化规格(Q2~Q8)，推荐Q8_0版本在精度与体积间取得最佳平衡。 文件大小范围：15.61 GB ~ 861.0 MB。",
+  "chinese_description": "**huihui-ai/Huihui-Ornith-1.0-35B-abliterated-GGUF** 该模型属于Meta Llama系列，参数量为未知，支持未知上下文窗口。采用多头注意力+Transformer架构，擅长自然语言理解、代码生成、多轮对话和逻辑推理。GGUF量化格式使其可在消费级硬件上高效运行。 擅长领域：abliterated（去除对齐限制）, 无限制, 文本生成。 提供5种量化规格(Q2~Q8)，推荐Q8_0版本在精度与体积间取得最佳平衡。 文件大小范围：15.61 GB ~ 861.0 MB。",
+  "risk_level": "high",
+  "review_notes": "模型包含不安全内容或去对齐标记，建议高级用户使用",
+  "approved_at": "2026-07-05T09:10:51.312542+00:00",
+  "approved_date": "2026-07-05"
+}

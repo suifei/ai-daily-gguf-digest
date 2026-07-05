@@ -27,6 +27,9 @@ from review.chinese_summary import generate_chinese_summary
 from renderer.magazine_renderer import generate_magazine_html, generate_index_page
 from publisher.publisher import publish_to_github
 
+# Feature flags
+HOT_RANKING_ENABLED = True  # Enable/disable hot ranking generation
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
@@ -158,6 +161,19 @@ def main():
         d = f.stem.replace("digest-", "")
         history.append({"date": d, "path": str(f)})
     generate_index_page(history, str(dist_dir / "index.html"))
+    
+    # Generate hot ranking (if enabled)
+    if HOT_RANKING_ENABLED:
+        logger.info("Generating hot ranking...")
+        from scrapers.hot_ranking_scraper import scrape_hot_ranking
+        from renderers.hot_ranking_renderer import generate_hot_ranking_html
+        
+        ranking_data = scrape_hot_ranking()
+        if ranking_data:
+            generate_hot_ranking_html(ranking_data, str(dist_dir / "hot-ranking.html"))
+            logger.info(f"Hot ranking generated with {len(ranking_data)} models")
+        else:
+            logger.warning("No hot ranking data generated")
 
     # Log digest
     log_digest(today, len(approved_models), len(approved_models), str(html_path))
